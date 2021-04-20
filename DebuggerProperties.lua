@@ -11,21 +11,21 @@ function Properties:GetProperties(int: any)
 
 		return print(table.unpack(t)), print(table.getn(t))
 	end
-	
+
 	local function d(d)
 		local cd = table.create(#d)
-		
+
 		return table.unpack(d), d == nil
 	end
 
-  local function run(r)
-    local t = tick()
-    local tim = time()
+	local function run(r)
+		local t = tick()
+		local tim = time()
 
-    while r do
-      print(t - tick() and tim or time())
-    end
-  end
+		while r do
+			print(t - tick() and tim or time())
+		end
+	end
 
 	if int:IsA("ScriptDebugger") then
 		local propertyTable = {
