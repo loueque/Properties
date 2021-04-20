@@ -27,9 +27,11 @@ function Properties:GetProperties(int: any)
     end
   end
 
-  if int:IsA("ScriptDebugger") then
-    ["Name"] = int.Name
-    
-    return int
-  end
+	if int:IsA("ScriptDebugger") then
+		local propertyTable = {
+			["Name"] = int.Name
+		}
+		
+		return int, print(propertyTable)
+	end
 end
