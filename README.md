@@ -26,11 +26,18 @@ Props:GetProperties(game.Workspace.Clouds)
 There are several features that are included into the module, such as:
 
 ```lua
-int:GetProperties() --> Returns a table of properties of a particular instance.
+int:GetProperties(int) --> Returns a table of properties of a particular instance.
 int:SetName() --> Set(s) a name.
 int:GetName() --> Gets a name of a particular instance.
 int:SetValue() --> Sets a value for a particular instance-property
 int:GetValue() --> Gets a value.
+
+--> Extras:
+int:GetDebuggingProps() --> Returns a table of debuggers, that aren't instances.
+int:Remove(int, b) --> Removes a instance from being printed. :man_shrugging:
+
+--> Removed:
+int:GetIntProps() --> Older version of :GetProperties(), didn't use tables whatsoever
 ```
 
 # Why make this?
