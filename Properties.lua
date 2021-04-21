@@ -32,9 +32,13 @@ function Properties:GetProperties(int: any)
 			["ClassName"] = int.ClassName,
 			["Mass"] = int.Mass,
 			["Name"] = int.Name,
-			["Orientation"] = int.Orientation, 
 			["Parent"] = int.Parent,
 			["Position"] = int.Position,
+			["Orientation"] = int.Orientation, 
+			["Origin Position"] = int["Origin Position"],
+			["Origin Orientation"] = int["Origin Orientation"],
+			["Pivot Offset Position"] = int["Pivot Offset Position"],
+			["Pivot Offset Orientation"] = int["Pivot Offset Position"],
 			["Anchored"] = int.Anchored,
 			["Archivable"] = int.Archivable,
 			["CanCollide"] = int.CanCollide, 
@@ -73,10 +77,14 @@ function Properties:GetProperties(int: any)
 			["ClassName"] = int.ClassName,
 			["Mass"] = int.Mass,
 			["MeshSize"] = int.MeshSize,
-			["Name"] = int.Name,
-			["Orientation"] = int.Orientation, 
+			["Name"] = int.Name, 
 			["Parent"] = int.Parent,
 			["Position"] = int.Position,
+			["Orientation"] = int.Orientation, 
+			["Origin Position"] = int["Origin Position"],
+			["Origin Orientation"] = int["Origin Orientation"],
+			["Pivot Offset Position"] = int["Pivot Offset Position"],
+			["Pivot Offset Orientation"] = int["Pivot Offset Position"],
 			["Anchored"] = int.Anchored,
 			["Archivable"] = int.Archivable,
 			["CanCollide"] = int.CanCollide, 
@@ -112,9 +120,13 @@ function Properties:GetProperties(int: any)
 			["ClassName"] = int.ClassName,
 			["Mass"] = int.Mass,
 			["Name"] = int.Name,
-			["Orientation"] = int.Orientation, 
 			["Parent"] = int.Parent,
 			["Position"] = int.Position,
+			["Orientation"] = int.Orientation, 
+			["Origin Position"] = int["Origin Position"],
+			["Origin Orientation"] = int["Origin Orientation"],
+			["Pivot Offset Position"] = int["Pivot Offset Position"],
+			["Pivot Offset Orientation"] = int["Pivot Offset Position"],
 			["Anchored"] = int.Anchored,
 			["Archivable"] = int.Archivable,
 			["CanCollide"] = int.CanCollide, 
@@ -146,7 +158,11 @@ function Properties:GetProperties(int: any)
 			["ClassName"] = int.ClassName,
 			["Name"] = int.Name,
 			["Parent"] = int.Parent,
+			["Origin Position"] = int["Origin Position"],
+			["Origin Orientation"] = int["Origin Orientation"],
 			["PrimaryPart"] = int.PrimaryPart,
+			["World Offset Position"] = int["World Offset Position"],
+			["World Offset Orientation"] = int["World Offset Position"],
 			["Archivable"] = int.Archivable
 		}
 
@@ -910,6 +926,18 @@ function Properties:GetProperties(int: any)
 
 		print(propertyTables)
 		
+	elseif int:IsA("ForceField") then
+		local propertyTables = {
+			["ClassName"] = int.ClassName,
+			["Name"] = int.Name,
+			["Parent"] = int.Parent,
+			["Visible"] = int.Visibe,
+			["Archivable"] = int.Archivable
+		}
+
+		print(propertyTables)
+
+		
 	elseif int:IsA("PointLight") then
 		local propertyTables = {
 			["Brightness"] = int.Brightness,
@@ -1008,6 +1036,87 @@ function Properties:GetProperties(int: any)
 			["Name"] = int.Name,
 			["Parent"] = int.Parent,
 			["PrimaryPart"] = int.PrimaryPart,
+			["Archivable"] = int.Archivable
+		}
+
+		print(propertyTables)
+		
+	elseif int:IsA("SelectionBox") then
+		local propertyTables = {
+			["Color3"] = int.Color3,
+			["LineThickness"] = int.LineThickness,
+			["SurfaceColor3"] = int.SurfaceColor3,
+			["SurfaceTransparency"] = int.SurfaceTransparency,
+			["Transparency"] = int.Transparency,
+			["Adornee"] = int.Adornee,
+			["ClassName"] = int.ClassName,
+			["Name"] = int.Name,
+			["Parent"] = int.Parent,
+			["Visible"] = int.Visible,
+			["Archivable"] = int.Archivable
+		}
+
+		print(propertyTables)
+		
+	elseif int:IsA("SelectionSphere") then
+		local propertyTables = {
+			["Color3"] = int.Color3,
+			["SurfaceColor3"] = int.SurfaceColor3,
+			["SurfaceTransparency"] = int.SurfaceTransparency,
+			["Transparency"] = int.Transparency,
+			["Adornee"] = int.Adornee,
+			["ClassName"] = int.ClassName,
+			["Name"] = int.Name,
+			["Parent"] = int.Parent,
+			["Visible"] = int.Visible,
+			["Archivable"] = int.Archivable
+		}
+
+		print(propertyTables)
+
+	elseif int:IsA("SurfaceSelection") then
+		local propertyTables = {
+			["Color3"] = int.Color3,
+			["Transparency"] = int.Transparency,
+			["Adornee"] = int.Adornee,
+			["ClassName"] = int.ClassName,
+			["Name"] = int.Name,
+			["Parent"] = int.Parent,
+			["Visible"] = int.Visible,
+			["Archivable"] = int.Archivable
+		}
+
+		print(propertyTables)
+		
+	elseif int:IsA("Dialog") then
+		local propertyTables = {
+			["BehaviorType"] = int.BehaviorType,
+			["ClassName"] = int.ClassName,
+			["ConversationDistance"] = int.ConversationDistance,
+			["GoodbyeChoiceActive"] = int.GoodbyeChoiceActive,
+			["GoodbyeDialog"] = int.GoodbyeDialog,
+			["InitialPrompt"] = int.InitialPrompt,
+			["InUse"] = int.InUse,
+			["Name"] = int.Name,
+			["Parent"] = int.Parent,
+			["Purpose"] = int.Purpose,
+			["Tone"] = int.Tone,
+			["TriggerDistance"] = int.TriggerDistance,
+			["TriggerOffset"] = int.TriggerOffset,
+			["Archivable"] = int.Archivable
+		}
+
+		print(propertyTables)
+		
+	elseif int:IsA("DialogChoice") then
+		local propertyTables = {
+			["ClassName"] = int.ClassName,
+			["GoodbyeChoiceActive"] = int.GoodbyeChoiceActive,
+			["GoodbyeDialog"] = int.GoodbyeDialog,
+			["Name"] = int.Name,
+			["Parent"] = int.Parent,
+			["ResponseDialog"] = int.ResponseDialog,
+			["UserDialog"] = int.UserDialog,
 			["Archivable"] = int.Archivable
 		}
 
