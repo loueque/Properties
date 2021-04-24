@@ -35,10 +35,10 @@ function Properties:GetProperties(int: any)
 			["Parent"] = int.Parent,
 			["Position"] = int.Position,
 			["Orientation"] = int.Orientation, 
-			["Origin Position"] = int["Origin Position"],
+			--[[["Origin Position"] = int["Origin Position"],
 			["Origin Orientation"] = int["Origin Orientation"],
 			["Pivot Offset Position"] = int["Pivot Offset Position"],
-			["Pivot Offset Orientation"] = int["Pivot Offset Position"],
+			["Pivot Offset Orientation"] = int["Pivot Offset Position"],--]]
 			["Anchored"] = int.Anchored,
 			["Archivable"] = int.Archivable,
 			["CanCollide"] = int.CanCollide, 
@@ -81,10 +81,10 @@ function Properties:GetProperties(int: any)
 			["Parent"] = int.Parent,
 			["Position"] = int.Position,
 			["Orientation"] = int.Orientation, 
-			["Origin Position"] = int["Origin Position"],
+			--[[["Origin Position"] = int["Origin Position"],
 			["Origin Orientation"] = int["Origin Orientation"],
 			["Pivot Offset Position"] = int["Pivot Offset Position"],
-			["Pivot Offset Orientation"] = int["Pivot Offset Position"],
+			["Pivot Offset Orientation"] = int["Pivot Offset Position"],--]]
 			["Anchored"] = int.Anchored,
 			["Archivable"] = int.Archivable,
 			["CanCollide"] = int.CanCollide, 
@@ -123,10 +123,10 @@ function Properties:GetProperties(int: any)
 			["Parent"] = int.Parent,
 			["Position"] = int.Position,
 			["Orientation"] = int.Orientation, 
-			["Origin Position"] = int["Origin Position"],
+			--[[["Origin Position"] = int["Origin Position"],
 			["Origin Orientation"] = int["Origin Orientation"],
 			["Pivot Offset Position"] = int["Pivot Offset Position"],
-			["Pivot Offset Orientation"] = int["Pivot Offset Position"],
+			["Pivot Offset Orientation"] = int["Pivot Offset Position"],-]]
 			["Anchored"] = int.Anchored,
 			["Archivable"] = int.Archivable,
 			["CanCollide"] = int.CanCollide, 
@@ -158,11 +158,11 @@ function Properties:GetProperties(int: any)
 			["ClassName"] = int.ClassName,
 			["Name"] = int.Name,
 			["Parent"] = int.Parent,
-			["Origin Position"] = int["Origin Position"],
-			["Origin Orientation"] = int["Origin Orientation"],
+			--[[["Origin Position"] = int["Origin Position"],
+			["Origin Orientation"] = int["Origin Orientation"],--]]
 			["PrimaryPart"] = int.PrimaryPart,
-			["World Offset Position"] = int["World Offset Position"],
-			["World Offset Orientation"] = int["World Offset Position"],
+			--[[["World Offset Position"] = int["World Offset Position"],
+			["World Offset Orientation"] = int["World Offset Position"],--]]
 			["Archivable"] = int.Archivable
 		}
 
