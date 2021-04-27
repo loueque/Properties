@@ -13,13 +13,13 @@ function Properties:GetProperties(int: any)
 
 		return print(table.unpack(t)), print(table.getn(t))
 	end
-	
+
 	local function d(d)
 		local cd = table.create(#d)
-		
+
 		return table.unpack(d), d == nil
 	end
-	
+
 	if int:IsA("BasePart") then
 		local propertyTable = {
 			["BrickColor"] = int.BrickColor,
@@ -34,16 +34,10 @@ function Properties:GetProperties(int: any)
 			["Name"] = int.Name,
 			["Parent"] = int.Parent,
 			["Position"] = int.Position,
-			["Orientation"] = int.Orientation, 
-			--[[
-			["Origin Position"] = int["Origin Position"],
-			["Origin Orientation"] = int["Origin Orientation"],
-			["Pivot Offset Position"] = int["Pivot Offset Position"],
-			["Pivot Offset Orientation"] = int["Pivot Offset Position"],
+			["Orientation"] = int.Orientation,
 			["Anchored"] = int.Anchored,
-			]]
 			["Archivable"] = int.Archivable,
-			["CanCollide"] = int.CanCollide, 
+			["CanCollide"] = int.CanCollide,
 			["CanTouch"] = int.CanTouch,
 			["CollisionGroupId"] = int.CollisionGroupId,
 			["Locked"] = int.Locked,
@@ -60,10 +54,10 @@ function Properties:GetProperties(int: any)
 			["AssemblyMass"] = int.AssemblyMass,
 			["AssemblyRootPart"] = int.AssemblyRootPart
 		}
-		
+
 		print(propertyTable)
 	end
-		
+
 	if int:IsA("MeshPart") then
 		local propertyTable = {
 			["BrickColor"] = int.BrickColor,
@@ -80,20 +74,13 @@ function Properties:GetProperties(int: any)
 			["ClassName"] = int.ClassName,
 			["Mass"] = int.Mass,
 			["MeshSize"] = int.MeshSize,
-			["Name"] = int.Name, 
+			["Name"] = int.Name,
 			["Parent"] = int.Parent,
 			["Position"] = int.Position,
-			["Orientation"] = int.Orientation, 
-			--[[
-			["Origin Position"] = int["Origin Position"],
-			["Origin Orientation"] = int["Origin Orientation"],
-			["Pivot Offset Position"] = int["Pivot Offset Position"],
-			["Pivot Offset Orientation"] = int["Pivot Offset Position"],
-			["Anchored"] = int.Anchored,
-			]]
+			["Orientation"] = int.Orientation,
 			["Anchored"] = int.Anchored,
 			["Archivable"] = int.Archivable,
-			["CanCollide"] = int.CanCollide, 
+			["CanCollide"] = int.CanCollide,
 			["CanTouch"] = int.CanTouch,
 			["CollisionFidelity"] = int.CollisionFidelity,
 			["CollisionGroupId"] = int.CollisionGroupId,
@@ -114,7 +101,7 @@ function Properties:GetProperties(int: any)
 
 		print(propertyTable)
 	end
-		
+
 	if int:IsA("SpawnLocation") then
 		local propertyTable = {
 			["BrickColor"] = int.BrickColor,
@@ -129,17 +116,10 @@ function Properties:GetProperties(int: any)
 			["Name"] = int.Name,
 			["Parent"] = int.Parent,
 			["Position"] = int.Position,
-			["Orientation"] = int.Orientation, 
-			--[[
-				["Origin Position"] = int["Origin Position"],
-				["Origin Orientation"] = int["Origin Orientation"],
-				["Pivot Offset Position"] = int["Pivot Offset Position"],
-				["Pivot Offset Orientation"] = int["Pivot Offset Position"],
-				["Anchored"] = int.Anchored,
-			]]
+			["Orientation"] = int.Orientation,
 			["Anchored"] = int.Anchored,
 			["Archivable"] = int.Archivable,
-			["CanCollide"] = int.CanCollide, 
+			["CanCollide"] = int.CanCollide,
 			["CanTouch"] = int.CanTouch,
 			["CollisionGroupId"] = int.CollisionGroupId,
 			["Locked"] = int.Locked,
@@ -163,25 +143,21 @@ function Properties:GetProperties(int: any)
 
 		print(propertyTable)
 	end
-		
+
 	if int:IsA("Model") then
 		local propertyTable = {
 			["ClassName"] = int.ClassName,
 			["Name"] = int.Name,
 			["Parent"] = int.Parent,
-			--["Origin Position"] = int["Origin Position"],
-			--["Origin Orientation"] = int["Origin Orientation"],-]]
 			["PrimaryPart"] = int.PrimaryPart,
-			--["Pivot Offset Position"] = int["Pivot Offset Position"],
-			--["Pivot Offset Orientation"] = int["Pivot Offset Position"],
-			["Anchored"] = int.Anchored,
 			["Archivable"] = int.Archivable
 		}
 
 		print(propertyTable)
 	end
-	
-	if int == game.Workspace then
+
+	if int:IsA("DataModel") then
+		if int == game.Workspace then
 			local propertyTable = {
 				["ClassName"] = int.ClassName,
 				["CurrentCamera"] = int.CurrentCamera,
@@ -194,142 +170,147 @@ function Properties:GetProperties(int: any)
 				["FilteringEnabled"] = int.FilteringEnabled,
 				["Gravity"] = int.Gravity,
 				["InterpolationThrottling"] = int.InterpolationThrottling,
-				["StreamingEnabled"] = int.StreamingEnabled,
-				["TouchesUseCollisionGroups"] = int.TouchesUseCollisionGroups
+				["StreamingEnabled"] = int.StreamingEnabled
+				--["TouchesUseCollisionGroups"] = int.TouchesUseCollisionGroups
 			}
-			
-		print(propertyTable)
+
+			print(propertyTable)
+		end
+
+		if int == game.Lighting then
+			local propertyTable = {
+				["Ambient"] = int.Ambient,
+				["Brightness"] = int.Brightness,
+				["ColorShiftBottom"] = int.ColorShift_Bottom,
+				["ColorShift_Top"] = int.ColorShift_Top,
+				["EnvironmentDiffuseScale"] = int.EnvironmentDiffuseScale,
+				["EnvironmentSpecularScale"] = int.EnvironmentSpecularScale,
+				["GlobalShadows"] = int.GlobalShadows,
+				["OutdoorAmbient"] = int.OutdoorAmbient,
+				["ShadowSoftness"] = int.ShadowSoftness,
+				["ClassName"] = int.ClassName,
+				["ClockTime"] = int.ClockTime,
+				["GeographicLatitude"] = int.GeographicLatitude,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["TimeOfDay"] = int.TimeOfDay,
+				["Archivable"] = int.Archivable,
+				["ExposureCompensation"] = int.ExposureCompensation
+			}
+
+			print(propertyTable)
+		end
+
+		if int == game.ReplicatedFirst then
+			local propertyTable = {
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Archivable"] = int.Archivable
+			}
+
+			print(propertyTable)
+		end
+
+		if int == game.ReplicatedStorage then
+			local propertyTable = {
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Archivable"] = int.Archivable
+			}
+
+			print(propertyTable)
+		end
+
+		if int == game.ServerScriptService then
+			local propertyTable = {
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Archivable"] = int.Archivable
+			}
+
+			print(propertyTable)
+		end
+
+		if int == game.ServerStorage then
+			local propertyTable = {
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Archivable"] = int.Archivable
+			}
+
+			print(propertyTable)
+		end
+
+		if int == game.StarterGui then
+			local propertyTable = {
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["ScreenOrientation"] = int.ScreenOrientation,
+				["ShowDevelopmentGui"] = int.ShowDevelopmentGui,
+				["Archivable"] = int.Archivable,
+			}
+
+			print(propertyTable)
+		end
+
+		if int == game.StarterPack then
+			local propertyTable = {
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Archivable"] = int.Archivable
+			}
+
+			print(propertyTable)
+		end
+
+		if int == game.StarterPlayer then
+			local propertyTable = {
+				["ClassName"] = int.ClassName,
+				["HealthDisplayDistance"] = int.HealthDisplayDistance,
+				["Name"] = int.Name,
+				["NameDisplayDistance"] = int.NameDisplayDistance,
+				["Parent"] = int.Parent,
+				["Archivable"] = int.Archivable,
+				["CameraMaxZoomDistance"] = int.CameraMaxZoomDistance,
+				["CameraMinZoomDistance"] = int.CameraMinZoomDistance,
+				["CameraMode"] = int.CameraMode,
+				["DevCameraOcclusionMovementMode"] = int.DevCameraOcclusionMovementMode,
+				["DevTouchCameraMovementMode"] = int.DevTouchCameraMovementMode,
+				["AutoJumpEnabled"] = int.AutoJumpEnabled,
+				["CharacterJumpHeight"] = int.CharacterJumpHeight,
+				["CharacterUseJumpPower"] = int.CharacterUseJumpPower,
+				["CharacterMaxSlopeAngle"] = int.CharacterMaxSlopeAngle,
+				["CharacterWalkSpeed"] = int.CharacterWalkSpeed,
+				["LoadCharacterAppearance"] = int.LoadCharacterAppearance,
+				["UserEmotesEnabled"] = int.UserEmotesEnabled,
+				["DevComputerMovementMode"] = int.DevComputerMovementMode,
+				["DevTouchMovementMode"] = int.DevTouchMovementMode,
+				["EnableMouseLockOption"] = int.EnableMouseLockOption
+			}
+
+			print(propertyTable)
+		end
+
+		if int == game.Teams then
+			local propertyTables = {
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Archivable"] = int.Archivable
+			}
+
+			print(propertyTables)
+		end
 	end
-			
-	if int == game.Lighting then
-		local propertyTable = {
-			["Ambient"] = int.Ambient,
-			["Brightness"] = int.Brightness,
-			["ColorShiftBottom"] = int.ColorShift_Bottom,
-			["ColorShift_Top"] = int.ColorShift_Top,
-			["EnvironmentDiffuseScale"] = int.EnvironmentDiffuseScale,
-			["EnvironmentSpecularScale"] = int.EnvironmentSpecularScale,
-			["GlobalShadows"] = int.GlobalShadows,
-			["OutdoorAmbient"] = int.OutdoorAmbient,
-			["ShadowSoftness"] = int.ShadowSoftness,
-			["ClassName"] = int.ClassName,
-			["ClockTime"] = int.ClockTime,
-			["GeographicLatitude"] = int.GeographicLatitude,
-			["Name"] = int.Name,
-			["Parent"] = int.Parent,
-			["TimeOfDay"] = int.TimeOfDay,
-			["Archivable"] = int.Archivable,
-			["ExposureCompensation"] = int.ExposureCompensation
-		}
-		
-		print(propertyTable)
-	end
-	
-	if int == game.ReplicatedFirst then
-		local propertyTable = {
-			["ClassName"] = int.ClassName,
-			["Name"] = int.Name,
-			["Parent"] = int.Parent,
-			["Archivable"] = int.Archivable
-		}
-		
-		print(propertyTable)
-	end
-	
-	if int == game.ReplicatedStorage then
-		local propertyTable = {
-			["ClassName"] = int.ClassName,
-			["Name"] = int.Name,
-			["Parent"] = int.Parent,
-			["Archivable"] = int.Archivable
-		}
-		
-		print(propertyTable)
-	end
-		
-	if int == game.ServerScriptService then
-		local propertyTable = {
-			["ClassName"] = int.ClassName,
-			["Name"] = int.Name,
-			["Parent"] = int.Parent,
-			["Archivable"] = int.Archivable
-		}
-		
-		print(propertyTable)
-	end
-		
-	if int == game.ServerStorage then
-		local propertyTable = {
-			["ClassName"] = int.ClassName,
-			["Name"] = int.Name,
-			["Parent"] = int.Parent,
-			["Archivable"] = int.Archivable
-		}
-		
-		print(propertyTable)
-	end
-		
-	if int == game.StarterGui then
-		local propertyTable = {
-			["ClassName"] = int.ClassName,
-			["Name"] = int.Name,
-			["Parent"] = int.Parent,
-			["ScreenOrientation"] = int.ScreenOrientation,
-			["ShowDevelopmentGui"] = int.ShowDevelopmentGui,
-			["Archivable"] = int.Archivable,
-		}
-		
-		print(propertyTable)
-	end
-	
-	if int == game.StarterPack then
-		local propertyTable = {
-			["ClassName"] = int.ClassName,
-			["Name"] = int.Name,
-			["Parent"] = int.Parent,
-			["Archivable"] = int.Archivable
-		}
-		
-		print(propertyTable)
-	end
-	
-	if int == game.StarterPlayer then
-		local propertyTable = {
-			["ClassName"] = int.ClassName,
-			["HealthDisplayDistance"] = int.HealthDisplayDistance,
-			["Name"] = int.Name,
-			["NameDisplayDistance"] = int.NameDisplayDistance,
-			["Parent"] = int.Parent,
-			["Archivable"] = int.Archivable,
-			["CameraMaxZoomDistance"] = int.CameraMaxZoomDistance,
-			["CameraMinZoomDistance"] = int.CameraMinZoomDistance,
-			["CameraMode"] = int.CameraMode,
-			["DevCameraOcclusionMovementMode"] = int.DevCameraOcclusionMovementMode,
-			["DevTouchCameraMovementMode"] = int.DevTouchCameraMovementMode,
-			["AutoJumpEnabled"] = int.AutoJumpEnabled,
-			["CharacterJumpHeight"] = int.CharacterJumpHeight,
-			["CharacterUseJumpPower"] = int.CharacterUseJumpPower,
-			["CharacterMaxSlopeAngle"] = int.CharacterMaxSlopeAngle,
-			["CharacterWalkSpeed"] = int.CharacterWalkSpeed,
-			["LoadCharacterAppearance"] = int.LoadCharacterAppearance,
-			["UserEmotesEnabled"] = int.UserEmotesEnabled,
-			["DevComputerMovementMode"] = int.DevComputerMovementMode,
-			["DevTouchMovementMode"] = int.DevTouchMovementMode,
-			["EnableMouseLockOption"] = int.EnableMouseLockOption
-		}
-		
-		print(propertyTable)
-	end
-		
-	if int == game.Teams then
-		local propertyTables = {
-			["ClassName"] = int.ClassName,
-			["Name"] = int.Name,
-			["Parent"] = int.Parent,
-			["Archivable"] = int.Archivable
-		}
-		
-		print(propertyTables)
+
+	if int:IsA('GuiObject') then
+
 	end
 
 	if int:IsA("ScreenGui") then
@@ -351,7 +332,7 @@ function Properties:GetProperties(int: any)
 
 		print(propertyTables)
 	end
-			
+
 	if int:IsA("Frame") then
 		local propertyTable = {
 			["Active"] = int.Active ,
@@ -380,7 +361,7 @@ function Properties:GetProperties(int: any)
 
 		print(propertyTable)
 	end
-			
+
 	if int:IsA("ScrollingFrame") then
 		local propertyTable = {
 			["SelectionImageObject"] = int.SelectionImageObject,
@@ -482,7 +463,7 @@ function Properties:GetProperties(int: any)
 
 		print(propertyTable)
 	end
-			
+
 	if int:IsA("TextBox") then
 		local propertyTable = {
 			["SelectionImageObject"] = int.SelectionImageObject,
@@ -539,7 +520,7 @@ function Properties:GetProperties(int: any)
 
 		print(propertyTable)
 	end
-			
+
 	if int:IsA("TextButton") then
 		local propertyTable = {
 			["SelectionImageObject"] = int.SelectionImageObject,
@@ -681,7 +662,7 @@ function Properties:GetProperties(int: any)
 
 		print(propertyTable)
 	end
-			
+
 	if int:IsA("ViewportFrame") then
 		local propertyTable = {
 			["Ambient"] = int.Ambient,
@@ -723,7 +704,7 @@ function Properties:GetProperties(int: any)
 
 		print(propertyTable)
 	end
-			
+
 	if int:IsA("VideoFrame") then
 		local propertyTable = {
 			["SelectionImageObject"] = int.SelectionImageObject,
@@ -768,7 +749,7 @@ function Properties:GetProperties(int: any)
 
 		print(propertyTable)
 	end
-		
+
 	if int:IsA("Tool") then
 		local propertyTable = {
 			["GripForward"] = int.GripForward,
@@ -786,10 +767,10 @@ function Properties:GetProperties(int: any)
 			["ManualActivationOnly"] = int.ManualActivationOnly,
 			["RequiresHandle"] = int.RequiresHandle
 		}
-		
+
 		print(propertyTable)
 	end
-	
+
 	if int:IsA("Sparkles") then
 		local propertyTables = {
 			["ClassName"] = int.ClassName,
@@ -802,7 +783,7 @@ function Properties:GetProperties(int: any)
 
 		print(propertyTables)
 	end
-		
+
 	if int:IsA("Explosion") then
 		local propertyTables = {
 			["BlastPressure"] = int.BlastPressure,
@@ -819,7 +800,7 @@ function Properties:GetProperties(int: any)
 
 		print(propertyTables)
 	end
-		
+
 	if int:IsA("ParticleEmitter") then
 		local propertyTables = {
 			["Color"] = int.Color,
@@ -851,7 +832,7 @@ function Properties:GetProperties(int: any)
 
 		print(propertyTables)
 	end
-	
+
 	if int:IsA("Fire") then
 		local propertyTables = {
 			["ClassName"] = int.ClassName,
@@ -867,7 +848,7 @@ function Properties:GetProperties(int: any)
 
 		print(propertyTables)
 	end
-		
+
 	if int:IsA("Smoke") then
 		local propertyTables = {
 			["ClassName"] = int.ClassName,
@@ -883,7 +864,7 @@ function Properties:GetProperties(int: any)
 
 		print(propertyTables)
 	end
-	
+
 	if int:IsA("Trail") then
 		local propertyTables = {
 			["Color"] = int.Color,
@@ -909,7 +890,7 @@ function Properties:GetProperties(int: any)
 
 		print(propertyTables)
 	end
-	
+
 	if int:IsA("Decal") then
 		local propertyTable = {
 			["Color3"] = int.Color3,
@@ -921,10 +902,10 @@ function Properties:GetProperties(int: any)
 			["Parent"] = int.Parent,
 			["Archivable"] = int.Archivable
 		}
-		
+
 		print(propertyTable)
 	end
-	
+
 	if int:IsA("Texture") then
 		local propertyTable = {
 			["Color3"] = int.Color3,
@@ -940,10 +921,10 @@ function Properties:GetProperties(int: any)
 			["Parent"] = int.Parent,
 			["Archivable"] = int.Archivable
 		}
-		
+
 		print(propertyTable)
 	end
-	
+
 	if int:IsA("Folder") then
 		local propertyTables = {
 			["ClassName"] = int.ClassName,
@@ -954,7 +935,7 @@ function Properties:GetProperties(int: any)
 
 		print(propertyTables)
 	end
-	
+
 	if int:IsA("Configuration") then
 		local propertyTables = {
 			["ClassName"] = int.ClassName,
@@ -965,7 +946,7 @@ function Properties:GetProperties(int: any)
 
 		print(propertyTables)
 	end
-	
+
 	if int:IsA("ForceField") then
 		local propertyTables = {
 			["ClassName"] = int.ClassName,
@@ -977,7 +958,7 @@ function Properties:GetProperties(int: any)
 
 		print(propertyTables)
 	end
-		
+
 	if int:IsA("PointLight") then
 		local propertyTables = {
 			["Brightness"] = int.Brightness,
@@ -993,7 +974,7 @@ function Properties:GetProperties(int: any)
 
 		print(propertyTables)
 	end
-	
+
 	if int:IsA("SpotLight") then
 		local propertyTables = {
 			["Angle"] = int.Angle,
@@ -1011,7 +992,7 @@ function Properties:GetProperties(int: any)
 
 		print(propertyTables)
 	end
-	
+
 	if int:IsA("SurfaceLight") then
 		local propertyTables = {
 			["Angle"] = int.Angle,
@@ -1029,7 +1010,7 @@ function Properties:GetProperties(int: any)
 
 		print(propertyTables)
 	end
-	
+
 	if int:IsA("Script") then
 		local propertyTables = {
 			["ClassName"] = int.ClassName,
@@ -1038,10 +1019,10 @@ function Properties:GetProperties(int: any)
 			["Archivable"] = int.Archivable,
 			["Disabled"] = int.Disabled
 		}
-	
+
 		print(propertyTables)
 	end
-	
+
 	if int:IsA("LocalScript") then
 		local propertyTables = {
 			["ClassName"] = int.ClassName,
@@ -1053,7 +1034,7 @@ function Properties:GetProperties(int: any)
 
 		print(propertyTables)
 	end
-	
+
 	if int:IsA("ModuleScript") then
 		local propertyTables = {
 			["ClassName"] = int.ClassName,
@@ -1064,7 +1045,7 @@ function Properties:GetProperties(int: any)
 
 		print(propertyTables)
 	end
-	
+
 	if int:IsA("Actor") then
 		local propertyTables = {
 			["ClassName"] = int.ClassName,
@@ -1076,7 +1057,7 @@ function Properties:GetProperties(int: any)
 
 		print(propertyTables)
 	end
-	
+
 	if int:IsA("WorldModel") then
 		local propertyTables = {
 			["ClassName"] = int.ClassName,
@@ -1088,7 +1069,7 @@ function Properties:GetProperties(int: any)
 
 		print(propertyTables)
 	end
-	
+
 	if int:IsA("SelectionBox") then
 		local propertyTables = {
 			["Color3"] = int.Color3,
@@ -1106,7 +1087,7 @@ function Properties:GetProperties(int: any)
 
 		print(propertyTables)
 	end
-	
+
 	if int:IsA("SelectionSphere") then
 		local propertyTables = {
 			["Color3"] = int.Color3,
@@ -1123,7 +1104,7 @@ function Properties:GetProperties(int: any)
 
 		print(propertyTables)
 	end
-	
+
 	if int:IsA("SurfaceSelection") then
 		local propertyTables = {
 			["Color3"] = int.Color3,
@@ -1138,7 +1119,7 @@ function Properties:GetProperties(int: any)
 
 		print(propertyTables)
 	end
-	
+
 	if int:IsA("Dialog") then
 		local propertyTables = {
 			["BehaviorType"] = int.BehaviorType,
@@ -1159,7 +1140,7 @@ function Properties:GetProperties(int: any)
 
 		print(propertyTables)
 	end
-	
+
 	if int:IsA("DialogChoice") then
 		local propertyTables = {
 			["ClassName"] = int.ClassName,
@@ -1191,7 +1172,7 @@ function Properties:GetProperties(int: any)
 
 		print(propertyTables)
 	end
-		
+
 	if int:IsA("Clouds") then
 		local propertyTables = {
 			["CoverDensity"] = int.Cover,
@@ -1204,7 +1185,7 @@ function Properties:GetProperties(int: any)
 
 		print(propertyTables)
 	end
-		
+
 	if int:IsA("Sky") then
 		local propertyTables = {
 			["CelestialBodiesShown"] = int.CelestialBodiesShown,
@@ -1227,7 +1208,7 @@ function Properties:GetProperties(int: any)
 
 		print(propertyTables)
 	end
-	
+
 	if int:IsA("ClickDetector") then
 		local propertyTables = {
 			["ClassName"] = int.ClassName,
@@ -1261,17 +1242,17 @@ function Properties:GetProperties(int: any)
 			["Archivable"] = int.Archivable,
 			["AutoLocalize"] = int.AutoLocalize
 		}
-		
+
 		local t = {}
 		setmetatable(t, propertyTables)
-		
+
 		print(getmetatable(t))
 	end
-	
+
 	if not int then
 		error("instance isn't supported in the module")
 	end
-	
+
 	return
 end
 
@@ -1281,7 +1262,7 @@ function Properties:SetName(int: any, strName: string)
 	elseif int ~= nil or not int then
 		error("instance doesn't exist...")
 	end
-	
+
 	return
 end
 
