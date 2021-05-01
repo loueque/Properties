@@ -8,7 +8,8 @@ This module collects all properties (hand-wriiten, no HTTP at all) and converts 
 To call a module, type:
 
 ```lua
-local Props = require(game.ReplicatedStorage.Properties)
+local Props = require(game.ReplicatedStorage.Properties) -- ...or:
+local Props = require(game:GetService("ReplicatedStorage"):WaitForChild("Properties"))
 ```
 
 Whatever is in your code, call many lines as you want:
