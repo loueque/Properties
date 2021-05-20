@@ -1,5 +1,6 @@
 # Properties
 Collects every property of an instance and converts into a table, easy right?
+Take a plugin version: https://www.roblox.com/catalog/6830145259/Properties
 
 # Concept
 
