@@ -21,9 +21,29 @@ function Properties:GetProperties(int: any)
 	end
 
 	if int:IsA("Instance") then
-		--if int:IsA("DataModel") then
+		if int == game then
+			local props = {
+				["CreatorId"] = int.CreatorId,
+				["CreatorType"] = int.CreatorType,
+				["GameId"] = int.GameId,
+				["Genre"] = int.Genre,
+				["JobId"] = int.JobId,
+				["PlaceId"] = int.PlaceId,
+				["PlaceVersion"] = int.PlaceVersion,
+				["PrivateServerId"] = int.PrivateServerId,
+				["PrivateServerOwnerId"] = int.PrivateServerOwnerId,
+				["Workspace"] = int.Workspace,
+				["Archivable"] = int.Archivable,
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent
+			}
+
+			print(props)
+		end
+
 		if int == game:GetService("Workspace") then
-			local propertyTable = {
+			local props = {
 				["ClassName"] = int.ClassName,
 				["CurrentCamera"] = int.CurrentCamera,
 				["DistributedGameTime"] = int.DistributedGameTime,
@@ -36,14 +56,55 @@ function Properties:GetProperties(int: any)
 				["Gravity"] = int.Gravity,
 				["InterpolationThrottling"] = int.InterpolationThrottling,
 				["StreamingEnabled"] = int.StreamingEnabled
-				--["TouchesUseCollisionGroups"] = int.TouchesUseCollisionGroups
 			}
 
-			print(propertyTable)
+			print(props)
+		end
+
+		if int == game:GetService("Players") then
+			local props = {
+				["BubbleChat"] = int.BubbleChat,
+				["ClassicChat"] = int.ClassicChat,
+				["ClassName"] = int.ClassName,
+				["LocalPlayer"] = int.LocalPlayer,
+				["MaxPlayers"] = int.MaxPlayers,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["PreferredPlayers"] = int.PreferredPlayers,
+				["RespawnTime"] = int.RespawnTime,
+				["Archivable"] = int.Archivable,
+				["CharacterAutoLoads"] = int.CharacterAutoLoads
+			}
+
+			print(props)
+		end
+
+		if int == game:GetService("CoreGui") then
+			local props = {
+				["SelectionImageObject"] = int.SelectionImageObject,
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Version"] = int.Version,
+				["Archivable"] = int.Archivable
+			}
+
+			print(props)
+		end
+
+		if int == game:GetService("CorePackages") then
+			local props = {
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Archivable"] = int.Archivable
+			}
+
+			print(props)
 		end
 
 		if int == game:GetService("Lighting") then
-			local propertyTable = {
+			local props = {
 				["Ambient"] = int.Ambient,
 				["Brightness"] = int.Brightness,
 				["ColorShiftBottom"] = int.ColorShift_Bottom,
@@ -63,55 +124,88 @@ function Properties:GetProperties(int: any)
 				["ExposureCompensation"] = int.ExposureCompensation
 			}
 
-			print(propertyTable)
+			print(props)
+		end
+
+		if int == game:GetService("PluginDebugService") then
+			local props = {
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Archivable"] = int.Archivable
+			}
+
+			print(props)
+		end
+
+		if int == game:GetService("PluginGuiService") then
+			local props = {
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Archivable"] = int.Archivable
+			}
+
+			print(props)
 		end
 
 		if int == game:GetService("ReplicatedFirst") then
-			local propertyTable = {
+			local props = {
 				["ClassName"] = int.ClassName,
 				["Name"] = int.Name,
 				["Parent"] = int.Parent,
 				["Archivable"] = int.Archivable
 			}
 
-			print(propertyTable)
+			print(props)
+		end
+
+		if int == game:GetService("ReplicatedScriptService") then
+			local props = {
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Archivable"] = int.Archivable
+			}
+
+			print(props)
 		end
 
 		if int == game:GetService("ReplicatedStorage") then
-			local propertyTable = {
+			local props = {
 				["ClassName"] = int.ClassName,
 				["Name"] = int.Name,
 				["Parent"] = int.Parent,
 				["Archivable"] = int.Archivable
 			}
 
-			print(propertyTable)
+			print(props)
 		end
 
 		if int == game:GetService("ServerScriptService") then
-			local propertyTable = {
+			local props = {
 				["ClassName"] = int.ClassName,
 				["Name"] = int.Name,
 				["Parent"] = int.Parent,
 				["Archivable"] = int.Archivable
 			}
 
-			print(propertyTable)
+			print(props)
 		end
 
 		if int == game:GetService("ServerStorage") then
-			local propertyTable = {
+			local props = {
 				["ClassName"] = int.ClassName,
 				["Name"] = int.Name,
 				["Parent"] = int.Parent,
 				["Archivable"] = int.Archivable
 			}
 
-			print(propertyTable)
+			print(props)
 		end
 
 		if int == game:GetService("StarterGui") then
-			local propertyTable = {
+			local props = {
 				["ClassName"] = int.ClassName,
 				["Name"] = int.Name,
 				["Parent"] = int.Parent,
@@ -120,22 +214,22 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable,
 			}
 
-			print(propertyTable)
+			print(props)
 		end
 
 		if int == game:GetService("StarterPack") then
-			local propertyTable = {
+			local props = {
 				["ClassName"] = int.ClassName,
 				["Name"] = int.Name,
 				["Parent"] = int.Parent,
 				["Archivable"] = int.Archivable
 			}
 
-			print(propertyTable)
+			print(props)
 		end
 
 		if int == game:GetService("StarterPlayer") then
-			local propertyTable = {
+			local props = {
 				["ClassName"] = int.ClassName,
 				["HealthDisplayDistance"] = int.HealthDisplayDistance,
 				["Name"] = int.Name,
@@ -160,7 +254,29 @@ function Properties:GetProperties(int: any)
 				["EnableMouseLockOption"] = int.EnableMouseLockOption
 			}
 
-			print(propertyTable)
+			print(props)
+		end
+
+		if int == game:GetService("StarterPlayer").StarterCharacterScripts then
+			local props = {
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Archivable"] = int.Archivable
+			}
+
+			print(props)
+		end
+
+		if int == game:GetService("StarterPlayer").StarterPlayerScripts then
+			local props = {
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Archivable"] = int.Archivable
+			}
+
+			print(props)
 		end
 
 		if int == game:GetService("Teams") then
@@ -175,7 +291,7 @@ function Properties:GetProperties(int: any)
 		end
 
 		if int == game:GetService("SoundService") then
-			local propertyTable = {
+			local props = {
 				["AmbientReverb"] = int.AmbientReverb,
 				["ClassName"] = int.ClassName,
 				["DistanceFactor"] = int.DistanceFactor,
@@ -187,11 +303,11 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print(propertyTable)
+			print(props)
 		end
 
 		if int == game:GetService("Chat") then
-			local propertyTable = {
+			local props = {
 				["ClassName"] = int.ClassName,
 				["Name"] = int.Name,
 				["Parent"] = int.Parent,
@@ -200,11 +316,11 @@ function Properties:GetProperties(int: any)
 				["LoadDefaultChat"] = int.LoadDefaultChat
 			}
 
-			print(propertyTable)
+			print(props)
 		end
 
 		if int == game:GetService("LocalizationService") then
-			local propertyTable = {
+			local props = {
 				["ClassName"] = int.ClassName,
 				["Name"] = int.Name,
 				["Parent"] = int.Parent,
@@ -213,11 +329,11 @@ function Properties:GetProperties(int: any)
 				["SystemLocaleId"] = int.SystemLocaleId
 			}
 
-			print(propertyTable)
+			print(props)
 		end
 
 		if int == game:GetService("TestService") then
-			local propertyTable = {
+			local props = {
 				["ClassName"] = int.ClassName,
 				["Description"] = int.Description,
 				["Name"] = int.Name,
@@ -236,12 +352,23 @@ function Properties:GetProperties(int: any)
 				["Timeout"] = int.Timeout
 			}
 
-			print(propertyTable)
+			print(props)
+		end
+
+		if int == game:GetService("Debris") then
+			local props = {
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Archivable"] = int.Archivable
+			}
+
+			print(props)
 		end
 
 		if int:IsA("BasePart") then
 			if int:IsA("Part") then
-				local propertyTable = {
+				local props = {
 					["BrickColor"] = int.BrickColor,
 					["CastShadow"] = int.CastShadow,
 					["Color"] = int.Color,
@@ -275,11 +402,11 @@ function Properties:GetProperties(int: any)
 					["AssemblyRootPart"] = int.AssemblyRootPart
 				}
 
-				print(propertyTable)
+				print(props)
 			end
 
 			if int:IsA("CornerWedgePart") then
-				local propertyTable = {
+				local props = {
 					["BrickColor"] = int.BrickColor,
 					["CastShadow"] = int.CastShadow,
 					["Color"] = int.Color,
@@ -313,11 +440,11 @@ function Properties:GetProperties(int: any)
 					["AssemblyRootPart"] = int.AssemblyRootPart
 				}
 
-				print(propertyTable)
+				print(props)
 			end
 
 			if int:IsA("TrussPart") then
-				local propertyTable = {
+				local props = {
 					["BrickColor"] = int.BrickColor,
 					["CastShadow"] = int.CastShadow,
 					["Color"] = int.Color,
@@ -351,11 +478,11 @@ function Properties:GetProperties(int: any)
 					["AssemblyRootPart"] = int.AssemblyRootPart
 				}
 
-				print(propertyTable)
+				print(props)
 			end
 
 			if int:IsA("WedgePart") then
-				local propertyTable = {
+				local props = {
 					["BrickColor"] = int.BrickColor,
 					["CastShadow"] = int.CastShadow,
 					["Color"] = int.Color,
@@ -389,11 +516,11 @@ function Properties:GetProperties(int: any)
 					["AssemblyRootPart"] = int.AssemblyRootPart
 				}
 
-				print(propertyTable)
+				print(props)
 			end
 
 			if int:IsA("MeshPart") then
-				local propertyTable = {
+				local props = {
 					["BrickColor"] = int.BrickColor,
 					["CastShadow"] = int.CastShadow,
 					["Color"] = int.Color,
@@ -433,11 +560,11 @@ function Properties:GetProperties(int: any)
 					["AssemblyRootPart"] = int.AssemblyRootPart
 				}
 
-				print(propertyTable)
+				print(props)
 			end
 
 			if int:IsA("SpawnLocation") then
-				local propertyTable = {
+				local props = {
 					["BrickColor"] = int.BrickColor,
 					["CastShadow"] = int.CastShadow,
 					["Color"] = int.Color,
@@ -475,7 +602,7 @@ function Properties:GetProperties(int: any)
 					["AssemblyRootPart"] = int.AssemblyRootPart
 				}
 
-				print(propertyTable)
+				print(props)
 			end
 
 			if int:IsA("Terrain") then
@@ -499,7 +626,7 @@ function Properties:GetProperties(int: any)
 			end
 
 			if int:IsA("Model") then
-				local propertyTable = {
+				local props = {
 					["ClassName"] = int.ClassName,
 					["Name"] = int.Name,
 					["Parent"] = int.Parent,
@@ -507,7 +634,7 @@ function Properties:GetProperties(int: any)
 					["Archivable"] = int.Archivable
 				}
 
-				print(propertyTable)
+				print(props)
 			end
 		end
 
@@ -533,7 +660,7 @@ function Properties:GetProperties(int: any)
 			end
 
 			if int:IsA("Frame") then
-				local propertyTable = {
+				local props = {
 					["Active"] = int.Active ,
 					["AnchorPoint"] = int.AnchorPoint ,
 					["AutomaticSize"] = int.AutomaticSize ,
@@ -558,11 +685,11 @@ function Properties:GetProperties(int: any)
 					["AutoLocalize"] = int.AutoLocalize ,
 				}
 
-				print(propertyTable)
+				print(props)
 			end
 
 			if int:IsA("ScrollingFrame") then
-				local propertyTable = {
+				local props = {
 					["SelectionImageObject"] = int.SelectionImageObject,
 					["AbsolutePosition"] = int.AbsolutePosition,
 					["AbsoluteRotation"] = int.AbsoluteRotation,
@@ -610,11 +737,11 @@ function Properties:GetProperties(int: any)
 					["AutoLocalize"] = int.AutoLocalize ,
 				}
 
-				print(propertyTable)
+				print(props)
 			end
 
 			if int:IsA("TextLabel") then
-				local propertyTable = {
+				local props = {
 					["SelectionImageObject"] = int.SelectionImageObject,
 					["AbsolutePosition"] = int.AbsolutePosition,
 					["AbsoluteRotation"] = int.AbsoluteRotation,
@@ -660,11 +787,11 @@ function Properties:GetProperties(int: any)
 					["AutoLocalize"] = int.AutoLocalize
 				}
 
-				print(propertyTable)
+				print(props)
 			end
 
 			if int:IsA("TextBox") then
-				local propertyTable = {
+				local props = {
 					["SelectionImageObject"] = int.SelectionImageObject,
 					["AbsolutePosition"] = int.AbsolutePosition,
 					["AbsoluteRotation"] = int.AbsoluteRotation,
@@ -717,11 +844,11 @@ function Properties:GetProperties(int: any)
 					["AutoLocalize"] = int.AutoLocalize
 				}
 
-				print(propertyTable)
+				print(props)
 			end
 
 			if int:IsA("TextButton") then
-				local propertyTable = {
+				local props = {
 					["SelectionImageObject"] = int.SelectionImageObject,
 					["AbsolutePosition"] = int.AbsolutePosition,
 					["AbsoluteRotation"] = int.AbsoluteRotation,
@@ -767,11 +894,11 @@ function Properties:GetProperties(int: any)
 					["AutoLocalize"] = int.AutoLocalize
 				}
 
-				print(propertyTable)
+				print(props)
 			end
 
 			if int:IsA("ImageButton") then
-				local propertyTable = {
+				local props = {
 					["SelectionImageObject"] = int.SelectionImageObject,
 					["AbsolutePosition"] = int.AbsolutePosition,
 					["AbsoluteRotation"] = int.AbsoluteRotation,
@@ -814,11 +941,11 @@ function Properties:GetProperties(int: any)
 					["AutoLocalize"] = int.AutoLocalize
 				}
 
-				print(propertyTable)
+				print(props)
 			end
 
 			if int:IsA("ImageLabel") then
-				local propertyTable = {
+				local props = {
 					["SelectionImageObject"] = int.SelectionImageObject,
 					["AbsolutePosition"] = int.AbsolutePosition,
 					["AbsoluteRotation"] = int.AbsoluteRotation,
@@ -859,11 +986,11 @@ function Properties:GetProperties(int: any)
 					["AutoLocalize"] = int.AutoLocalize
 				}
 
-				print(propertyTable)
+				print(props)
 			end
 
 			if int:IsA("ViewportFrame") then
-				local propertyTable = {
+				local props = {
 					["Ambient"] = int.Ambient,
 					["LightColor"] = int.LightColor,
 					["LightDirection"] = int.LightDirection,
@@ -901,11 +1028,11 @@ function Properties:GetProperties(int: any)
 					["AutoLocalize"] = int.AutoLocalize
 				}
 
-				print(propertyTable)
+				print(props)
 			end
 
 			if int:IsA("VideoFrame") then
-				local propertyTable = {
+				local props = {
 					["SelectionImageObject"] = int.SelectionImageObject,
 					["AbsolutePosition"] = int.AbsolutePosition,
 					["AbsoluteRotation"] = int.AbsoluteRotation,
@@ -946,11 +1073,11 @@ function Properties:GetProperties(int: any)
 					["AutoLocalize"] = int.AutoLocalize
 				}
 
-				print(propertyTable)
+				print(props)
 			end
 		end
 		if int:IsA("Tool") then
-			local propertyTable = {
+			local props = {
 				["GripForward"] = int.GripForward,
 				["GripPos"] = int.GripForward,
 				["GripRight"] = int.GripRight,
@@ -967,7 +1094,7 @@ function Properties:GetProperties(int: any)
 				["RequiresHandle"] = int.RequiresHandle
 			}
 
-			print(propertyTable)
+			print(props)
 		end
 
 		if int:IsA("Sparkles") then
@@ -1091,7 +1218,7 @@ function Properties:GetProperties(int: any)
 		end
 
 		if int:IsA("Decal") then
-			local propertyTable = {
+			local props = {
 				["Color3"] = int.Color3,
 				["Texture"] = int.Texture,
 				["Transparency"] = int.Transparency,
@@ -1102,11 +1229,11 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print(propertyTable)
+			print(props)
 		end
 
 		if int:IsA("Texture") then
-			local propertyTable = {
+			local props = {
 				["Color3"] = int.Color3,
 				["OffsetStudsU"] = int.OffsetStudsU,
 				["OffsetStudsV"] = int.OffsetStudsV,
@@ -1121,7 +1248,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print(propertyTable)
+			print(props)
 		end
 
 		if int:IsA("Folder") then
@@ -1578,3 +1705,4 @@ end
 
 
 return Properties
+
