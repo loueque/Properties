@@ -3,7 +3,7 @@ Collects every property of an instance and converts into a table, easy right?
 
 # Concept
 
-This module collects all properties (hand-wriiten, no HTTP at all) and converts into a table, it also collects current values and names of a particular instance.
+This module collects all properties (hand-written, no HTTP at all) and converts into a table, it also collects current values and names of a particular instance.
 
 To call a module, type:
 
@@ -44,6 +44,3 @@ int:GetIntProps() --> Older version of :GetProperties(), didn't use tables whats
 # Why make this?
 
 A reason I've created this was a particular feature request that wasn't implemented to the engine, got me an idea to do this, and hey, it works out fine for all instances and DataModels!
-
-
-License under Mozilla Public License, Version 2.0.
