@@ -1752,7 +1752,7 @@ function Properties:GetName(int: any, strName: string | nil)
 end
 
 function Properties:SetValue(int: any, value: number | nil)
-	return self.int == value or int == value
+	return int == value
 end
 
 function Properties:GetValue(int: any, value: number)
