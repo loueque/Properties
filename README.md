@@ -1,5 +1,5 @@
 # Properties
-Collects every property of an instance and converts into a table, easy right?
+Reads all properties (excluding readonly) of a instance into a table from top -> bottom.
 
 Take a plugin version: https://www.roblox.com/catalog/6830145259/Properties
 
