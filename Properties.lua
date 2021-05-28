@@ -1557,9 +1557,7 @@ function Properties:GetProperties(int: any)
 				["Enabled"] = int.Enabled,
 			}
 
-			for i, v in ipairs(props) do
-				print(props)
-			end
+			print(props)
 		end
 
 		if int:IsA("Atmosphere") then
