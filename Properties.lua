@@ -1251,6 +1251,22 @@ function Properties:GetProperties(int: any)
 			print(props)
 		end
 
+		if int:IsA("SurfaceAppearance") then
+			local props = {
+				["AlphaMode"] = int.AlphaMode,
+				["ColorMap"] = int.ColorMap,
+				["MetalnessMap"] = int.MetanessMap,
+				["NormalMap"] = int.NormalMap,
+				["RoughnessMap"] = int.RoughnessMap,
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Archivable"] = int.Archivable
+			}
+
+			print(props)
+		end
+
 		if int:IsA("Folder") then
 			local props = {
 				["ClassName"] = int.ClassName,
@@ -1526,6 +1542,28 @@ function Properties:GetProperties(int: any)
 			print(props)
 		end
 
+		if int:IsA("Motor6D") then
+			local props = {
+				["ClassName"] = int.ClassName,
+				["CurrentAngle"] = int.CurrentAngle,
+				["DesiredAngle"] = int.DesiredAngle,
+				["MaxVelocity"] = int.MaxVelocity,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Part0"] = int.Part0,
+				["Part1"] = int.Part1,
+				["Active"] = int.Active,
+				["Archivable"] = int.Archivable,
+				["Enabled"] = int.Enabled,
+				["ChildName"] = int.ChildName,
+				["ParentName"] = int.ParentName
+			}
+
+			for i, v in ipairs(props) do
+				print(props)
+			end
+		end
+
 		if int:IsA("Atmosphere") then
 			local props = {
 				["Density"] = int.Density,
@@ -1617,6 +1655,24 @@ function Properties:GetProperties(int: any)
 			setmetatable(t, props)
 
 			print(getmetatable(t))
+		end
+
+		if int:IsA("PackageLink") then
+			local props = {
+				["ClassName"] = int.ClassName,
+				["Creator"] = int.Creator,
+				["Name"] = int.Name,
+				["PackageAssetName"] = int.PackageAssetName,
+				["Parent"] = int.Parent,
+				["PermissionLevel"] = int.PermissionLevel,
+				["Archivable"] = int.Archivable,
+				["AutoUpdate"] = int.AutoUpdate,
+				["PackageId"] = int.PackageId,
+				["Status"] = int.Status,
+				["VersionNumber"] = int.VersionNumber
+			}
+
+			print(props)
 		end
 
 		if int:IsA("LocalizationTable") then
