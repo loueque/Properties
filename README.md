@@ -35,10 +35,6 @@ int:GetName() --> Gets a name of a particular instance.
 int:SetValue() --> Sets a value for a particular instance-property
 int:GetValue() --> Gets a value.
 
---> Extras:
-int:GetDebuggingProps() --> Returns a table of debuggers, that aren't instances.
-int:Remove(int, b) --> Removes a instance from being printed. :man_shrugging:
-
 --> Removed:
 int:GetIntProps() --> Older version of :GetProperties(), didn't use tables whatsoever
 ```
