@@ -1555,8 +1555,6 @@ function Properties:GetProperties(int: any)
 				["Active"] = int.Active,
 				["Archivable"] = int.Archivable,
 				["Enabled"] = int.Enabled,
-				["ChildName"] = int.ChildName,
-				["ParentName"] = int.ParentName
 			}
 
 			for i, v in ipairs(props) do
