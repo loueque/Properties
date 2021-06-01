@@ -1289,6 +1289,44 @@ function Properties:GetProperties(int: any)
 			print(props)
 		end
 
+		if int:IsA("Accessory") then
+			local props = {
+				["AttachmentForward"] = int.AttachmentForward,
+				["AttachmentPos"] = int.AttachmentPos,
+				["AttachmentRight"] = int.AttachmentRight,
+				["AttachmentUp"] = int.AttachmentUp,
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Archivable"] = int.Archivable
+			}
+
+			print(props)
+		end
+
+		if int:IsA("BodyColors") then
+			local props = {
+				["HeadColor"] = int.HeadColor,
+				["HeadColor3"] = int.HeadColor3,
+				["LeftArmColor"] = int.LeftArmColor,
+				["LeftArmColor3"] = int.LeftArmColor3,
+				["LeftLegColor"] = int.LeftLegColor,
+				["LeftLegColor3"] = int.LeftLegColor3,
+				["RightArmColor"] = int.RightArmColor,
+				["RightArmColor3"] = int.RightArmColor3,
+				["RightLegColor"] = int.RightLegColor,
+				["RightLegColor3"] = int.RightLegColor3,
+				["TorsoColor"] = int.TorsoColor,
+				["TorsoColor3"] = int.TorsoColor3,
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Archivable"] = int.Archivable
+			}
+
+			print(props)
+		end
+
 		if int:IsA("ForceField") then
 			local props = {
 				["ClassName"] = int.ClassName,
@@ -1299,6 +1337,82 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+		end
+
+		if int:IsA("Humanoid") then
+			local props = {
+				["CameraOffset"] = int.CameraOffset,
+				["ClassName"] = int.ClassName,
+				["DisplayDistanceType"] = int.DisplayDistanceType,
+				["DisplayName"] = int.DisplayName,
+				["HealthDisplayDistance"] = int.HealthDisplayDistance,
+				["HealthDisplayType"] = int.HealthDisplayType,
+				["Name"] = int.Name,
+				["NameDisplayDistance"] = int.NameDisplayDistance,
+				["NameOcclusion"] = int.NameOcclusion,
+				["Parent"] = int.Parent,
+				["RigType"] = int.RigType,
+				["RootPart"] = int.RootPart,
+				["Archivable"] = int.Archivable,
+				["BreakJointsOnDeath"] = int.BreakJointsOnDeath,
+				["RequiresNeck"] = int.RequiresNeck,
+				["AutoJumpEnabled"] = int.AutoJumpEnabled,
+				["JumpPower"] = int.JumpPower,
+				["UseJumpPower"] = int.UseJumpPower,
+				["AutoRotate"] = int.AutoRotate,
+				["FloorMaterial"] = int.FloorMaterial,
+				["Jump"] = int.Jump,
+				["MoveDirection"] = int.MoveDirection,
+				["PlatformStand"] = int.PlatformStand,
+				["SeatPart"] = int.SeatPart,
+				["Sit"] = int.Sit,
+				["TargetPoint"] = int.TargetPoint,
+				["WalkToPart"] = int.WalkToPart,
+				["WalkToPoint"] = int.WalkToPoint,
+				["AutomaticScalingEnabled"] = int.AutomaticScalingEnabled,
+				["Health"] = int.Health,
+				["HipHeight"] = int.HipHeight,
+				["MaxHealth"] = int.MaxHealth,
+				["MaxSlopeAngle"] = int.MaxSlopeAngle,
+				["WalkSpeed"] = int.WalkSpeed
+			}
+
+			print(props)
+		end
+
+		if int:IsA("Pants") then
+			local props = {
+				["Color3"] = int.Color3,
+				["PantsTemplate"] = int.PantsTemplate,
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Archivable"] = int.Archivable
+			}
+
+			print(props)
+		end
+
+		if int:IsA("Shirt") then
+			local props = {
+				["Color3"] = int.Color3,
+				["ShirtTemplate"] = int.ShirtTemplate,
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Archivable"] = int.Archivable
+			}
+		end
+
+		if int:IsA("ShirtGraphic") then
+			local props = {
+				["Color3"] = int.Color3,
+				["Graphic"] = int.Graphic,
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Archivable"] = int.Archivable
+			}
 		end
 
 		if int:IsA("PointLight") then
@@ -1348,6 +1462,95 @@ function Properties:GetProperties(int: any)
 				["Name"] = int.Name,
 				["Parent"] = int.Parent,
 				["Archivable"] = int.Archivable
+			}
+
+			print(props)
+		end
+
+		if int:IsA("Seat") then
+			local props = {
+				["BrickColor"] = int.BrickColor,
+				["CastShadow"] = int.CastShadow,
+				["Color"] = int.Color,
+				["Material"] = int.Material,
+				["Reflectance"] = int.Reflectance,
+				["Transparency"] = int.Transparency,
+				["CenterOfMass"] = int.CenterOfMass,
+				["ClassName"] = int.ClassName,
+				["Mass"] = int.Mass,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Position"] = int.Position,
+				["Orientation"] = int.Orientation,
+				["Anchored"] = int.Anchored,
+				["Archivable"] = int.Archivable,
+				["CanCollide"] = int.CanCollide,
+				["CanTouch"] = int.CanTouch,
+				["CollisionGroupId"] = int.CollisionGroupId,
+				["Locked"] = int.Locked,
+				["Massless"] = int.Massless,
+				["ResizeableFaces"] = int.ResizeableFaces,
+				["ResizeIncrement"] = int.ResizeIncrement,
+				["Disabled"] = int.Disabled,
+				["Occupant"] = int.Occupant,
+				["CustomPhysicalProperties"] = int.CustomPhysicalProperties,
+				["RootPriority"] = int.RootPriority,
+				["Shape"] = int.Shape,
+				["Size"] = int.Size,
+				["AssemblyLinearVelocity"] = int.AssemblyLinearVelocity,
+				["AssemblyAngularVelocity"] = int.AssemblyAngularVelocity,
+				["AssemblyCenterOfMass"] = int.AssemblyCenterOfMass,
+				["AssemblyMass"] = int.AssemblyMass,
+				["AssemblyRootPart"] = int.AssemblyRootPart
+			}
+
+			print(props)
+		end
+
+		if int:IsA("VehicleSeat") then
+			local props = {
+				["BrickColor"] = int.BrickColor,
+				["CastShadow"] = int.CastShadow,
+				["Color"] = int.Color,
+				["Material"] = int.Material,
+				["Reflectance"] = int.Reflectance,
+				["Transparency"] = int.Transparency,
+				["CenterOfMass"] = int.CenterOfMass,
+				["ClassName"] = int.ClassName,
+				["Mass"] = int.Mass,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Position"] = int.Position,
+				["Orientation"] = int.Orientation,
+				["Anchored"] = int.Anchored,
+				["Archivable"] = int.Archivable,
+				["CanCollide"] = int.CanCollide,
+				["CanTouch"] = int.CanTouch,
+				["CollisionGroupId"] = int.CollisionGroupId,
+				["Locked"] = int.Locked,
+				["Massless"] = int.Massless,
+				["ResizeableFaces"] = int.ResizeableFaces,
+				["ResizeIncrement"] = int.ResizeIncrement,
+				["AreHingesDetected"] = int.AreHingesDetected,
+				["Disabled"] = int.Disabled,
+				["HeadsUpDisplay"] = int.HeadsUpDisplay,
+				["MaxSpeed"] = int.MaxSpeed,
+				["Occupant"] = int.Occupant,
+				["Steer"] = int.Steer,
+				["SteerFloat"] = int.SteerFloat,
+				["Throttle"] = int.Throttle,
+				["ThrottleFloat"] = int.ThrottleFloat,
+				["Torque"] = int.Torque,
+				["TurnSpeed"] = int.TurnSpeed,
+				["CustomPhysicalProperties"] = int.CustomPhysicalProperties,
+				["RootPriority"] = int.RootPriority,
+				["Shape"] = int.Shape,
+				["Size"] = int.Size,
+				["AssemblyLinearVelocity"] = int.AssemblyLinearVelocity,
+				["AssemblyAngularVelocity"] = int.AssemblyAngularVelocity,
+				["AssemblyCenterOfMass"] = int.AssemblyCenterOfMass,
+				["AssemblyMass"] = int.AssemblyMass,
+				["AssemblyRootPart"] = int.AssemblyRootPart
 			}
 
 			print(props)
@@ -1724,6 +1927,124 @@ function Properties:GetProperties(int: any)
 
 			print(props)
 		end
+
+		if int:IsA("BoolValue") then
+			local props = {
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Value"] = int.Value,
+				["Archivable"] = int.Archivable
+			}
+
+			print(props)
+		end
+
+		if int:IsA("BrickColorValue") then
+			local props = {
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Value"] = int.Value,
+				["Archivable"] = int.Archivable
+			}
+
+			print(props)
+		end
+
+		if int:IsA("CFrameValue") then
+			local props = {
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Archivable"] = int.Archivable
+			}
+
+			print(props)
+		end
+
+		if int:IsA("Color3Value") then
+			local props = {
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Value"] = int.Value,
+				["Archivable"] = int.Archivable
+			}
+
+			print(props)
+		end
+
+		if int:IsA("IntValue") then
+			local props = {
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Value"] = int.Value,
+				["Archivable"] = int.Archivable
+			}
+
+			print(props)
+		end
+
+		if int:IsA("NumberValue") then
+			local props = {
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Value"] = int.Value,
+				["Archivable"] = int.Archivable
+			}
+
+			print(props)
+		end
+
+		if int:IsA("ObjectValue") then
+			local props = {
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Value"] = int.Value,
+				["Archivable"] = int.Archivable
+			}
+
+			print(props)
+		end
+
+		if int:IsA("RayValue") then
+			local props = {
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Archivable"] = int.Archivable
+			}
+
+			print(props)
+		end
+
+		if int:IsA("StringValue") then
+			local props = {
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Value"] = int.Value,
+				["Archivable"] = int.Archivable
+			}
+
+			print(props)
+		end
+
+		if int:IsA("Vector3Value") then
+			local props = {
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Value"] = int.Value,
+				["Archivable"] = int.Archivable
+			}
+
+			print(props)
+		end
 	end
 
 	if not int:IsA("Instance") then
@@ -1755,6 +2076,4 @@ function Properties:GetValue(int: any, value: number)
 	return value
 end
 
-
 return Properties
-
