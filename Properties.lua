@@ -1245,6 +1245,64 @@ function Properties:GetProperties(int: any)
 			end
 		end
 
+		if int:IsA("UIAspectRatioConstraint") then
+			local props = {
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Archivable"] = int.Archivable,
+				["AspectRatio"] = int.AspectRatio,
+				["AspectType"] = int.AspectType,
+				["DominantAxis"] = int.DominantAxis
+			}
+
+			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if int:IsA("UICorner") then
+			local props = {
+				["CornerRadius"] = int.CornerRadius,
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Archivable"] = int.Archivable
+			}
+
+			print(props)
+		end
+
+		if int:IsA("UIGradient") then
+			local props = {
+				["Color"] = int.Color,
+				["Enabled"] = int.Enabled,
+				["Offset"] = int.Offset,
+				["Rotation"] = int.Rotation,
+				["Transparency"] = int.Transparency,
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Archivable"] = int.Archivable
+			}
+
+			print(props)
+		end
+
+		if int:IsA("UIScale") then
+			local props = {
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Archivable"] = int.Archivable,
+				["Scale"] = int.Scale
+			}
+
+			print(props)
+		end
+
 		if int:IsA("Tool") then
 			local props = {
 				["GripForward"] = int.GripForward,
