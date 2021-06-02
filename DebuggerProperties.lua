@@ -35,3 +35,5 @@ function Properties:GetProperties(int: any)
 		return int, print(propertyTable)
 	end
 end
+
+return Properties
