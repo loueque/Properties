@@ -30,7 +30,7 @@ There are several features that are included into the module, such as:
 
 ```lua
 int:GetProperties(int) --> Returns a table of properties of a particular instance.
-int:GetEnumerator(enum) --> Use a enum (ex. Material) and reads all EnumItems available to it.
+int:ReadEnumerator(enum) --> Use a enum (ex. Material) and reads all EnumItems available to it.
 int:SetName() --> Set(s) a name.
 int:GetName() --> Gets a name of a particular instance.
 int:SetValue() --> Sets a value for a particular instance-property
