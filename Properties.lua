@@ -1273,6 +1273,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int:IsA("UIGradient") then
@@ -1289,6 +1293,29 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if int:IsA("UIPadding") then
+			local props = {
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Archivable"] = int.Archivable,
+				["PaddingBottom"] = int.PaddingBottom,
+				["PaddingLeft"] = int.PaddingLeft,
+				["PaddingRight"] = int.PaddingRight,
+				["PaddingTop"] = int.PaddingTop
+			}
+
+			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int:IsA("UIScale") then
@@ -1301,6 +1328,48 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if int:IsA("UIStroke") then
+			local props = {
+				["ApplyStrokeMode"] = int.ApplyStrokeMode,
+				["Color"] = int.Color,
+				["LineJoinMode"] = int.LineJoinMode,
+				["Thickness"] = int.Thickness,
+				["Transparency"] = int.Transparency,
+				["ClassName"] = int.ClassName,
+				["Enabled"] = int.Enabled,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Archivable"] = int.Archivable
+			}
+
+			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if int:IsA("UITextSizeConstraint") then
+			local props = {
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Archivable"] = int.Archivable,
+				["MaxTextSize"] = int.MaxTextSize,
+				["MinTextSize"] = int.MinTextSize
+			}
+
+			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int:IsA("Tool") then
@@ -2560,6 +2629,14 @@ function Properties:GetProperties(int: any)
 	end
 
 	return int
+end
+
+function Properties:ReadEnumerator(enum: Enum)
+	if assert(enum) then
+		return print(enum:GetEnumItems())
+	end
+
+	return
 end
 
 function Properties:SetName(int: any, strName: string)
