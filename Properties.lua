@@ -1380,6 +1380,58 @@ function Properties:GetProperties(int: any)
 			print(props)
 		end
 
+		if int:IsA("HumanoidDescription") then
+			local props = {
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Archivable"] = int.Archivable,
+				["BackAccessory"] = int.BackAccessory,
+				["FaceAccessory"] = int.FaceAccessory,
+				["FrontAccessory"] = int.FrontAccessory,
+				["HairAccessory"] = int.HairAccessory,
+				["HatAccessory"] = int.HatAccessory,
+				["NeckAccessory"] = int.NeckAccessory,
+				["ShouldersAccessory"] = int.ShouldersAccessory,
+				["WaistAccessory"] = int.WaistAccessory,
+				["BodyTypeScale"] = int.BodyTypeScale,
+				["DepthScale"] = int.DepthScale,
+				["HeadScale"] = int.HeadScale,
+				["HeightScale"] = int.HeightScale,
+				["ProportionScale"] = int.ProportionScale,
+				["WidthScale"] = int.WidthScale,
+				["ClimbAnimation"] = int.ClimbAnimation,
+				["FallAnimation"] = int.FallAnimation,
+				["IdleAnimation"] = int.IdleAnimation,
+				["JumpAnimation"] = int.JumpAnimation,
+				["RunAnimation"] = int.RunAnimation,
+				["SwimAnimation"] = int.SwimAnimation,
+				["WalkAnimation"] = int.WalkAnimation,
+				["Face"] = int.Face,
+				["Head"] = int.Head,
+				["LeftArm"] = int.LeftArm,
+				["LeftLeg"] = int.LeftLeg,
+				["RightArm"] = int.RightArm,
+				["RightLeg"] = int.RightLeg,
+				["Torso"] = int.Torso,
+				["GraphicTShirt"] = int.GraphicTShirt,
+				["Pants"] = int.Pants,
+				["Shirt"] = int.Shirt,
+				["HeadColor"] = int.HeadColor,
+				["LeftArmColor"] = int.LeftArmColor,
+				["LeftLegColor"] = int.LeftLegColor,
+				["RightArmColor"] = int.RightArmColor,
+				["RightLegColor"] = int.RightLegColor,
+				["TorsoColor"] = int.TorsoColor
+			}
+
+			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
 		if int:IsA("Pants") then
 			local props = {
 				["Color3"] = int.Color3,
