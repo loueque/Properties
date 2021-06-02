@@ -2633,7 +2633,7 @@ end
 
 function Properties:ReadEnumerator(enum: Enum)
 	if assert(enum) then
-		return print(enum:GetEnumItems())
+		return enum:GetEnumItems()
 	end
 
 	return
@@ -2649,15 +2649,21 @@ function Properties:SetName(int: any, strName: string)
 	return
 end
 
-function Properties:GetName(int: any, strName: string | nil)
-	return print(int.Name) or strName
+function Properties:GetName(int: any)
+	return int.Name
 end
 
-function Properties:SetValue(int: any, value: number | nil)
-	return int == value
+function Properties:SetValue(int: any, value: any)
+	int = value
+
+	if int ~= value then
+		int = value
+	end
+
+	return int, value
 end
 
-function Properties:GetValue(int: any, value: number)
+function Properties:GetValue(value: any)
 	return value
 end
 
