@@ -40,6 +40,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int == game:GetService("Workspace") then
@@ -59,6 +63,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int == game:GetService("Players") then
@@ -77,6 +85,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int == game:GetService("CoreGui") then
@@ -90,6 +102,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int == game:GetService("CorePackages") then
@@ -101,6 +117,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int == game:GetService("Lighting") then
@@ -125,6 +145,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int == game:GetService("PluginDebugService") then
@@ -136,6 +160,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int == game:GetService("PluginGuiService") then
@@ -147,6 +175,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int == game:GetService("ReplicatedFirst") then
@@ -158,6 +190,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int == game:GetService("ReplicatedScriptService") then
@@ -169,6 +205,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int == game:GetService("ReplicatedStorage") then
@@ -180,6 +220,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int == game:GetService("ServerScriptService") then
@@ -191,6 +235,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int == game:GetService("ServerStorage") then
@@ -202,6 +250,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int == game:GetService("StarterGui") then
@@ -215,6 +267,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int == game:GetService("StarterPack") then
@@ -226,6 +282,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int == game:GetService("StarterPlayer") then
@@ -255,6 +315,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int == game:GetService("StarterPlayer").StarterCharacterScripts then
@@ -266,6 +330,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int == game:GetService("StarterPlayer").StarterPlayerScripts then
@@ -277,6 +345,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int == game:GetService("Teams") then
@@ -288,6 +360,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int == game:GetService("SoundService") then
@@ -304,6 +380,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int == game:GetService("Chat") then
@@ -317,6 +397,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int == game:GetService("LocalizationService") then
@@ -330,6 +414,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int == game:GetService("TestService") then
@@ -353,6 +441,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int == game:GetService("Debris") then
@@ -364,6 +456,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int:IsA("BasePart") then
@@ -403,6 +499,10 @@ function Properties:GetProperties(int: any)
 				}
 
 				print(props)
+
+				for g, v in pairs(int:GetAttributes()) do
+					print(g, ", ", v)
+				end
 			end
 
 			if int:IsA("CornerWedgePart") then
@@ -441,6 +541,10 @@ function Properties:GetProperties(int: any)
 				}
 
 				print(props)
+
+				for g, v in pairs(int:GetAttributes()) do
+					print(g, ", ", v)
+				end
 			end
 
 			if int:IsA("TrussPart") then
@@ -479,6 +583,10 @@ function Properties:GetProperties(int: any)
 				}
 
 				print(props)
+
+				for g, v in pairs(int:GetAttributes()) do
+					print(g, ", ", v)
+				end
 			end
 
 			if int:IsA("WedgePart") then
@@ -517,6 +625,10 @@ function Properties:GetProperties(int: any)
 				}
 
 				print(props)
+
+				for g, v in pairs(int:GetAttributes()) do
+					print(g, ", ", v)
+				end
 			end
 
 			if int:IsA("MeshPart") then
@@ -561,6 +673,10 @@ function Properties:GetProperties(int: any)
 				}
 
 				print(props)
+
+				for g, v in pairs(int:GetAttributes()) do
+					print(g, ", ", v)
+				end
 			end
 
 			if int:IsA("SpawnLocation") then
@@ -603,6 +719,10 @@ function Properties:GetProperties(int: any)
 				}
 
 				print(props)
+
+				for g, v in pairs(int:GetAttributes()) do
+					print(g, ", ", v)
+				end
 			end
 
 			if int:IsA("Terrain") then
@@ -623,6 +743,10 @@ function Properties:GetProperties(int: any)
 				}
 
 				print(props)
+
+				for g, v in pairs(int:GetAttributes()) do
+					print(g, ", ", v)
+				end
 			end
 
 			if int:IsA("Model") then
@@ -635,6 +759,10 @@ function Properties:GetProperties(int: any)
 				}
 
 				print(props)
+
+				for g, v in pairs(int:GetAttributes()) do
+					print(g, ", ", v)
+				end
 			end
 		end
 
@@ -657,6 +785,10 @@ function Properties:GetProperties(int: any)
 				}
 
 				print(props)
+
+				for g, v in pairs(int:GetAttributes()) do
+					print(g, ", ", v)
+				end
 			end
 
 			if int:IsA("Frame") then
@@ -686,6 +818,10 @@ function Properties:GetProperties(int: any)
 				}
 
 				print(props)
+
+				for g, v in pairs(int:GetAttributes()) do
+					print(g, ", ", v)
+				end
 			end
 
 			if int:IsA("ScrollingFrame") then
@@ -738,6 +874,10 @@ function Properties:GetProperties(int: any)
 				}
 
 				print(props)
+
+				for g, v in pairs(int:GetAttributes()) do
+					print(g, ", ", v)
+				end
 			end
 
 			if int:IsA("TextLabel") then
@@ -788,6 +928,10 @@ function Properties:GetProperties(int: any)
 				}
 
 				print(props)
+
+				for g, v in pairs(int:GetAttributes()) do
+					print(g, ", ", v)
+				end
 			end
 
 			if int:IsA("TextBox") then
@@ -845,6 +989,10 @@ function Properties:GetProperties(int: any)
 				}
 
 				print(props)
+
+				for g, v in pairs(int:GetAttributes()) do
+					print(g, ", ", v)
+				end
 			end
 
 			if int:IsA("TextButton") then
@@ -895,6 +1043,10 @@ function Properties:GetProperties(int: any)
 				}
 
 				print(props)
+
+				for g, v in pairs(int:GetAttributes()) do
+					print(g, ", ", v)
+				end
 			end
 
 			if int:IsA("ImageButton") then
@@ -942,6 +1094,10 @@ function Properties:GetProperties(int: any)
 				}
 
 				print(props)
+
+				for g, v in pairs(int:GetAttributes()) do
+					print(g, ", ", v)
+				end
 			end
 
 			if int:IsA("ImageLabel") then
@@ -987,6 +1143,10 @@ function Properties:GetProperties(int: any)
 				}
 
 				print(props)
+
+				for g, v in pairs(int:GetAttributes()) do
+					print(g, ", ", v)
+				end
 			end
 
 			if int:IsA("ViewportFrame") then
@@ -1029,6 +1189,10 @@ function Properties:GetProperties(int: any)
 				}
 
 				print(props)
+
+				for g, v in pairs(int:GetAttributes()) do
+					print(g, ", ", v)
+				end
 			end
 
 			if int:IsA("VideoFrame") then
@@ -1074,8 +1238,13 @@ function Properties:GetProperties(int: any)
 				}
 
 				print(props)
+
+				for g, v in pairs(int:GetAttributes()) do
+					print(g, ", ", v)
+				end
 			end
 		end
+
 		if int:IsA("Tool") then
 			local props = {
 				["GripForward"] = int.GripForward,
@@ -1095,6 +1264,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int:IsA("Sparkles") then
@@ -1108,6 +1281,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int:IsA("Explosion") then
@@ -1125,6 +1302,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int:IsA("ParticleEmitter") then
@@ -1157,6 +1338,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int:IsA("Fire") then
@@ -1173,6 +1358,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int:IsA("Smoke") then
@@ -1189,6 +1378,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int:IsA("Trail") then
@@ -1215,6 +1408,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int:IsA("Decal") then
@@ -1230,6 +1427,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int:IsA("Texture") then
@@ -1249,6 +1450,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int:IsA("SurfaceAppearance") then
@@ -1265,6 +1470,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int:IsA("Folder") then
@@ -1276,6 +1485,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int:IsA("Configuration") then
@@ -1287,6 +1500,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int:IsA("Accessory") then
@@ -1302,6 +1519,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int:IsA("BodyColors") then
@@ -1325,6 +1546,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int:IsA("ForceField") then
@@ -1337,6 +1562,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int:IsA("Humanoid") then
@@ -1378,6 +1607,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int:IsA("HumanoidDescription") then
@@ -1454,6 +1687,12 @@ function Properties:GetProperties(int: any)
 				["Parent"] = int.Parent,
 				["Archivable"] = int.Archivable
 			}
+
+			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int:IsA("ShirtGraphic") then
@@ -1465,6 +1704,12 @@ function Properties:GetProperties(int: any)
 				["Parent"] = int.Parent,
 				["Archivable"] = int.Archivable
 			}
+
+			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int:IsA("PointLight") then
@@ -1481,6 +1726,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int:IsA("SpotLight") then
@@ -1499,6 +1748,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int:IsA("SurfaceLight") then
@@ -1517,6 +1770,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int:IsA("Seat") then
@@ -1557,6 +1814,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int:IsA("VehicleSeat") then
@@ -1606,6 +1867,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int:IsA("Script") then
@@ -1618,6 +1883,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int:IsA("LocalScript") then
@@ -1630,6 +1899,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int:IsA("ModuleScript") then
@@ -1641,6 +1914,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int:IsA("BindableFunction") then
@@ -1652,6 +1929,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int:IsA("BindableEvent") then
@@ -1663,6 +1944,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int:IsA("RemoteFunction") then
@@ -1674,6 +1959,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int:IsA("RemoteEvent") then
@@ -1685,6 +1974,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int:IsA("Actor") then
@@ -1697,6 +1990,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int:IsA("WorldModel") then
@@ -1709,6 +2006,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int:IsA("SelectionBox") then
@@ -1727,6 +2028,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int:IsA("SelectionSphere") then
@@ -1744,6 +2049,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int:IsA("SurfaceSelection") then
@@ -1759,6 +2068,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int:IsA("Dialog") then
@@ -1780,6 +2093,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int:IsA("DialogChoice") then
@@ -1795,6 +2112,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int:IsA("Motor6D") then
@@ -1813,6 +2134,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int:IsA("Atmosphere") then
@@ -1830,6 +2155,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int:IsA("Clouds") then
@@ -1843,6 +2172,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int:IsA("Sky") then
@@ -1866,6 +2199,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int:IsA("ClickDetector") then
@@ -1879,6 +2216,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int:IsA("ProximityPrompt") then
@@ -1902,10 +2243,11 @@ function Properties:GetProperties(int: any)
 				["AutoLocalize"] = int.AutoLocalize
 			}
 
-			local t = {}
-			setmetatable(t, props)
+			print(props)
 
-			print(getmetatable(t))
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int:IsA("PackageLink") then
@@ -1924,6 +2266,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int:IsA("LocalizationTable") then
@@ -1936,6 +2282,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int:IsA("Sound") then
@@ -1966,6 +2316,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int:IsA("SoundGroup") then
@@ -1978,6 +2332,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int:IsA("BoolValue") then
@@ -1990,6 +2348,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int:IsA("BrickColorValue") then
@@ -2002,6 +2364,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int:IsA("CFrameValue") then
@@ -2013,6 +2379,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int:IsA("Color3Value") then
@@ -2025,6 +2395,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int:IsA("IntValue") then
@@ -2037,6 +2411,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int:IsA("NumberValue") then
@@ -2049,6 +2427,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int:IsA("ObjectValue") then
@@ -2061,6 +2443,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int:IsA("RayValue") then
@@ -2072,6 +2458,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int:IsA("StringValue") then
@@ -2084,6 +2474,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int:IsA("Vector3Value") then
@@ -2096,6 +2490,10 @@ function Properties:GetProperties(int: any)
 			}
 
 			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 	end
 
