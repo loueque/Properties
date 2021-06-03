@@ -2,6 +2,7 @@
 
 local Properties = {}
 Properties.__index = {}
+--> Optional: Properties.ClassName = "Properties"
 
 function Properties:GetProperties(int: any)
 	local function r(i, p)
@@ -1299,6 +1300,52 @@ function Properties:GetProperties(int: any)
 			end
 		end
 
+		if int:IsA("UIGridLayout") then
+			local props = {
+				["CellPadding"] = int.CellPadding,
+				["CellSize"] = int.CellSize,
+				["AbsoluteCellCount"] = int.AbsoluteCellCount,
+				["AbsoluteCellSize"] = int.AbsoluteCellSize,
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Archivable"] = int.Archivable,
+				["FillDirection"] = int.FillDirection,
+				["FillDirectionMaxCells"] = int.FillDirectionMaxCells,
+				["HorizontalAlignment"] = int.HorizontalAlignment,
+				["SortOrder"] = int.SortOrder,
+				["StartCorner"] = int.StartCorner,
+				["VerticalAlignment"] = int.VerticalAlignment
+			}
+
+			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if int:IsA("UIListLayout") then
+			local props = {
+				["Padding"] = int.Padding,
+				["AbsoluteContentSize"] = int.AbsoluteContentSize,
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Archivable"] = int.Archivable,
+				["FillDirection"] = int.FillDirection,
+				["HorizontalAlignment"] = int.HorizontalAlignment,
+				["SortOrder"] = int.SortOrder,
+				["VerticalAlignment"] = int.VerticalAlignment
+			}
+
+			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
 		if int:IsA("UIPadding") then
 			local props = {
 				["ClassName"] = int.ClassName,
@@ -1309,6 +1356,33 @@ function Properties:GetProperties(int: any)
 				["PaddingLeft"] = int.PaddingLeft,
 				["PaddingRight"] = int.PaddingRight,
 				["PaddingTop"] = int.PaddingTop
+			}
+
+			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if int:IsA("UIPageLayout") then
+			local props = {
+				["Animated"] = int.Animated,
+				["Circular"] = int.Circular,
+				["EasingDirection"] = int.EasingDirection,
+				["EasingStyle"] = int.EasingStyle,
+				["Padding"] = int.Padding,
+				["TweenTime"] = int.TweenTime,
+				["AbsoluteContentSize"] = int.AbsoluteContentSize,
+				["ClassName"] = int.ClassName,
+				["CurrentPage"] = int.CurrentPage,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Archivable"] = int.Archivable,
+				["FillDirection"] = int.FillDirection,
+				["HorizontalAlignment"] = int.HorizontalAlignment,
+				["SortOrder"] = int.SortOrder,
+				["VerticalAlignment"] = int.VerticalAlignment
 			}
 
 			print(props)
@@ -1334,6 +1408,23 @@ function Properties:GetProperties(int: any)
 			end
 		end
 
+		if int:IsA("UISizeConstraint") then
+			local props = {
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Archivable"] = int.Archivable,
+				["MaxSize"] = int.MaxSize,
+				["MinSize"] = int.MinSize
+			}
+
+			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
 		if int:IsA("UIStroke") then
 			local props = {
 				["ApplyStrokeMode"] = int.ApplyStrokeMode,
@@ -1346,6 +1437,30 @@ function Properties:GetProperties(int: any)
 				["Name"] = int.Name,
 				["Parent"] = int.Parent,
 				["Archivable"] = int.Archivable
+			}
+
+			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if int:IsA("UITableLayout") then
+			local props = {
+				["FillEmptySpaceColumns"] = int.FillEmptySpaceColumns,
+				["FillEmptySpaceRows"] = int.FillEmptySpaceRows,
+				["Padding"] = int.Padding,
+				["AbsoluteContentSize"] = int.AbsoluteContentSize,
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Archivable"] = int.Archivable,
+				["FillDirection"] = int.FillDirection,
+				["HorizontalAlignment"] = int.HorizontalAlignment,
+				["MajorAxis"] = int.MajorAxis,
+				["SortOrder"] = int.SortOrder,
+				["VerticalAlignment"] = int.VerticalAlignment
 			}
 
 			print(props)
