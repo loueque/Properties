@@ -2300,6 +2300,48 @@ function Properties:GetProperties(int: any)
 			end
 		end
 
+		if int:IsA("VectorForce") then
+			local props = {
+				["Color"] = int.Color,
+				["Visible"] = int.Visible,
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Active"] = int.Active,
+				["Archivable"] = int.Archivable,
+				["Enabled"] = int.Enabled,
+				["ApplyAtCenterOfMass"] = int.ApplyAtCenterOfMass,
+				["Force"] = int.Force,
+				["RelativeTo"] = int.RelativeTo,
+				["Attachment0"] = int.Attachment0
+			}
+
+			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if int:IsA("WeldConstraint") then
+			local props = {
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Active"] = int.Active,
+				["Archivable"] = int.Archivable,
+				["Enabled"] = int.Enabled,
+				["Part0"] = int.Part,
+				["Part1"] = int.Part
+			}
+
+			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
 		if int:IsA("PointLight") then
 			local props = {
 				["Brightness"] = int.Brightness,
