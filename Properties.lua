@@ -1939,12 +1939,66 @@ function Properties:GetProperties(int: any)
 
 		if int:IsA("ShirtGraphic") then
 			local props = {
-				["Color3"] = int.Color3,
+				["Color"] = int.Color,
 				["Graphic"] = int.Graphic,
 				["ClassName"] = int.ClassName,
 				["Name"] = int.Name,
 				["Parent"] = int.Parent,
 				["Archivable"] = int.Archivable
+			}
+
+			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if int:IsA("AlignOrientation") then
+			local props = {
+				["Color"] = int.Color,
+				["Visible"] = int.Visible,
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Active"] = int.Active,
+				["Archivable"] = int.Archivable,
+				["Enabled"] = int.Enabled,
+				["PrimaryAxisOnly"] = int.PrimaryAxisOnly,
+				["ReactionTorqueEnabled"] = int.ReactionTorqueEnabled,
+				["RigidtyEnabled"] = int.RigidityEnabled,
+				["MaxAngularVelocity"] = int.MaxAngularVelocity,
+				["MaxTorque"] = int.MaxTorque,
+				["Responsiveness"] = int.Responsiveness,
+				["Attachment0"] = int.Attachment0,
+				["Attachment1"] = int.Attachment1
+			}
+
+			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if int:IsA("AlignPosition") then
+			local props = {
+				["Color"] = int.Color,
+				["Visible"] = int.Visible,
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Active"] = int.Active,
+				["Archivable"] = int.Archivable,
+				["Enabled"] = int.Enabled,
+				["MaxForce"] = int.MaxAngularVelocity,
+				["MaxVelocity"] = int.MaxTorque,
+				["Responsiveness"] = int.Responsiveness,
+				["ApplyAtCenterOfMass"] = int.ApplyAtCenterOfMass,
+				["ReactionTorqueEnabled"] = int.ReactionTorqueEnabled,
+				["RigidtyEnabled"] = int.RigidityEnabled,
+				["Attachment0"] = int.Attachment0,
+				["Attachment1"] = int.Attachment1
 			}
 
 			print(props)
