@@ -2503,6 +2503,138 @@ function Properties:GetProperties(int: any)
 			end
 		end
 
+		if int:IsA("BodyAngularVelocity") then
+			local props = {
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Archivable"] = int.Archivable,
+				["AngularVelocity"] = int.AngularVelocity,
+				["MaxTorque"] = int.MaxTorque,
+				["P"] = int.P
+			}
+
+			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if int:IsA("BodyForce") then
+			local props = {
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Archivable"] = int.Archivable,
+				["Force"] = int.Force,
+			}
+
+			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if int:IsA("BodyGyro") then
+			local props = {
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Archivable"] = int.Archivable,
+				["D"] = int.D,
+				["MaxTorque"] = int.MaxTorque,
+				["P"] = int.P
+			}
+
+			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if int:IsA("BodyPosition") then
+			local props = {
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Archivable"] = int.Archivable,
+				["D"] = int.D,
+				["MaxTorque"] = int.MaxTorque,
+				["P"] = int.P,
+				["Position"] = int.Position
+			}
+
+			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if int:IsA('BodyThrust') then
+			local props = {
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Archivable"] = int.Archivable,
+				["Force"] = int.Force,
+				["Location"] = int.Location
+			}
+
+			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if int:IsA("BodyVelocity") then
+			local props = {
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Archivable"] = int.Archivable,
+				["MaxTorque"] = int.MaxTorque,
+				["P"] = int.P,
+				["Velocity"] = int.Velocity
+			}
+
+			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if int:IsA("RocketPropulsion") then
+			local props = {
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Archivable"] = int.Archivable,
+				["CartoonFactor"] = int.CartoonFactor,
+				["Target"] = int.Target,
+				["TargetOffset"] = int.TargetOffset,
+				["TargetRadius"] = int.TargetRadius,
+				["MaxSpeed"] = int.MaxSpeed,
+				["MaxThrust"] = int.MaxThrust,
+				["ThrustD"] = int.ThrustD,
+				["ThrustP"] = int.ThrustP,
+				["MaxTorque"] = int.MaxTorque,
+				["TurnD"] = int.TurnD,
+				["TurnP"] = int.TurnP
+			}
+
+			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
 		if int:IsA("Script") then
 			local props = {
 				["ClassName"] = int.ClassName,
