@@ -17,6 +17,7 @@ function Properties:GetProperties(int: any)
 
 	local function d(d)
 		local cd = table.create(#d)
+		print(cd)
 
 		return table.unpack(d), d == nil
 	end
@@ -2162,7 +2163,7 @@ function Properties:GetProperties(int: any)
 				["Active"] = int.Active,
 				["Archivable"] = int.Archivable,
 				["Enabled"] = int.Enabled,
-				["Length"] = int.MinLength
+				["Length"] = int.MinLength,
 				["LimitsEnabled"] = int.LimitsEnabled,
 				["Attachment0"] = int.Attachment0,
 				["Attachment1"] = int.Attachment1
@@ -2186,7 +2187,7 @@ function Properties:GetProperties(int: any)
 				["Active"] = int.Active,
 				["Archivable"] = int.Archivable,
 				["Enabled"] = int.Enabled,
-				["Length"] = int.MinLength
+				["Length"] = int.MinLength,
 				["Resitution"] = int.Resitution,
 				["Attachment0"] = int.Attachment0,
 				["Attachment1"] = int.Attachment1
@@ -3267,7 +3268,7 @@ function Properties:GetProperties(int: any)
 end
 
 function Properties:ReadEnumerator(enum: Enum)
-	if assert(enum) then
+	if assert(enum, "nil") then
 		return enum:GetEnumItems()
 	end
 
