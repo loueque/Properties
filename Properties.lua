@@ -15,11 +15,14 @@ function Properties:GetProperties(int: any)
 		return print(table.unpack(t)), print(table.getn(t))
 	end
 
-	local function d(d)
-		local cd = table.create(#d)
-		print(cd)
+	local function Length(Table)
+		local counter = 0 
 
-		return table.unpack(d), d == nil
+		for _, _ in pairs(Table) do
+			counter += 1
+		end
+
+		return counter
 	end
 
 	if int:IsA("Instance") then
@@ -2767,6 +2770,177 @@ function Properties:GetProperties(int: any)
 				["PrimaryPart"] = int.PrimaryPart,
 				["Archivable"] = int.Archivable
 			}
+
+			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if int:IsA("ArcHandles") then
+			local props = {
+				["Color3"] = int.Color3,
+				["Transparency"] = int.Transparency,
+				["Adornee"] = int.Adornee,
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Visible"] = int.Visible,
+				["Archivable"] = int.Archivable
+			}
+
+			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if int:IsA("BoxHandleAdornment") then
+			local props = {
+				["Color3"] = int.Color3,
+				["Transparency"] = int.Transparency,
+				["AdornCullingMode"] = int.AdornCullingMode,
+				["Adornee"] = int.Adornee,
+				["AlwaysOnTop"] = int.AlwaysOnTop,
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Size"] = int.Size,
+				["SizeRelativeOffset"] = int.SizeRelativeOffset,
+				["Visible"] = int.Visible,
+				["ZIndex"] = int.ZIndex,
+				["Archivable"] = int.Archivable
+			}
+
+			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if int:IsA("ConeHandleAdornment") then
+			local props = {
+				["Color3"] = int.Color3,
+				["Transparency"] = int.Transparency,
+				["AdornCullingMode"] = int.AdornCullingMode,
+				["Adornee"] = int.Adornee,
+				["AlwaysOnTop"] = int.AlwaysOnTop,
+				["ClassName"] = int.ClassName,
+				["Height"] = int.Height,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Radius"] = int.Radius,
+				["SizeRelativeOffset"] = int.SizeRelativeOffset,
+				["Visible"] = int.Visible,
+				["ZIndex"] = int.ZIndex,
+				["Archivable"] = int.Archivable
+			}
+
+			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if int:IsA("CylinderHandleAdornment") then
+			local props = {
+				["Color3"] = int.Color3,
+				["Transparency"] = int.Transparency,
+				["AdornCullingMode"] = int.AdornCullingMode,
+				["Adornee"] = int.Adornee,
+				["AlwaysOnTop"] = int.AlwaysOnTop,
+				["Angle"] = int.Angle,
+				["ClassName"] = int.ClassName,
+				["Height"] = int.Height,
+				["InnerRadius"] = int.InnerRadius,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Radius"] = int.Radius,
+				["SizeRelativeOffset"] = int.SizeRelativeOffset,
+				["Visible"] = int.Visible,
+				["ZIndex"] = int.ZIndex,
+				["Archivable"] = int.Archivable
+			}
+
+			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if int:IsA("ImageHandleAdornment") then
+			local props = {
+				["Color3"] = int.Color3,
+				["Transparency"] = int.Transparency,
+				["AdornCullingMode"] = int.AdornCullingMode,
+				["Adornee"] = int.Adornee,
+				["AlwaysOnTop"] = int.AlwaysOnTop,
+				["ClassName"] = int.ClassName,
+				["Image"] = int.Image,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Size"] = int.Size,
+				["SizeRelativeOffset"] = int.SizeRelativeOffset,
+				["Visible"] = int.Visible,
+				["ZIndex"] = int.ZIndex,
+				["Archivable"] = int.Archivable
+			}
+
+			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if int:IsA("LineHandleAdornment") then
+			local props = {
+				["Color3"] = int.Color3,
+				["Transparency"] = int.Transparency,
+				["AdornCullingMode"] = int.AdornCullingMode,
+				["Adornee"] = int.Adornee,
+				["AlwaysOnTop"] = int.AlwaysOnTop,
+				["ClassName"] = int.ClassName,
+				["Length"] = int.Length,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Size"] = int.Size,
+				["SizeRelativeOffset"] = int.SizeRelativeOffset,
+				["Visible"] = int.Visible,
+				["ZIndex"] = int.ZIndex,
+				["Archivable"] = int.Archivable
+			}
+
+			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if int:IsA("SphereHandleAdornment") then
+			local props = {
+				["Color3"] = int.Color3,
+				["Transparency"] = int.Transparency,
+				["AdornCullingMode"] = int.AdornCullingMode,
+				["Adornee"] = int.Adornee,
+				["AlwaysOnTop"] = int.AlwaysOnTop,
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Radius"] = int.Radius,
+				["SizeRelativeOffset"] = int.SizeRelativeOffset,
+				["Visible"] = int.Visible,
+				["ZIndex"] = int.ZIndex,
+				["Archivable"] = int.Archivable
+			}
+
+			print("There are " .. Length(props) .. " properties for " .. int.Name)
 
 			print(props)
 
