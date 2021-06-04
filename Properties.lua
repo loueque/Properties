@@ -5,16 +5,6 @@ Properties.__index = {}
 --> Optional: Properties.ClassName = "Properties"
 
 function Properties:GetProperties(int: any)
-	local function r(i, p)
-		local t = table.create(#p)
-
-		for I,v in ipairs(p) do
-			t[I] = i[v]
-		end
-
-		return print(table.unpack(t)), print(table.getn(t))
-	end
-
 	local function Length(Table)
 		local counter = 0 
 
