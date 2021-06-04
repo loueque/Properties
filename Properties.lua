@@ -2008,6 +2008,130 @@ function Properties:GetProperties(int: any)
 			end
 		end
 
+		if int:IsA("AngularVelocity") then
+			local props = {
+				["Color"] = int.Color,
+				["Visible"] = int.Visible,
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Active"] = int.Active,
+				["Archivable"] = int.Archivable,
+				["Enabled"] = int.Enabled,
+				["AngularVelocity"] = int.AngularVelocity
+				["MaxTorque"] = int.MaxTorque,
+				["RelativeTo"] = int.RelativeTo,
+				["Attachment0"] = int.Attachment0
+			}
+
+			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if int:IsA("BallSocketConstraint") then
+			local props = {
+				["Color"] = int.Color,
+				["Radius"] = int.Radius,
+				["Visible"] = int.Visible,
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Active"] = int.Active,
+				["Archivable"] = int.Archivable,
+				["Enabled"] = int.Enabled,
+				["LimitsEnabled"] = int.LimitsEnabled,
+				["MaxFrictionTorque"] = int.MaxFrictionTorque,
+				["Attachment0"] = int.Attachment0,
+				["Attachment1"] = int.Attachment1
+			}
+
+			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if int:IsA("CylindricalConstraint") then
+			local props = {
+				["Color"] = int.Color,
+				["RotationAxisVisible"] = int.RotationAxisVisible,
+				["Size"] = int.Size,
+				["Visible"] = int.Visible,
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Active"] = int.Active,
+				["Archivable"] = int.Archivable,
+				["Enabled"] = int.Enabled,
+				["AngularActuatorType"] = int.AngularActuatorType,
+				["AngularLimitsEnabled"] = int.AngularLimitsEnabled,
+				["InclinationAngle"] = int.InclinationAngle,
+				["ActuatorType"] = int.ActuatorType,
+				["LimitsEnabled"] = int.LimitsEnabled,
+				["Attachment0"] = int.Attachment0,
+				["Attachment1"] = int.Attachment1
+			}
+
+			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if int:IsA("HingeConstraint") then
+			local props = {
+				["Color"] = int.Color,
+				["Radius"] = int.Radius,
+				["Visible"] = int.Visible,
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Active"] = int.Active,
+				["Archivable"] = int.Archivable,
+				["Enabled"] = int.Enabled,
+				["ActuatorType"] = int.ActuatorType,
+				["LimitsEnabled"] = int.LimitsEnabled,
+				["Attachment0"] = int.Attachment0,
+				["Attachment1"] = int.Attachment1
+			}
+
+			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if int:IsA("LineForce") then
+			local props = {
+				["Color"] = int.Color,
+				["Visible"] = int.Visible,
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Active"] = int.Active,
+				["Archivable"] = int.Archivable,
+				["Enabled"] = int.Enabled,
+				["ApplyAtCenterOfMass"] = int.ApplyAtCenterOfMass,
+				["InverseSquareLaw"] = int.InverseSquareLaw,
+				["Magnitude"] = int.Magnitude,
+				["ReactionForceEnabled"] = int.ReactionForceEnabled,
+				["Attachment0"] = int.Attachment0,
+				["Attachment1"] = int.Attachment1
+			}
+
+			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
 		if int:IsA("PointLight") then
 			local props = {
 				["Brightness"] = int.Brightness,
