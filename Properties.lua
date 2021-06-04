@@ -2018,7 +2018,7 @@ function Properties:GetProperties(int: any)
 				["Active"] = int.Active,
 				["Archivable"] = int.Archivable,
 				["Enabled"] = int.Enabled,
-				["AngularVelocity"] = int.AngularVelocity
+				["AngularVelocity"] = int.AngularVelocity,
 				["MaxTorque"] = int.MaxTorque,
 				["RelativeTo"] = int.RelativeTo,
 				["Attachment0"] = int.Attachment0
