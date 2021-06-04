@@ -2132,6 +2132,174 @@ function Properties:GetProperties(int: any)
 			end
 		end
 
+		if int:IsA("NoCollisionConstraint") then
+			local props = {
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Active"] = int.Active,
+				["Archivable"] = int.Archivable,
+				["Enabled"] = int.Enabled,
+				["Part0"] = int.Part,
+				["Part1"] = int.Part
+			}
+
+			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if int:IsA("RodConstraint") then
+			local props = {
+				["Color"] = int.Color,
+				["Thickness"] = int.Thickness,
+				["Visible"] = int.Visible,
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Active"] = int.Active,
+				["Archivable"] = int.Archivable,
+				["Enabled"] = int.Enabled,
+				["Length"] = int.MinLength
+				["LimitsEnabled"] = int.LimitsEnabled,
+				["Attachment0"] = int.Attachment0,
+				["Attachment1"] = int.Attachment1
+			}
+
+			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if int:IsA("RopeConstraint") then
+			local props = {
+				["Color"] = int.Color,
+				["Thickness"] = int.Thickness,
+				["Visible"] = int.Visible,
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Active"] = int.Active,
+				["Archivable"] = int.Archivable,
+				["Enabled"] = int.Enabled,
+				["Length"] = int.MinLength
+				["Resitution"] = int.Resitution,
+				["Attachment0"] = int.Attachment0,
+				["Attachment1"] = int.Attachment1
+			}
+
+			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if int:IsA("SpringConstraint") then
+			local props = {
+				["Coils"] = int.Coils,
+				["Color"] = int.Color,
+				["Radius"] = int.Radius,
+				["Thickness"] = int.Thickness,
+				["Visible"] = int.Visible,
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Active"] = int.Active,
+				["Archivable"] = int.Archivable,
+				["Enabled"] = int.Enabled,
+				["Damping"] = int.Damping,
+				["FreeLength"] = int.FreeLength,
+				["LimitsEnabled"] = int.LimitsEnabled,
+				["MaxForce"] = int.MaxForce,
+				["Stiffness"] = int.Stiffness,
+				["Attachment0"] = int.Attachment0,
+				["Attachment1"] = int.Attachment1
+			}
+
+			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if int:IsA("Torque") then
+			local props = {
+				["Color"] = int.Color,
+				["Visible"] = int.Visible,
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Active"] = int.Active,
+				["Archivable"] = int.Archivable,
+				["Enabled"] = int.Enabled,
+				["RelativeTo"] = int.RelativeTo,
+				["Torque"] = int.Torque,
+				["Attachment0"] = int.Attachment0
+			}
+
+			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if int:IsA("TorsionSpringConstraint") then
+			local props = {
+				["Coils"] = int.Coils,
+				["Color"] = int.Color,
+				["Radius"] = int.Radius,
+				["Visible"] = int.Visible,
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Active"] = int.Active,
+				["Archivable"] = int.Archivable,
+				["Enabled"] = int.Enabled,
+				["Damping"] = int.Damping,
+				["LimitsEnabled"] = int.LimitsEnabled,
+				["MaxForce"] = int.MaxForce,
+				["Stiffness"] = int.Stiffness,
+				["Attachment0"] = int.Attachment0,
+				["Attachment1"] = int.Attachment1
+			}
+
+			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if int:IsA("UniversalConstraint") then
+			local props = {
+				["Color"] = int.Color,
+				["Radius"] = int.Radius,
+				["Visible"] = int.Visible,
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Active"] = int.Active,
+				["Archivable"] = int.Archivable,
+				["Enabled"] = int.Enabled,
+				["LimitsEnabled"] = int.LimitsEnabled,
+				["Attachment0"] = int.Attachment0,
+				["Attachment1"] = int.Attachment1
+			}
+
+			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
 		if int:IsA("PointLight") then
 			local props = {
 				["Brightness"] = int.Brightness,
