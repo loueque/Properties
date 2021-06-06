@@ -3259,6 +3259,10 @@ function Properties:GetProperties(int: any)
 			end
 		end
 
+		if int:IsA("SunRaysEffect") then
+			
+		end
+
 		if int:IsA("ClickDetector") then
 			local props = {
 				["ClassName"] = int.ClassName,
@@ -3387,6 +3391,197 @@ function Properties:GetProperties(int: any)
 				["Name"] = int.Name,
 				["Parent"] = int.Parent,
 				["Volume"] = int.Volume,
+				["Archivable"] = int.Archivable
+			}
+
+			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if int:IsA("ChorusSoundEffect") then
+			local props = {
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Depth"] = int.Depth,
+				["Enabled"] = int.Enabled,
+				["Mix"] = int.Mix,
+				["Priority"] = int.Priority,
+				["Rate"] = int.Rate,
+				["Archivable"] = int.Archivable
+			}
+
+			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if int:IsA("DistortionSoundEffect") then
+			local props = {
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Enabled"] = int.Enabled,
+				["Level"] = int.Level,
+				["Priority"] = int.Priority,
+				["Archivable"] = int.Archivable
+			}
+
+			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if int:IsA("CompressorSoundEffect") then
+			local props = {
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Attack"] = int.Attack,
+				["Enabled"] = int.Enabled,
+				["GainMakeup"] = int.GainMakeup,
+				["Priority"] = int.Priority,
+				["Ratio"] = int.Ratio,
+				["Release"] = int.Release,
+				["SideChain"] = int.SideChain,
+				["Threshold"] = int.Threshold,
+				["Archivable"] = int.Archivable
+			}
+
+			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if int:IsA("EchoSoundEffect") then
+			local props = {
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Delay"] = int.Delay,
+				["DryLevel"] = int.DryLevel,
+				["Enabled"] = int.Enabled,
+				["Feedback"] = int.Feedback,
+				["Priority"] = int.Priority,
+				["WetLevel"] = int.Level,
+				["Archivable"] = int.Archivable
+			}
+
+			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if int:IsA("EqualizerSoundEffect") then
+			local props = {
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Enabled"] = int.Enabled,
+				["HighGain"] = int.HighGain,
+				["LowGain"] = int.LowGain,
+				["MidGain"] = int.MidGain,
+				["Priority"] = int.Priority,
+				["Archivable"] = int.Archivable
+			}
+
+			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if int:IsA("FlangeSoundEffect") then
+			local props = {
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Depth"] = int.Depth,
+				["Enabled"] = int.Enabled,
+				["Mix"] = int.Mix,
+				["Priority"] = int.Priority,
+				["Rate"] = int.Rate,
+				["Archivable"] = int.Archivable
+			}
+
+			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if int:IsA("PitchShiftSoundEffect") then
+			local props = {
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Enabled"] = int.Enabled,
+				["Octave"] = int.Octave,
+				["Priority"] = int.Priority,
+				["Archivable"] = int.Archivable
+			}
+
+			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if int:IsA("ReverbSoundEffect") then
+			local props = {
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["DecayTime"] = int.DecayTime,
+				["Density"] = int.Density,
+				["Diffusion"] = int.Diffusion,
+				["DryLevel"] = int.DryLevel,
+				["Enabled"] = int.Enabled,
+				["Priority"] = int.Priority,
+				["WetLevel"] = int.WetLevel,
+				["Archivable"] = int.Archivable
+			}
+
+			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if int:IsA("TremeloSoundEffect") then
+			local props = {
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Depth"] = int.Depth,
+				["Duty"] = int.Duty,
+				["Enabled"] = int.Enabled,
+				["Frequency"] = int.Frequency,
+				["Priority"] = int.Priority,
 				["Archivable"] = int.Archivable
 			}
 
