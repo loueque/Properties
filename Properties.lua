@@ -3260,7 +3260,102 @@ function Properties:GetProperties(int: any)
 		end
 
 		if int:IsA("SunRaysEffect") then
-			
+			local props = {
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Enabled"] = int.Enabled,
+				["Intensity"] = int.Intensity,
+				["Spread"] = int.Spread,
+				["Archivable"] = int.Archivable
+			}
+
+			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if int:IsA("BloomEffect") then
+			local props = {
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Enabled"] = int.Enabled,
+				["Intensity"] = int.Intensity,
+				["Size"] = int.Size,
+				["Threshold"] = int.Threshold,
+				["Archivable"] = int.Archivable
+			}
+
+			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if int:IsA("BlurEffect") then
+			local props = {
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Enabled"] = int.Enabled,
+				["Size"] = int.Size,
+				["Archivable"] = int.Archivable
+			}
+
+			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if int:IsA("ColorCorrectionEffect") then
+			local props = {
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Brightness"] = int.Brightness,
+				["Contrast"] = int.Contrast,
+				["Enabled"] = int.Enabled,
+				["Saturation"] = int.Saturation,
+				["TintColor"] = int.TintColor,
+				["Archivable"] = int.Archivable
+			}
+
+			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if int:IsA("DepthOfFieldEffect") then
+			local props = {
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Enabled"] = int.Enabled,
+				["FarIntensity"] = int.FarIntensity,
+				["FocusDistance"] = int.FocusDistance,
+				["InFocusRadius"] = int.InFocusRadius,
+				["NearIntensity"] = int.NearIntensity,
+				["Archivable"] = int.Archivable
+			}
+
+			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
 		end
 
 		if int:IsA("ClickDetector") then
@@ -3340,6 +3435,47 @@ function Properties:GetProperties(int: any)
 				["Parent"] = int.Parent,
 				["Archivable"] = int.Archivable,
 				["SourceLocaleId"] = int.SourceLocaleId
+			}
+
+			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if int:IsA("BlockMesh") then
+			local props = {
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Offset"] = int.Offset,
+				["Parent"] = int.Parent,
+				["Scale"] = int.Scale,
+				["VertexColor"] = int.VertexColor,
+				["Archivable"] = int.Archivable
+			}
+
+			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if int:IsA("SpecialMesh") then
+			local props = {
+				["ClassName"] = int.ClassName,
+				["MeshId"] = int.MeshId,
+				["MeshType"] = int.MeshType,
+				["Name"] = int.Name,
+				["Offset"] = int.Offset,
+				["Parent"] = int.Parent,
+				["Scale"] = int.Scale,
+				["TextureId"] = int.TextureId,
+				["VertexColor"] = int.VertexColor,
+				["Archivable"] = int.Archivable
 			}
 
 			print("There are " .. Length(props) .. " properties for " .. int.Name)
