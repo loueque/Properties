@@ -3708,7 +3708,7 @@ function Properties:GetProperties(int: any)
 			end
 		end
 
-		if int:IsA("TremeloSoundEffect") then
+		if int:IsA("TremoloSoundEffect") then
 			local props = {
 				["ClassName"] = int.ClassName,
 				["Name"] = int.Name,
