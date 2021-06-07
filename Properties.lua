@@ -2415,8 +2415,48 @@ function Properties:GetProperties(int: any)
 				["Active"] = int.Active,
 				["Archivable"] = int.Archivable,
 				["Enabled"] = int.Enabled,
-				["Part0"] = int.Part,
-				["Part1"] = int.Part
+				["Part0"] = int.Part0,
+				["Part1"] = int.Part1
+			}
+
+			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if int:IsA("Weld") then
+			local props = {
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Part0"] = int.Part0,
+				["Part1"] = int.Part1,
+				["Active"] = int.Active,
+				["Archivable"] = int.Archivable,
+				["Enabled"] = int.Enabled
+			}
+
+			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if int:IsA("Snap") then
+			local props = {
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Part0"] = int.Part0,
+				["Part1"] = int.Part1,
+				["Active"] = int.Active,
+				["Archivable"] = int.Archivable,
+				["Enabled"] = int.Enabled
 			}
 
 			print("There are " .. Length(props) .. " properties for " .. int.Name)
@@ -3887,6 +3927,50 @@ function Properties:GetProperties(int: any)
 				["Parent"] = int.Parent,
 				["Value"] = int.Value,
 				["Archivable"] = int.Archivable
+			}
+
+			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if int:IsA("WrapLayer") then
+			local props = {
+				["CageMeshId"] = int.CageMeshId,
+				["Order"] = int.Order,
+				["Puffiness"] = int.Puffiness,
+				["ReferenceMeshId"] = int.ReferenceMeshId,
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Archivable"] = int.Archivable,
+				["Enabled"] = int.Enabled,
+				["ShrinkFactor"] = int.ShrinkFactor,
+				["Color"] = int.Color,
+				["DebugMode"] = int.DebugMode
+			}
+
+			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print(props)
+
+			for g, v in pairs(int:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if int:IsA("WrapTarget") then
+			local props = {
+				["CageMeshId"] = int.CageMeshId,
+				["Stiffness"] = int.Stiffness,
+				["ClassName"] = int.ClassName,
+				["Name"] = int.Name,
+				["Parent"] = int.Parent,
+				["Archivable"] = int.Archivable,
+				["Color"] = int.Color,
+				["DebugMode"] = int.DebugMode
 			}
 
 			print("There are " .. Length(props) .. " properties for " .. int.Name)
