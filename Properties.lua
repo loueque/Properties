@@ -5,7 +5,7 @@ Properties.__index = {}
 --> Optional: Properties.ClassName = "Properties"
 
 function Properties:GetProperties(int: any)
-	local function Length(Table)
+	local function length(Table)
 		local counter = 0 
 
 		for _, _ in pairs(Table) do
@@ -34,7 +34,7 @@ function Properties:GetProperties(int: any)
 				["Parent"] = int.Parent
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -58,7 +58,7 @@ function Properties:GetProperties(int: any)
 				["StreamingEnabled"] = int.StreamingEnabled
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -81,7 +81,7 @@ function Properties:GetProperties(int: any)
 				["CharacterAutoLoads"] = int.CharacterAutoLoads
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -99,8 +99,8 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -116,7 +116,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -145,7 +145,7 @@ function Properties:GetProperties(int: any)
 				["ExposureCompensation"] = int.ExposureCompensation
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -161,7 +161,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -177,8 +177,8 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -194,7 +194,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -210,7 +210,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -226,7 +226,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -242,7 +242,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -258,7 +258,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -276,7 +276,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable,
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -292,7 +292,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -326,7 +326,7 @@ function Properties:GetProperties(int: any)
 				["EnableMouseLockOption"] = int.EnableMouseLockOption
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -342,7 +342,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -358,7 +358,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -374,7 +374,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -395,7 +395,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -413,7 +413,7 @@ function Properties:GetProperties(int: any)
 				["LoadDefaultChat"] = int.LoadDefaultChat
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -431,7 +431,7 @@ function Properties:GetProperties(int: any)
 				["SystemLocaleId"] = int.SystemLocaleId
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -459,7 +459,7 @@ function Properties:GetProperties(int: any)
 				["Timeout"] = int.Timeout
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -475,7 +475,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -519,7 +519,7 @@ function Properties:GetProperties(int: any)
 					["AssemblyRootPart"] = int.AssemblyRootPart
 				}
 
-				print("There are " .. Length(props) .. " properties for " .. int.Name)
+				print("There are " .. length(props) .. " properties for " .. int.Name)
 				print(props)
 
 				for g, v in pairs(int:GetAttributes()) do
@@ -562,7 +562,7 @@ function Properties:GetProperties(int: any)
 					["AssemblyRootPart"] = int.AssemblyRootPart
 				}
 
-				print("There are " .. Length(props) .. " properties for " .. int.Name)
+				print("There are " .. length(props) .. " properties for " .. int.Name)
 				print(props)
 
 				for g, v in pairs(int:GetAttributes()) do
@@ -605,7 +605,7 @@ function Properties:GetProperties(int: any)
 					["AssemblyRootPart"] = int.AssemblyRootPart
 				}
 
-				print("There are " .. Length(props) .. " properties for " .. int.Name)
+				print("There are " .. length(props) .. " properties for " .. int.Name)
 				print(props)
 
 				for g, v in pairs(int:GetAttributes()) do
@@ -648,7 +648,7 @@ function Properties:GetProperties(int: any)
 					["AssemblyRootPart"] = int.AssemblyRootPart
 				}
 
-				print("There are " .. Length(props) .. " properties for " .. int.Name)
+				print("There are " .. length(props) .. " properties for " .. int.Name)
 				print(props)
 
 				for g, v in pairs(int:GetAttributes()) do
@@ -697,7 +697,7 @@ function Properties:GetProperties(int: any)
 					["AssemblyRootPart"] = int.AssemblyRootPart
 				}
 
-				print("There are " .. Length(props) .. " properties for " .. int.Name)
+				print("There are " .. length(props) .. " properties for " .. int.Name)
 				print(props)
 
 				for g, v in pairs(int:GetAttributes()) do
@@ -744,7 +744,7 @@ function Properties:GetProperties(int: any)
 					["AssemblyRootPart"] = int.AssemblyRootPart
 				}
 
-				print("There are " .. Length(props) .. " properties for " .. int.Name)
+				print("There are " .. length(props) .. " properties for " .. int.Name)
 				print(props)
 
 				for g, v in pairs(int:GetAttributes()) do
@@ -769,7 +769,7 @@ function Properties:GetProperties(int: any)
 					["CustomPhysicalProperties"] = int.CustomPhysicalProperties
 				}
 
-				print("There are " .. Length(props) .. " properties for " .. int.Name)
+				print("There are " .. length(props) .. " properties for " .. int.Name)
 				print(props)
 
 				for g, v in pairs(int:GetAttributes()) do
@@ -786,7 +786,7 @@ function Properties:GetProperties(int: any)
 					["Archivable"] = int.Archivable
 				}
 
-				print("There are " .. Length(props) .. " properties for " .. int.Name)
+				print("There are " .. length(props) .. " properties for " .. int.Name)
 				print(props)
 
 				for g, v in pairs(int:GetAttributes()) do
@@ -813,7 +813,7 @@ function Properties:GetProperties(int: any)
 					["AutoLocalize"] = int.AutoLocalize
 				}
 
-				print("There are " .. Length(props) .. " properties for " .. int.Name)
+				print("There are " .. length(props) .. " properties for " .. int.Name)
 				print(props)
 
 				for g, v in pairs(int:GetAttributes()) do
@@ -847,7 +847,7 @@ function Properties:GetProperties(int: any)
 					["AutoLocalize"] = int.AutoLocalize ,
 				}
 
-				print("There are " .. Length(props) .. " properties for " .. int.Name)
+				print("There are " .. length(props) .. " properties for " .. int.Name)
 				print(props)
 
 				for g, v in pairs(int:GetAttributes()) do
@@ -904,7 +904,7 @@ function Properties:GetProperties(int: any)
 					["AutoLocalize"] = int.AutoLocalize ,
 				}
 
-				print("There are " .. Length(props) .. " properties for " .. int.Name)
+				print("There are " .. length(props) .. " properties for " .. int.Name)
 				print(props)
 
 				for g, v in pairs(int:GetAttributes()) do
@@ -959,7 +959,7 @@ function Properties:GetProperties(int: any)
 					["AutoLocalize"] = int.AutoLocalize
 				}
 
-				print("There are " .. Length(props) .. " properties for " .. int.Name)
+				print("There are " .. length(props) .. " properties for " .. int.Name)
 				print(props)
 
 				for g, v in pairs(int:GetAttributes()) do
@@ -1021,7 +1021,7 @@ function Properties:GetProperties(int: any)
 					["AutoLocalize"] = int.AutoLocalize
 				}
 
-				print("There are " .. Length(props) .. " properties for " .. int.Name)
+				print("There are " .. length(props) .. " properties for " .. int.Name)
 				print(props)
 
 				for g, v in pairs(int:GetAttributes()) do
@@ -1076,7 +1076,7 @@ function Properties:GetProperties(int: any)
 					["AutoLocalize"] = int.AutoLocalize
 				}
 
-				print("There are " .. Length(props) .. " properties for " .. int.Name)
+				print("There are " .. length(props) .. " properties for " .. int.Name)
 				print(props)
 
 				for g, v in pairs(int:GetAttributes()) do
@@ -1128,7 +1128,7 @@ function Properties:GetProperties(int: any)
 					["AutoLocalize"] = int.AutoLocalize
 				}
 
-				print("There are " .. Length(props) .. " properties for " .. int.Name)
+				print("There are " .. length(props) .. " properties for " .. int.Name)
 				print(props)
 
 				for g, v in pairs(int:GetAttributes()) do
@@ -1178,7 +1178,7 @@ function Properties:GetProperties(int: any)
 					["AutoLocalize"] = int.AutoLocalize
 				}
 
-				print("There are " .. Length(props) .. " properties for " .. int.Name)
+				print("There are " .. length(props) .. " properties for " .. int.Name)
 				print(props)
 
 				for g, v in pairs(int:GetAttributes()) do
@@ -1225,7 +1225,7 @@ function Properties:GetProperties(int: any)
 					["AutoLocalize"] = int.AutoLocalize
 				}
 
-				print("There are " .. Length(props) .. " properties for " .. int.Name)
+				print("There are " .. length(props) .. " properties for " .. int.Name)
 				print(props)
 
 				for g, v in pairs(int:GetAttributes()) do
@@ -1268,14 +1268,14 @@ function Properties:GetProperties(int: any)
 					["Looped"] = int.Looped,
 					["Playing"] = int.Playing,
 					["Resolution"] = int.Resolution,
-					["TimeLength"] = int.TimeLength,
+					["Timelength"] = int.Timelength,
 					["TimePosition"] = int.TimePosition,
 					["Video"] = int.Video,
 					["Volume"] = int.Volume,
 					["AutoLocalize"] = int.AutoLocalize
 				}
 
-				print("There are " .. Length(props) .. " properties for " .. int.Name)
+				print("There are " .. length(props) .. " properties for " .. int.Name)
 				print(props)
 
 				for g, v in pairs(int:GetAttributes()) do
@@ -1295,7 +1295,7 @@ function Properties:GetProperties(int: any)
 				["DominantAxis"] = int.DominantAxis
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -1312,7 +1312,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -1333,7 +1333,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -1359,7 +1359,7 @@ function Properties:GetProperties(int: any)
 				["VerticalAlignment"] = int.VerticalAlignment
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -1381,7 +1381,7 @@ function Properties:GetProperties(int: any)
 				["VerticalAlignment"] = int.VerticalAlignment
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -1401,7 +1401,7 @@ function Properties:GetProperties(int: any)
 				["PaddingTop"] = int.PaddingTop
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -1429,7 +1429,7 @@ function Properties:GetProperties(int: any)
 				["VerticalAlignment"] = int.VerticalAlignment
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -1446,7 +1446,7 @@ function Properties:GetProperties(int: any)
 				["Scale"] = int.Scale
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -1464,7 +1464,7 @@ function Properties:GetProperties(int: any)
 				["MinSize"] = int.MinSize
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -1486,7 +1486,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -1511,7 +1511,7 @@ function Properties:GetProperties(int: any)
 				["VerticalAlignment"] = int.VerticalAlignment
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -1529,7 +1529,7 @@ function Properties:GetProperties(int: any)
 				["MinTextSize"] = int.MinTextSize
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -1555,7 +1555,7 @@ function Properties:GetProperties(int: any)
 				["RequiresHandle"] = int.RequiresHandle
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -1573,7 +1573,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -1595,7 +1595,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -1632,7 +1632,7 @@ function Properties:GetProperties(int: any)
 				["SpreadAngle"] = int.SpreadAngle
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -1653,7 +1653,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -1674,7 +1674,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -1689,7 +1689,7 @@ function Properties:GetProperties(int: any)
 				["LightEmission"] = int.LightMission,
 				["LightInfluence"] = int.LightInfluence,
 				["Texture"] = int.Texture,
-				["TextureLength"] = int.TextureLength,
+				["Texturelength"] = int.Texturelength,
 				["TextureMode"] = int.TextureMode,
 				["Transparency"] = int.Transparency,
 				["Attachment0"] = int.Attachment0,
@@ -1700,12 +1700,12 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable,
 				["Enabled"] = int.Enabled,
 				["Lifetime"] = int.Lifetime,
-				["MaxLength"] = int.MaxLength,
-				["MinLength"] = int.MinLength,
+				["Maxlength"] = int.Maxlength,
+				["Minlength"] = int.Minlength,
 				["WidthScale"] = int.WidthScale
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -1725,7 +1725,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -1749,7 +1749,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -1770,7 +1770,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -1786,7 +1786,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -1802,7 +1802,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -1822,7 +1822,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -1850,7 +1850,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -1867,7 +1867,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -1913,7 +1913,7 @@ function Properties:GetProperties(int: any)
 				["WalkSpeed"] = int.WalkSpeed
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -1966,7 +1966,7 @@ function Properties:GetProperties(int: any)
 				["TorsoColor"] = int.TorsoColor
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -1997,7 +1997,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -2015,7 +2015,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -2043,7 +2043,7 @@ function Properties:GetProperties(int: any)
 				["Attachment1"] = int.Attachment1
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -2071,7 +2071,7 @@ function Properties:GetProperties(int: any)
 				["Attachment1"] = int.Attachment1
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -2095,7 +2095,7 @@ function Properties:GetProperties(int: any)
 				["Attachment0"] = int.Attachment0
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -2120,7 +2120,7 @@ function Properties:GetProperties(int: any)
 				["Attachment1"] = int.Attachment1
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -2149,7 +2149,7 @@ function Properties:GetProperties(int: any)
 				["Attachment1"] = int.Attachment1
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -2174,7 +2174,7 @@ function Properties:GetProperties(int: any)
 				["Attachment1"] = int.Attachment1
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -2200,7 +2200,7 @@ function Properties:GetProperties(int: any)
 				["Attachment1"] = int.Attachment1
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -2220,7 +2220,7 @@ function Properties:GetProperties(int: any)
 				["Part1"] = int.Part
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -2239,13 +2239,13 @@ function Properties:GetProperties(int: any)
 				["Active"] = int.Active,
 				["Archivable"] = int.Archivable,
 				["Enabled"] = int.Enabled,
-				["Length"] = int.MinLength,
+				["length"] = int.Minlength,
 				["LimitsEnabled"] = int.LimitsEnabled,
 				["Attachment0"] = int.Attachment0,
 				["Attachment1"] = int.Attachment1
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -2264,13 +2264,13 @@ function Properties:GetProperties(int: any)
 				["Active"] = int.Active,
 				["Archivable"] = int.Archivable,
 				["Enabled"] = int.Enabled,
-				["Length"] = int.MinLength,
+				["length"] = int.Minlength,
 				["Resitution"] = int.Resitution,
 				["Attachment0"] = int.Attachment0,
 				["Attachment1"] = int.Attachment1
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -2292,7 +2292,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable,
 				["Enabled"] = int.Enabled,
 				["Damping"] = int.Damping,
-				["FreeLength"] = int.FreeLength,
+				["Freelength"] = int.Freelength,
 				["LimitsEnabled"] = int.LimitsEnabled,
 				["MaxForce"] = int.MaxForce,
 				["Stiffness"] = int.Stiffness,
@@ -2300,7 +2300,7 @@ function Properties:GetProperties(int: any)
 				["Attachment1"] = int.Attachment1
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -2323,7 +2323,7 @@ function Properties:GetProperties(int: any)
 				["Attachment0"] = int.Attachment0
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -2351,7 +2351,7 @@ function Properties:GetProperties(int: any)
 				["Attachment1"] = int.Attachment1
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -2375,7 +2375,7 @@ function Properties:GetProperties(int: any)
 				["Attachment1"] = int.Attachment1
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -2399,7 +2399,7 @@ function Properties:GetProperties(int: any)
 				["Attachment0"] = int.Attachment0
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -2419,7 +2419,7 @@ function Properties:GetProperties(int: any)
 				["Part1"] = int.Part1
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -2439,7 +2439,7 @@ function Properties:GetProperties(int: any)
 				["Enabled"] = int.Enabled
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -2459,7 +2459,7 @@ function Properties:GetProperties(int: any)
 				["Enabled"] = int.Enabled
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -2480,7 +2480,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -2503,7 +2503,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -2526,7 +2526,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -2571,7 +2571,7 @@ function Properties:GetProperties(int: any)
 				["AssemblyRootPart"] = int.AssemblyRootPart
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -2625,7 +2625,7 @@ function Properties:GetProperties(int: any)
 				["AssemblyRootPart"] = int.AssemblyRootPart
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -2644,7 +2644,7 @@ function Properties:GetProperties(int: any)
 				["P"] = int.P
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -2661,7 +2661,7 @@ function Properties:GetProperties(int: any)
 				["Force"] = int.Force,
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -2680,7 +2680,7 @@ function Properties:GetProperties(int: any)
 				["P"] = int.P
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -2700,7 +2700,7 @@ function Properties:GetProperties(int: any)
 				["Position"] = int.Position
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -2718,7 +2718,7 @@ function Properties:GetProperties(int: any)
 				["Location"] = int.Location
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -2737,7 +2737,7 @@ function Properties:GetProperties(int: any)
 				["Velocity"] = int.Velocity
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -2764,7 +2764,7 @@ function Properties:GetProperties(int: any)
 				["TurnP"] = int.TurnP
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -2781,7 +2781,7 @@ function Properties:GetProperties(int: any)
 				["Disabled"] = int.Disabled
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -2798,7 +2798,7 @@ function Properties:GetProperties(int: any)
 				["Disabled"] = int.Disabled
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -2814,7 +2814,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -2830,7 +2830,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -2846,7 +2846,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -2862,7 +2862,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -2878,7 +2878,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -2895,7 +2895,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -2912,7 +2912,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -2932,7 +2932,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -2957,7 +2957,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -2983,7 +2983,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -3011,7 +3011,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -3037,7 +3037,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -3053,7 +3053,7 @@ function Properties:GetProperties(int: any)
 				["Adornee"] = int.Adornee,
 				["AlwaysOnTop"] = int.AlwaysOnTop,
 				["ClassName"] = int.ClassName,
-				["Length"] = int.Length,
+				["length"] = int.length,
 				["Name"] = int.Name,
 				["Parent"] = int.Parent,
 				["Size"] = int.Size,
@@ -3063,7 +3063,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -3088,7 +3088,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -3111,7 +3111,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -3133,7 +3133,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -3153,7 +3153,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -3179,7 +3179,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -3199,7 +3199,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -3222,8 +3222,8 @@ function Properties:GetProperties(int: any)
 				["Enabled"] = int.Enabled,
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -3245,7 +3245,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -3263,7 +3263,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -3291,7 +3291,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -3310,7 +3310,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -3330,7 +3330,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -3348,7 +3348,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -3369,7 +3369,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -3390,7 +3390,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -3408,7 +3408,7 @@ function Properties:GetProperties(int: any)
 				["CursorIcon"] = int.CursorIcon
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -3437,7 +3437,7 @@ function Properties:GetProperties(int: any)
 				["AutoLocalize"] = int.AutoLocalize
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -3460,7 +3460,7 @@ function Properties:GetProperties(int: any)
 				["VersionNumber"] = int.VersionNumber
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -3477,7 +3477,7 @@ function Properties:GetProperties(int: any)
 				["SourceLocaleId"] = int.SourceLocaleId
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -3496,7 +3496,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -3518,7 +3518,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -3546,14 +3546,14 @@ function Properties:GetProperties(int: any)
 					int.SoundId,
 					["Preview"] = int.Preview
 				},
-				["TimeLength"] = int.TimeLength,
+				["Timelength"] = int.Timelength,
 				["TimePosition"] = int.TimePosition,
 				["Volume"] = int.Volume,
 				["Archivable"] = int.Archivable,
 				["PlayOnRemove"] = int.PlayOnRemove
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -3570,7 +3570,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -3591,7 +3591,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -3610,7 +3610,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -3634,7 +3634,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -3656,7 +3656,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -3677,7 +3677,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -3698,7 +3698,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -3717,7 +3717,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -3740,7 +3740,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -3761,7 +3761,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -3778,7 +3778,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -3795,7 +3795,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -3811,7 +3811,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -3828,7 +3828,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -3845,7 +3845,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -3862,7 +3862,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -3879,7 +3879,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -3895,7 +3895,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -3912,7 +3912,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -3929,7 +3929,7 @@ function Properties:GetProperties(int: any)
 				["Archivable"] = int.Archivable
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -3953,7 +3953,7 @@ function Properties:GetProperties(int: any)
 				["DebugMode"] = int.DebugMode
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
@@ -3973,7 +3973,7 @@ function Properties:GetProperties(int: any)
 				["DebugMode"] = int.DebugMode
 			}
 
-			print("There are " .. Length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. int.Name)
 			print(props)
 
 			for g, v in pairs(int:GetAttributes()) do
