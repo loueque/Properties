@@ -3986,7 +3986,7 @@ function Properties:GetProperties(int: any)
 end
 
 function Properties:ReadEnumerator(enum: Enum)
-	return print(enum:GetEnums() or enum:GetEnumItems())
+	return print(enum:GetEnumItems())
 end
 
 function Properties:SetName(int: any, strName: string)
