@@ -6,7 +6,7 @@ Properties.__index = {}
 
 function Properties:GetProperties(int: any)
 	local function length(Table)
-		local counter = 0 
+		local counter = 0
 
 		for _, _ in pairs(Table) do
 			counter += 1
@@ -3948,9 +3948,7 @@ function Properties:GetProperties(int: any)
 				["Parent"] = int.Parent,
 				["Archivable"] = int.Archivable,
 				["Enabled"] = int.Enabled,
-				["ShrinkFactor"] = int.ShrinkFactor,
-				["Color"] = int.Color,
-				["DebugMode"] = int.DebugMode
+				["ShrinkFactor"] = int.ShrinkFactor
 			}
 
 			print("There are " .. length(props) .. " properties for " .. int.Name)
@@ -3968,9 +3966,7 @@ function Properties:GetProperties(int: any)
 				["ClassName"] = int.ClassName,
 				["Name"] = int.Name,
 				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable,
-				["Color"] = int.Color,
-				["DebugMode"] = int.DebugMode
+				["Archivable"] = int.Archivable
 			}
 
 			print("There are " .. length(props) .. " properties for " .. int.Name)
@@ -3990,11 +3986,7 @@ function Properties:GetProperties(int: any)
 end
 
 function Properties:ReadEnumerator(enum: Enum)
-	if assert(enum, "nil") then
-		return enum:GetEnumItems()
-	end
-
-	return
+	return print(enum:GetEnums() or enum:GetEnumItems())
 end
 
 function Properties:SetName(int: any, strName: string)
