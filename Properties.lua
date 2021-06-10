@@ -3985,6 +3985,67 @@ function Properties:GetProperties(int: any)
 	return int
 end
 
+function Properties:APIGetProperties(instance: string)
+	local Property do
+		-- ClassProperties is a Dictionary of sorted arrays of Properties of Classes
+		-- Pulls from anaminus.github.io
+		-- Ignores deprecated and RobloxPluginSecurity Properties
+		-- Make sure HttpService is Enabled (Roblox Studio -> Home Tab -> Game Settings -> Security -> Allow HTTP requests = "On")
+
+		-- Source: https://scriptinghelpers.org/questions/50784/how-to-get-list-of-object-properties
+
+		Property = {}
+		local HttpService = game:GetService("HttpService")
+
+		local Data = HttpService:JSONDecode(HttpService:GetAsync("https://anaminus.github.io/rbx/json/api/latest.json"))
+
+		for i = 1, #Data do
+			local Table = Data[i]
+			local Type = Table.type
+
+			if Type == "Class" then
+				local ClassData = {}
+
+				local Superclass = Property[Table.Superclass]
+
+				if Superclass then
+					for j = 1, #Superclass do
+						ClassData[j] = Superclass[j]
+					end
+				end
+
+				Property[Table.Name] = ClassData
+			elseif Type == "Property" then
+				if not next(Table.tags) then
+					local Class = Property[Table.Class]
+					local Property = Table.Name
+					local Inserted
+
+					for j = 1, #Class do
+						if Property < Class[j] then
+							Inserted = true
+							table.insert(Class, j, Property)
+							break
+						end
+					end
+
+					if not Inserted then
+						table.insert(Class, Property)
+					end
+				end
+			elseif Type == "Function" then
+			elseif Type == "YieldFunction" then
+			elseif Type == "Event" then
+			elseif Type == "Callback" then
+			elseif Type == "Enum" then
+			elseif Type == "EnumItem" then
+			end
+		end
+	end
+
+	table.foreach(Property[tostring(instance)], print)
+end
+
 function Properties:ReadEnumerator(enum: Enum)
 	return print(enum:GetEnumItems())
 end
