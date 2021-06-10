@@ -4,7 +4,7 @@ local Properties = {}
 Properties.__index = {}
 --> Optional: Properties.ClassName = "Properties"
 
-function Properties:GetProperties(int: any)
+function Properties:GetProperties(instance: any)
 	local function length(Table)
 		local counter = 0
 
@@ -15,4063 +15,4002 @@ function Properties:GetProperties(int: any)
 		return counter
 	end
 
-	if int:IsA("Instance") then
-		if int == game then
+	if instance:IsA("Instance") then
+		if instance == game then
 			local props = {
-				["CreatorId"] = int.CreatorId,
-				["CreatorType"] = int.CreatorType,
-				["GameId"] = int.GameId,
-				["Genre"] = int.Genre,
-				["JobId"] = int.JobId,
-				["PlaceId"] = int.PlaceId,
-				["PlaceVersion"] = int.PlaceVersion,
-				["PrivateServerId"] = int.PrivateServerId,
-				["PrivateServerOwnerId"] = int.PrivateServerOwnerId,
-				["Workspace"] = int.Workspace,
-				["Archivable"] = int.Archivable,
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent
+				["CreatorId"] = instance.CreatorId,
+				["CreatorType"] = instance.CreatorType,
+				["GameId"] = instance.GameId,
+				["Genre"] = instance.Genre,
+				["JobId"] = instance.JobId,
+				["PlaceId"] = instance.PlaceId,
+				["PlaceVersion"] = instance.PlaceVersion,
+				["PrivateServerId"] = instance.PrivateServerId,
+				["PrivateServerOwnerId"] = instance.PrivateServerOwnerId,
+				["Workspace"] = instance.Workspace,
+				["Archivable"] = instance.Archivable,
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int == game:GetService("Workspace") then
+		if instance == game:GetService("Workspace") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["CurrentCamera"] = int.CurrentCamera,
-				["DistributedGameTime"] = int.DistributedGameTime,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["AllowThirdPartySales"] = int.AllowThirdPartySales,
-				["Archivable"] = int.Archivable,
-				["FallenPartsDestroyHeight"] = int.FallenPartsDestroyHeight,
-				["FilteringEnabled"] = int.FilteringEnabled,
-				["Gravity"] = int.Gravity,
-				["InterpolationThrottling"] = int.InterpolationThrottling,
-				["StreamingEnabled"] = int.StreamingEnabled
+				["ClassName"] = instance.ClassName,
+				["CurrentCamera"] = instance.CurrentCamera,
+				["DistributedGameTime"] = instance.DistributedGameTime,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["AllowThirdPartySales"] = instance.AllowThirdPartySales,
+				["Archivable"] = instance.Archivable,
+				["FallenPartsDestroyHeight"] = instance.FallenPartsDestroyHeight,
+				["FilteringEnabled"] = instance.FilteringEnabled,
+				["Gravity"] = instance.Gravity,
+				["instanceerpolationThrottling"] = instance.instanceerpolationThrottling,
+				["StreamingEnabled"] = instance.StreamingEnabled
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int == game:GetService("Players") then
+		if instance == game:GetService("Players") then
 			local props = {
-				["BubbleChat"] = int.BubbleChat,
-				["ClassicChat"] = int.ClassicChat,
-				["ClassName"] = int.ClassName,
-				["LocalPlayer"] = int.LocalPlayer,
-				["MaxPlayers"] = int.MaxPlayers,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["PreferredPlayers"] = int.PreferredPlayers,
-				["RespawnTime"] = int.RespawnTime,
-				["Archivable"] = int.Archivable,
-				["CharacterAutoLoads"] = int.CharacterAutoLoads
+				["BubbleChat"] = instance.BubbleChat,
+				["ClassicChat"] = instance.ClassicChat,
+				["ClassName"] = instance.ClassName,
+				["LocalPlayer"] = instance.LocalPlayer,
+				["MaxPlayers"] = instance.MaxPlayers,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["PreferredPlayers"] = instance.PreferredPlayers,
+				["RespawnTime"] = instance.RespawnTime,
+				["Archivable"] = instance.Archivable,
+				["CharacterAutoLoads"] = instance.CharacterAutoLoads
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int == game:GetService("CoreGui") then
+		if instance == game:GetService("CoreGui") then
 			local props = {
-				["SelectionImageObject"] = int.SelectionImageObject,
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Version"] = int.Version,
-				["Archivable"] = int.Archivable
+				["SelectionImageObject"] = instance.SelectionImageObject,
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Version"] = instance.Version,
+				["Archivable"] = instance.Archivable
 			}
 
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int == game:GetService("CorePackages") then
+		if instance == game:GetService("CorePackages") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int == game:GetService("Lighting") then
+		if instance == game:GetService("Lighting") then
 			local props = {
-				["Ambient"] = int.Ambient,
-				["Brightness"] = int.Brightness,
-				["ColorShiftBottom"] = int.ColorShift_Bottom,
-				["ColorShift_Top"] = int.ColorShift_Top,
-				["EnvironmentDiffuseScale"] = int.EnvironmentDiffuseScale,
-				["EnvironmentSpecularScale"] = int.EnvironmentSpecularScale,
-				["GlobalShadows"] = int.GlobalShadows,
-				["OutdoorAmbient"] = int.OutdoorAmbient,
-				["ShadowSoftness"] = int.ShadowSoftness,
-				["ClassName"] = int.ClassName,
-				["ClockTime"] = int.ClockTime,
-				["GeographicLatitude"] = int.GeographicLatitude,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["TimeOfDay"] = int.TimeOfDay,
-				["Archivable"] = int.Archivable,
-				["ExposureCompensation"] = int.ExposureCompensation
+				["Ambient"] = instance.Ambient,
+				["Brightness"] = instance.Brightness,
+				["ColorShiftBottom"] = instance.ColorShift_Bottom,
+				["ColorShift_Top"] = instance.ColorShift_Top,
+				["EnvironmentDiffuseScale"] = instance.EnvironmentDiffuseScale,
+				["EnvironmentSpecularScale"] = instance.EnvironmentSpecularScale,
+				["GlobalShadows"] = instance.GlobalShadows,
+				["OutdoorAmbient"] = instance.OutdoorAmbient,
+				["ShadowSoftness"] = instance.ShadowSoftness,
+				["ClassName"] = instance.ClassName,
+				["ClockTime"] = instance.ClockTime,
+				["GeographicLatitude"] = instance.GeographicLatitude,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["TimeOfDay"] = instance.TimeOfDay,
+				["Archivable"] = instance.Archivable,
+				["ExposureCompensation"] = instance.ExposureCompensation
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int == game:GetService("PluginDebugService") then
+		if instance == game:GetService("PluginDebugService") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int == game:GetService("PluginGuiService") then
+		if instance == game:GetService("PluginGuiService") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int == game:GetService("ReplicatedFirst") then
+		if instance == game:GetService("ReplicatedFirst") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int == game:GetService("ReplicatedScriptService") then
+		if instance == game:GetService("ReplicatedScriptService") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int == game:GetService("ReplicatedStorage") then
+		if instance == game:GetService("ReplicatedStorage") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int == game:GetService("ServerScriptService") then
+		if instance == game:GetService("ServerScriptService") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int == game:GetService("ServerStorage") then
+		if instance == game:GetService("ServerStorage") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int == game:GetService("StarterGui") then
+		if instance == game:GetService("StarterGui") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["ScreenOrientation"] = int.ScreenOrientation,
-				["ShowDevelopmentGui"] = int.ShowDevelopmentGui,
-				["Archivable"] = int.Archivable,
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["ScreenOrientation"] = instance.ScreenOrientation,
+				["ShowDevelopmentGui"] = instance.ShowDevelopmentGui,
+				["Archivable"] = instance.Archivable,
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int == game:GetService("StarterPack") then
+		if instance == game:GetService("StarterPack") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int == game:GetService("StarterPlayer") then
+		if instance == game:GetService("StarterPlayer") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["HealthDisplayDistance"] = int.HealthDisplayDistance,
-				["Name"] = int.Name,
-				["NameDisplayDistance"] = int.NameDisplayDistance,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable,
-				["CameraMaxZoomDistance"] = int.CameraMaxZoomDistance,
-				["CameraMinZoomDistance"] = int.CameraMinZoomDistance,
-				["CameraMode"] = int.CameraMode,
-				["DevCameraOcclusionMode"] = int.DevCameraOcclusionMode,
-				["DevComputerCameraMovementMode"] = int.DevComputerCameraMovementMode,
-				["DevTouchCameraMovementMode"] = int.DevTouchCameraMovementMode,
-				["AutoJumpEnabled"] = int.AutoJumpEnabled,
-				["CharacterJumpHeight"] = int.CharacterJumpHeight,
-				["CharacterUseJumpPower"] = int.CharacterUseJumpPower,
-				["CharacterMaxSlopeAngle"] = int.CharacterMaxSlopeAngle,
-				["CharacterWalkSpeed"] = int.CharacterWalkSpeed,
-				["LoadCharacterAppearance"] = int.LoadCharacterAppearance,
-				["UserEmotesEnabled"] = int.UserEmotesEnabled,
-				["DevComputerMovementMode"] = int.DevComputerMovementMode,
-				["DevTouchMovementMode"] = int.DevTouchMovementMode,
-				["EnableMouseLockOption"] = int.EnableMouseLockOption
+				["ClassName"] = instance.ClassName,
+				["HealthDisplayDistance"] = instance.HealthDisplayDistance,
+				["Name"] = instance.Name,
+				["NameDisplayDistance"] = instance.NameDisplayDistance,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable,
+				["CameraMaxZoomDistance"] = instance.CameraMaxZoomDistance,
+				["CameraMinZoomDistance"] = instance.CameraMinZoomDistance,
+				["CameraMode"] = instance.CameraMode,
+				["DevCameraOcclusionMode"] = instance.DevCameraOcclusionMode,
+				["DevComputerCameraMovementMode"] = instance.DevComputerCameraMovementMode,
+				["DevTouchCameraMovementMode"] = instance.DevTouchCameraMovementMode,
+				["AutoJumpEnabled"] = instance.AutoJumpEnabled,
+				["CharacterJumpHeight"] = instance.CharacterJumpHeight,
+				["CharacterUseJumpPower"] = instance.CharacterUseJumpPower,
+				["CharacterMaxSlopeAngle"] = instance.CharacterMaxSlopeAngle,
+				["CharacterWalkSpeed"] = instance.CharacterWalkSpeed,
+				["LoadCharacterAppearance"] = instance.LoadCharacterAppearance,
+				["UserEmotesEnabled"] = instance.UserEmotesEnabled,
+				["DevComputerMovementMode"] = instance.DevComputerMovementMode,
+				["DevTouchMovementMode"] = instance.DevTouchMovementMode,
+				["EnableMouseLockOption"] = instance.EnableMouseLockOption
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int == game:GetService("StarterPlayer").StarterCharacterScripts then
+		if instance == game:GetService("StarterPlayer").StarterCharacterScripts then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int == game:GetService("StarterPlayer").StarterPlayerScripts then
+		if instance == game:GetService("StarterPlayer").StarterPlayerScripts then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int == game:GetService("Teams") then
+		if instance == game:GetService("Teams") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int == game:GetService("SoundService") then
+		if instance == game:GetService("SoundService") then
 			local props = {
-				["AmbientReverb"] = int.AmbientReverb,
-				["ClassName"] = int.ClassName,
-				["DistanceFactor"] = int.DistanceFactor,
-				["DopplerScale"] = int.DopplerScale,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["RespectFilteringEnabled"] = int.RespectFilteringEnabled,
-				["RolloffScale"] = int.RolloffScale,
-				["Archivable"] = int.Archivable
+				["AmbientReverb"] = instance.AmbientReverb,
+				["ClassName"] = instance.ClassName,
+				["DistanceFactor"] = instance.DistanceFactor,
+				["DopplerScale"] = instance.DopplerScale,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["RespectFilteringEnabled"] = instance.RespectFilteringEnabled,
+				["RolloffScale"] = instance.RolloffScale,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int == game:GetService("Chat") then
+		if instance == game:GetService("Chat") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable,
-				["BubbleChatEnabled"] = int.BubbleChatEnabled,
-				["LoadDefaultChat"] = int.LoadDefaultChat
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable,
+				["BubbleChatEnabled"] = instance.BubbleChatEnabled,
+				["LoadDefaultChat"] = instance.LoadDefaultChat
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int == game:GetService("LocalizationService") then
+		if instance == game:GetService("LocalizationService") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable,
-				["RobloxLocaleId"] = int.RobloxLocaleId,
-				["SystemLocaleId"] = int.SystemLocaleId
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable,
+				["RobloxLocaleId"] = instance.RobloxLocaleId,
+				["SystemLocaleId"] = instance.SystemLocaleId
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int == game:GetService("TestService") then
+		if instance == game:GetService("TestService") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Description"] = int.Description,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable,
-				["AutoRuns"] = int.AutoRuns,
-				["Is30FpsThrottleEnabled"] = int.Is30FpsThrottleEnabled,
-				["IsPhysicsEnvironmentalThrottled"] = int.IsPhysicsEnvironmentalThrottled,
-				["IsSleepAllowed"] = int.IsSleepAllowed,
-				["ErrorCount"] = int.ErrorCount,
-				["TestCount"] = int.TestCount,
-				["WarnCount"] = int.WarnCount,
-				["ExecuteWithStudioRun"] = int.ExecuteWithStudioRun,
-				["NumberOfPlayers"] = int.NumberOfPlayers,
-				["SimulateSecondsLag"] = int.SimulateSecondsLag,
-				["Timeout"] = int.Timeout
+				["ClassName"] = instance.ClassName,
+				["Description"] = instance.Description,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable,
+				["AutoRuns"] = instance.AutoRuns,
+				["Is30FpsThrottleEnabled"] = instance.Is30FpsThrottleEnabled,
+				["IsPhysicsEnvironmentalThrottled"] = instance.IsPhysicsEnvironmentalThrottled,
+				["IsSleepAllowed"] = instance.IsSleepAllowed,
+				["ErrorCount"] = instance.ErrorCount,
+				["TestCount"] = instance.TestCount,
+				["WarnCount"] = instance.WarnCount,
+				["ExecuteWithStudioRun"] = instance.ExecuteWithStudioRun,
+				["NumberOfPlayers"] = instance.NumberOfPlayers,
+				["SimulateSecondsLag"] = instance.SimulateSecondsLag,
+				["Timeout"] = instance.Timeout
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int == game:GetService("Debris") then
+		if instance == game:GetService("Debris") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("BasePart") then
-			if int:IsA("Part") then
+		if instance:IsA("BasePart") then
+			if instance:IsA("Part") then
 				local props = {
-					["BrickColor"] = int.BrickColor,
-					["CastShadow"] = int.CastShadow,
-					["Color"] = int.Color,
-					["Material"] = int.Material,
-					["Reflectance"] = int.Reflectance,
-					["Transparency"] = int.Transparency,
-					["CenterOfMass"] = int.CenterOfMass,
-					["ClassName"] = int.ClassName,
-					["Mass"] = int.Mass,
-					["Name"] = int.Name,
-					["Parent"] = int.Parent,
-					["Position"] = int.Position,
-					["Orientation"] = int.Orientation,
-					["Anchored"] = int.Anchored,
-					["Archivable"] = int.Archivable,
-					["CanCollide"] = int.CanCollide,
-					["CanTouch"] = int.CanTouch,
-					["CollisionGroupId"] = int.CollisionGroupId,
-					["Locked"] = int.Locked,
-					["Massless"] = int.Massless,
-					["ResizeableFaces"] = int.ResizeableFaces,
-					["ResizeIncrement"] = int.ResizeIncrement,
-					["CustomPhysicalProperties"] = int.CustomPhysicalProperties,
-					["RootPriority"] = int.RootPriority,
-					["Shape"] = int.Shape,
-					["Size"] = int.Size,
-					["AssemblyLinearVelocity"] = int.AssemblyLinearVelocity,
-					["AssemblyAngularVelocity"] = int.AssemblyAngularVelocity,
-					["AssemblyCenterOfMass"] = int.AssemblyCenterOfMass,
-					["AssemblyMass"] = int.AssemblyMass,
-					["AssemblyRootPart"] = int.AssemblyRootPart
+					["BrickColor"] = instance.BrickColor,
+					["CastShadow"] = instance.CastShadow,
+					["Color"] = instance.Color,
+					["Material"] = instance.Material,
+					["Reflectance"] = instance.Reflectance,
+					["Transparency"] = instance.Transparency,
+					["CenterOfMass"] = instance.CenterOfMass,
+					["ClassName"] = instance.ClassName,
+					["Mass"] = instance.Mass,
+					["Name"] = instance.Name,
+					["Parent"] = instance.Parent,
+					["Position"] = instance.Position,
+					["Orientation"] = instance.Orientation,
+					["Anchored"] = instance.Anchored,
+					["Archivable"] = instance.Archivable,
+					["CanCollide"] = instance.CanCollide,
+					["CanTouch"] = instance.CanTouch,
+					["CollisionGroupId"] = instance.CollisionGroupId,
+					["Locked"] = instance.Locked,
+					["Massless"] = instance.Massless,
+					["ResizeableFaces"] = instance.ResizeableFaces,
+					["ResizeIncrement"] = instance.ResizeIncrement,
+					["CustomPhysicalProperties"] = instance.CustomPhysicalProperties,
+					["RootPriority"] = instance.RootPriority,
+					["Shape"] = instance.Shape,
+					["Size"] = instance.Size,
+					["AssemblyLinearVelocity"] = instance.AssemblyLinearVelocity,
+					["AssemblyAngularVelocity"] = instance.AssemblyAngularVelocity,
+					["AssemblyCenterOfMass"] = instance.AssemblyCenterOfMass,
+					["AssemblyMass"] = instance.AssemblyMass,
+					["AssemblyRootPart"] = instance.AssemblyRootPart
 				}
 
-				print("There are " .. length(props) .. " properties for " .. int.Name)
+				print("There are " .. length(props) .. " properties for " .. instance.Name)
 				print(props)
 
-				for g, v in pairs(int:GetAttributes()) do
+				for g, v in pairs(instance:GetAttributes()) do
 					print(g, ", ", v)
 				end
 			end
 
-			if int:IsA("CornerWedgePart") then
+			if instance:IsA("CornerWedgePart") then
 				local props = {
-					["BrickColor"] = int.BrickColor,
-					["CastShadow"] = int.CastShadow,
-					["Color"] = int.Color,
-					["Material"] = int.Material,
-					["Reflectance"] = int.Reflectance,
-					["Transparency"] = int.Transparency,
-					["CenterOfMass"] = int.CenterOfMass,
-					["ClassName"] = int.ClassName,
-					["Mass"] = int.Mass,
-					["Name"] = int.Name,
-					["Parent"] = int.Parent,
-					["Position"] = int.Position,
-					["Orientation"] = int.Orientation,
-					["Anchored"] = int.Anchored,
-					["Archivable"] = int.Archivable,
-					["CanCollide"] = int.CanCollide,
-					["CanTouch"] = int.CanTouch,
-					["CollisionGroupId"] = int.CollisionGroupId,
-					["Locked"] = int.Locked,
-					["Massless"] = int.Massless,
-					["ResizeableFaces"] = int.ResizeableFaces,
-					["ResizeIncrement"] = int.ResizeIncrement,
-					["CustomPhysicalProperties"] = int.CustomPhysicalProperties,
-					["RootPriority"] = int.RootPriority,
-					["Shape"] = int.Shape,
-					["Size"] = int.Size,
-					["AssemblyLinearVelocity"] = int.AssemblyLinearVelocity,
-					["AssemblyAngularVelocity"] = int.AssemblyAngularVelocity,
-					["AssemblyCenterOfMass"] = int.AssemblyCenterOfMass,
-					["AssemblyMass"] = int.AssemblyMass,
-					["AssemblyRootPart"] = int.AssemblyRootPart
+					["BrickColor"] = instance.BrickColor,
+					["CastShadow"] = instance.CastShadow,
+					["Color"] = instance.Color,
+					["Material"] = instance.Material,
+					["Reflectance"] = instance.Reflectance,
+					["Transparency"] = instance.Transparency,
+					["CenterOfMass"] = instance.CenterOfMass,
+					["ClassName"] = instance.ClassName,
+					["Mass"] = instance.Mass,
+					["Name"] = instance.Name,
+					["Parent"] = instance.Parent,
+					["Position"] = instance.Position,
+					["Orientation"] = instance.Orientation,
+					["Anchored"] = instance.Anchored,
+					["Archivable"] = instance.Archivable,
+					["CanCollide"] = instance.CanCollide,
+					["CanTouch"] = instance.CanTouch,
+					["CollisionGroupId"] = instance.CollisionGroupId,
+					["Locked"] = instance.Locked,
+					["Massless"] = instance.Massless,
+					["ResizeableFaces"] = instance.ResizeableFaces,
+					["ResizeIncrement"] = instance.ResizeIncrement,
+					["CustomPhysicalProperties"] = instance.CustomPhysicalProperties,
+					["RootPriority"] = instance.RootPriority,
+					["Shape"] = instance.Shape,
+					["Size"] = instance.Size,
+					["AssemblyLinearVelocity"] = instance.AssemblyLinearVelocity,
+					["AssemblyAngularVelocity"] = instance.AssemblyAngularVelocity,
+					["AssemblyCenterOfMass"] = instance.AssemblyCenterOfMass,
+					["AssemblyMass"] = instance.AssemblyMass,
+					["AssemblyRootPart"] = instance.AssemblyRootPart
 				}
 
-				print("There are " .. length(props) .. " properties for " .. int.Name)
+				print("There are " .. length(props) .. " properties for " .. instance.Name)
 				print(props)
 
-				for g, v in pairs(int:GetAttributes()) do
+				for g, v in pairs(instance:GetAttributes()) do
 					print(g, ", ", v)
 				end
 			end
 
-			if int:IsA("TrussPart") then
+			if instance:IsA("TrussPart") then
 				local props = {
-					["BrickColor"] = int.BrickColor,
-					["CastShadow"] = int.CastShadow,
-					["Color"] = int.Color,
-					["Material"] = int.Material,
-					["Reflectance"] = int.Reflectance,
-					["Transparency"] = int.Transparency,
-					["CenterOfMass"] = int.CenterOfMass,
-					["ClassName"] = int.ClassName,
-					["Mass"] = int.Mass,
-					["Name"] = int.Name,
-					["Parent"] = int.Parent,
-					["Position"] = int.Position,
-					["Orientation"] = int.Orientation,
-					["Anchored"] = int.Anchored,
-					["Archivable"] = int.Archivable,
-					["CanCollide"] = int.CanCollide,
-					["CanTouch"] = int.CanTouch,
-					["CollisionGroupId"] = int.CollisionGroupId,
-					["Locked"] = int.Locked,
-					["Massless"] = int.Massless,
-					["ResizeableFaces"] = int.ResizeableFaces,
-					["ResizeIncrement"] = int.ResizeIncrement,
-					["CustomPhysicalProperties"] = int.CustomPhysicalProperties,
-					["RootPriority"] = int.RootPriority,
-					["Shape"] = int.Shape,
-					["Size"] = int.Size,
-					["AssemblyLinearVelocity"] = int.AssemblyLinearVelocity,
-					["AssemblyAngularVelocity"] = int.AssemblyAngularVelocity,
-					["AssemblyCenterOfMass"] = int.AssemblyCenterOfMass,
-					["AssemblyMass"] = int.AssemblyMass,
-					["AssemblyRootPart"] = int.AssemblyRootPart
+					["BrickColor"] = instance.BrickColor,
+					["CastShadow"] = instance.CastShadow,
+					["Color"] = instance.Color,
+					["Material"] = instance.Material,
+					["Reflectance"] = instance.Reflectance,
+					["Transparency"] = instance.Transparency,
+					["CenterOfMass"] = instance.CenterOfMass,
+					["ClassName"] = instance.ClassName,
+					["Mass"] = instance.Mass,
+					["Name"] = instance.Name,
+					["Parent"] = instance.Parent,
+					["Position"] = instance.Position,
+					["Orientation"] = instance.Orientation,
+					["Anchored"] = instance.Anchored,
+					["Archivable"] = instance.Archivable,
+					["CanCollide"] = instance.CanCollide,
+					["CanTouch"] = instance.CanTouch,
+					["CollisionGroupId"] = instance.CollisionGroupId,
+					["Locked"] = instance.Locked,
+					["Massless"] = instance.Massless,
+					["ResizeableFaces"] = instance.ResizeableFaces,
+					["ResizeIncrement"] = instance.ResizeIncrement,
+					["CustomPhysicalProperties"] = instance.CustomPhysicalProperties,
+					["RootPriority"] = instance.RootPriority,
+					["Shape"] = instance.Shape,
+					["Size"] = instance.Size,
+					["AssemblyLinearVelocity"] = instance.AssemblyLinearVelocity,
+					["AssemblyAngularVelocity"] = instance.AssemblyAngularVelocity,
+					["AssemblyCenterOfMass"] = instance.AssemblyCenterOfMass,
+					["AssemblyMass"] = instance.AssemblyMass,
+					["AssemblyRootPart"] = instance.AssemblyRootPart
 				}
 
-				print("There are " .. length(props) .. " properties for " .. int.Name)
+				print("There are " .. length(props) .. " properties for " .. instance.Name)
 				print(props)
 
-				for g, v in pairs(int:GetAttributes()) do
+				for g, v in pairs(instance:GetAttributes()) do
 					print(g, ", ", v)
 				end
 			end
 
-			if int:IsA("WedgePart") then
+			if instance:IsA("WedgePart") then
 				local props = {
-					["BrickColor"] = int.BrickColor,
-					["CastShadow"] = int.CastShadow,
-					["Color"] = int.Color,
-					["Material"] = int.Material,
-					["Reflectance"] = int.Reflectance,
-					["Transparency"] = int.Transparency,
-					["CenterOfMass"] = int.CenterOfMass,
-					["ClassName"] = int.ClassName,
-					["Mass"] = int.Mass,
-					["Name"] = int.Name,
-					["Parent"] = int.Parent,
-					["Position"] = int.Position,
-					["Orientation"] = int.Orientation,
-					["Anchored"] = int.Anchored,
-					["Archivable"] = int.Archivable,
-					["CanCollide"] = int.CanCollide,
-					["CanTouch"] = int.CanTouch,
-					["CollisionGroupId"] = int.CollisionGroupId,
-					["Locked"] = int.Locked,
-					["Massless"] = int.Massless,
-					["ResizeableFaces"] = int.ResizeableFaces,
-					["ResizeIncrement"] = int.ResizeIncrement,
-					["CustomPhysicalProperties"] = int.CustomPhysicalProperties,
-					["RootPriority"] = int.RootPriority,
-					["Shape"] = int.Shape,
-					["Size"] = int.Size,
-					["AssemblyLinearVelocity"] = int.AssemblyLinearVelocity,
-					["AssemblyAngularVelocity"] = int.AssemblyAngularVelocity,
-					["AssemblyCenterOfMass"] = int.AssemblyCenterOfMass,
-					["AssemblyMass"] = int.AssemblyMass,
-					["AssemblyRootPart"] = int.AssemblyRootPart
+					["BrickColor"] = instance.BrickColor,
+					["CastShadow"] = instance.CastShadow,
+					["Color"] = instance.Color,
+					["Material"] = instance.Material,
+					["Reflectance"] = instance.Reflectance,
+					["Transparency"] = instance.Transparency,
+					["CenterOfMass"] = instance.CenterOfMass,
+					["ClassName"] = instance.ClassName,
+					["Mass"] = instance.Mass,
+					["Name"] = instance.Name,
+					["Parent"] = instance.Parent,
+					["Position"] = instance.Position,
+					["Orientation"] = instance.Orientation,
+					["Anchored"] = instance.Anchored,
+					["Archivable"] = instance.Archivable,
+					["CanCollide"] = instance.CanCollide,
+					["CanTouch"] = instance.CanTouch,
+					["CollisionGroupId"] = instance.CollisionGroupId,
+					["Locked"] = instance.Locked,
+					["Massless"] = instance.Massless,
+					["ResizeableFaces"] = instance.ResizeableFaces,
+					["ResizeIncrement"] = instance.ResizeIncrement,
+					["CustomPhysicalProperties"] = instance.CustomPhysicalProperties,
+					["RootPriority"] = instance.RootPriority,
+					["Shape"] = instance.Shape,
+					["Size"] = instance.Size,
+					["AssemblyLinearVelocity"] = instance.AssemblyLinearVelocity,
+					["AssemblyAngularVelocity"] = instance.AssemblyAngularVelocity,
+					["AssemblyCenterOfMass"] = instance.AssemblyCenterOfMass,
+					["AssemblyMass"] = instance.AssemblyMass,
+					["AssemblyRootPart"] = instance.AssemblyRootPart
 				}
 
-				print("There are " .. length(props) .. " properties for " .. int.Name)
+				print("There are " .. length(props) .. " properties for " .. instance.Name)
 				print(props)
 
-				for g, v in pairs(int:GetAttributes()) do
+				for g, v in pairs(instance:GetAttributes()) do
 					print(g, ", ", v)
 				end
 			end
 
-			if int:IsA("MeshPart") then
+			if instance:IsA("MeshPart") then
 				local props = {
-					["BrickColor"] = int.BrickColor,
-					["CastShadow"] = int.CastShadow,
-					["Color"] = int.Color,
-					["DoubleSided"] = int.DoubleSided,
-					["Material"] = int.Material,
-					["MeshId"] = int.MeshId,
-					["Reflectance"] = int.Reflectance,
-					["RenderFidelity"] = int.RenderFidelity,
-					["TextureID"] = int.TextureID,
-					["Transparency"] = int.Transparency,
-					["CenterOfMass"] = int.CenterOfMass,
-					["ClassName"] = int.ClassName,
-					["Mass"] = int.Mass,
-					["MeshSize"] = int.MeshSize,
-					["Name"] = int.Name,
-					["Parent"] = int.Parent,
-					["Position"] = int.Position,
-					["Orientation"] = int.Orientation,
-					["Anchored"] = int.Anchored,
-					["Archivable"] = int.Archivable,
-					["CanCollide"] = int.CanCollide,
-					["CanTouch"] = int.CanTouch,
-					["CollisionFidelity"] = int.CollisionFidelity,
-					["CollisionGroupId"] = int.CollisionGroupId,
-					["Locked"] = int.Locked,
-					["Massless"] = int.Massless,
-					["ResizeableFaces"] = int.ResizeableFaces,
-					["ResizeIncrement"] = int.ResizeIncrement,
-					["CustomPhysicalProperties"] = int.CustomPhysicalProperties,
-					["RootPriority"] = int.RootPriority,
-					["Shape"] = int.Shape,
-					["Size"] = int.Size,
-					["AssemblyLinearVelocity"] = int.AssemblyLinearVelocity,
-					["AssemblyAngularVelocity"] = int.AssemblyAngularVelocity,
-					["AssemblyCenterOfMass"] = int.AssemblyCenterOfMass,
-					["AssemblyMass"] = int.AssemblyMass,
-					["AssemblyRootPart"] = int.AssemblyRootPart
+					["BrickColor"] = instance.BrickColor,
+					["CastShadow"] = instance.CastShadow,
+					["Color"] = instance.Color,
+					["DoubleSided"] = instance.DoubleSided,
+					["Material"] = instance.Material,
+					["MeshId"] = instance.MeshId,
+					["Reflectance"] = instance.Reflectance,
+					["RenderFidelity"] = instance.RenderFidelity,
+					["TextureID"] = instance.TextureID,
+					["Transparency"] = instance.Transparency,
+					["CenterOfMass"] = instance.CenterOfMass,
+					["ClassName"] = instance.ClassName,
+					["Mass"] = instance.Mass,
+					["MeshSize"] = instance.MeshSize,
+					["Name"] = instance.Name,
+					["Parent"] = instance.Parent,
+					["Position"] = instance.Position,
+					["Orientation"] = instance.Orientation,
+					["Anchored"] = instance.Anchored,
+					["Archivable"] = instance.Archivable,
+					["CanCollide"] = instance.CanCollide,
+					["CanTouch"] = instance.CanTouch,
+					["CollisionFidelity"] = instance.CollisionFidelity,
+					["CollisionGroupId"] = instance.CollisionGroupId,
+					["Locked"] = instance.Locked,
+					["Massless"] = instance.Massless,
+					["ResizeableFaces"] = instance.ResizeableFaces,
+					["ResizeIncrement"] = instance.ResizeIncrement,
+					["CustomPhysicalProperties"] = instance.CustomPhysicalProperties,
+					["RootPriority"] = instance.RootPriority,
+					["Shape"] = instance.Shape,
+					["Size"] = instance.Size,
+					["AssemblyLinearVelocity"] = instance.AssemblyLinearVelocity,
+					["AssemblyAngularVelocity"] = instance.AssemblyAngularVelocity,
+					["AssemblyCenterOfMass"] = instance.AssemblyCenterOfMass,
+					["AssemblyMass"] = instance.AssemblyMass,
+					["AssemblyRootPart"] = instance.AssemblyRootPart
 				}
 
-				print("There are " .. length(props) .. " properties for " .. int.Name)
+				print("There are " .. length(props) .. " properties for " .. instance.Name)
 				print(props)
 
-				for g, v in pairs(int:GetAttributes()) do
+				for g, v in pairs(instance:GetAttributes()) do
 					print(g, ", ", v)
 				end
 			end
 
-			if int:IsA("SpawnLocation") then
+			if instance:IsA("SpawnLocation") then
 				local props = {
-					["BrickColor"] = int.BrickColor,
-					["CastShadow"] = int.CastShadow,
-					["Color"] = int.Color,
-					["Material"] = int.Material,
-					["Reflectance"] = int.Reflectance,
-					["Transparency"] = int.Transparency,
-					["CenterOfMass"] = int.CenterOfMass,
-					["ClassName"] = int.ClassName,
-					["Mass"] = int.Mass,
-					["Name"] = int.Name,
-					["Parent"] = int.Parent,
-					["Position"] = int.Position,
-					["Orientation"] = int.Orientation,
-					["Anchored"] = int.Anchored,
-					["Archivable"] = int.Archivable,
-					["CanCollide"] = int.CanCollide,
-					["CanTouch"] = int.CanTouch,
-					["CollisionGroupId"] = int.CollisionGroupId,
-					["Locked"] = int.Locked,
-					["Massless"] = int.Massless,
-					["ResizeableFaces"] = int.ResizeableFaces,
-					["ResizeIncrement"] = int.ResizeIncrement,
-					["AllowTeamChangeOnTouch"] = int.AllowTeamChangeOnTouch,
-					["Neutral"] = int.Neutral,
-					["TeamColor"] = int.TeamColor,
-					["Duration"] = int.Duration,
-					["CustomPhysicalProperties"] = int.CustomPhysicalProperties,
-					["RootPriority"] = int.RootPriority,
-					["Shape"] = int.Shape,
-					["Size"] = int.Size,
-					["AssemblyLinearVelocity"] = int.AssemblyLinearVelocity,
-					["AssemblyAngularVelocity"] = int.AssemblyAngularVelocity,
-					["AssemblyCenterOfMass"] = int.AssemblyCenterOfMass,
-					["AssemblyMass"] = int.AssemblyMass,
-					["AssemblyRootPart"] = int.AssemblyRootPart
+					["BrickColor"] = instance.BrickColor,
+					["CastShadow"] = instance.CastShadow,
+					["Color"] = instance.Color,
+					["Material"] = instance.Material,
+					["Reflectance"] = instance.Reflectance,
+					["Transparency"] = instance.Transparency,
+					["CenterOfMass"] = instance.CenterOfMass,
+					["ClassName"] = instance.ClassName,
+					["Mass"] = instance.Mass,
+					["Name"] = instance.Name,
+					["Parent"] = instance.Parent,
+					["Position"] = instance.Position,
+					["Orientation"] = instance.Orientation,
+					["Anchored"] = instance.Anchored,
+					["Archivable"] = instance.Archivable,
+					["CanCollide"] = instance.CanCollide,
+					["CanTouch"] = instance.CanTouch,
+					["CollisionGroupId"] = instance.CollisionGroupId,
+					["Locked"] = instance.Locked,
+					["Massless"] = instance.Massless,
+					["ResizeableFaces"] = instance.ResizeableFaces,
+					["ResizeIncrement"] = instance.ResizeIncrement,
+					["AllowTeamChangeOnTouch"] = instance.AllowTeamChangeOnTouch,
+					["Neutral"] = instance.Neutral,
+					["TeamColor"] = instance.TeamColor,
+					["Duration"] = instance.Duration,
+					["CustomPhysicalProperties"] = instance.CustomPhysicalProperties,
+					["RootPriority"] = instance.RootPriority,
+					["Shape"] = instance.Shape,
+					["Size"] = instance.Size,
+					["AssemblyLinearVelocity"] = instance.AssemblyLinearVelocity,
+					["AssemblyAngularVelocity"] = instance.AssemblyAngularVelocity,
+					["AssemblyCenterOfMass"] = instance.AssemblyCenterOfMass,
+					["AssemblyMass"] = instance.AssemblyMass,
+					["AssemblyRootPart"] = instance.AssemblyRootPart
 				}
 
-				print("There are " .. length(props) .. " properties for " .. int.Name)
+				print("There are " .. length(props) .. " properties for " .. instance.Name)
 				print(props)
 
-				for g, v in pairs(int:GetAttributes()) do
+				for g, v in pairs(instance:GetAttributes()) do
 					print(g, ", ", v)
 				end
 			end
 
-			if int:IsA("Terrain") then
+			if instance:IsA("Terrain") then
 				local props = {
-					["Decoration"] = int.Decoration,
-					["MaterialColors"] = int.MaterialColors,
-					["WaterColor"] = int.WaterColor,
-					["WaterReflectance"] = int.WaterReflectance,
-					["WaterTransparency"] = int.WaterTransparency,
-					["WaterWaveSize"] = int.WaterWaveSize,
-					["WaterWaveSpeed"] = int.WaterWaveSpeed,
-					["ClassName"] = int.ClassName,
-					["Name"] = int.Name,
-					["Parent"] = int.Parent,
-					["Archivable"] = int.Archivable,
-					["CollisionGroupId"] = int.CollisionGroupId,
-					["CustomPhysicalProperties"] = int.CustomPhysicalProperties
+					["Decoration"] = instance.Decoration,
+					["MaterialColors"] = instance.MaterialColors,
+					["WaterColor"] = instance.WaterColor,
+					["WaterReflectance"] = instance.WaterReflectance,
+					["WaterTransparency"] = instance.WaterTransparency,
+					["WaterWaveSize"] = instance.WaterWaveSize,
+					["WaterWaveSpeed"] = instance.WaterWaveSpeed,
+					["ClassName"] = instance.ClassName,
+					["Name"] = instance.Name,
+					["Parent"] = instance.Parent,
+					["Archivable"] = instance.Archivable,
+					["CollisionGroupId"] = instance.CollisionGroupId,
+					["CustomPhysicalProperties"] = instance.CustomPhysicalProperties
 				}
 
-				print("There are " .. length(props) .. " properties for " .. int.Name)
+				print("There are " .. length(props) .. " properties for " .. instance.Name)
 				print(props)
 
-				for g, v in pairs(int:GetAttributes()) do
+				for g, v in pairs(instance:GetAttributes()) do
 					print(g, ", ", v)
 				end
 			end
 
-			if int:IsA("Model") then
+			if instance:IsA("Model") then
 				local props = {
-					["ClassName"] = int.ClassName,
-					["Name"] = int.Name,
-					["Parent"] = int.Parent,
-					["PrimaryPart"] = int.PrimaryPart,
-					["Archivable"] = int.Archivable
+					["ClassName"] = instance.ClassName,
+					["Name"] = instance.Name,
+					["Parent"] = instance.Parent,
+					["PrimaryPart"] = instance.PrimaryPart,
+					["Archivable"] = instance.Archivable
 				}
 
-				print("There are " .. length(props) .. " properties for " .. int.Name)
+				print("There are " .. length(props) .. " properties for " .. instance.Name)
 				print(props)
 
-				for g, v in pairs(int:GetAttributes()) do
-					print(g, ", ", v)
-				end
-			end
-		end
-
-		if int:IsA("GuiObject") then
-			if int:IsA("ScreenGui") then
-				local props = {
-					["AbsolutePosition"] = int.AbsolutePosition,
-					["AbsoluteRotation"] = int.AbsoluteRotation,
-					["AbsoluteSize"] = int.AbsoluteSize,
-					["ClassName"] = int.ClassName,
-					["DisplayOrder"] = int.DisplayOrder,
-					["Enabled"] = int.Enabled,
-					["IgnoreGuiInset"] = int.IgnoreGuiInset,
-					["Name"] = int.Name,
-					["Parent"] = int.Parent,
-					["ResetOnSpawn"] = int.ResetOnSpawn,
-					["ZIndexBehavior"] = int.ZIndexBehavior,
-					["Archivable"] = int.Archivable,
-					["AutoLocalize"] = int.AutoLocalize
-				}
-
-				print("There are " .. length(props) .. " properties for " .. int.Name)
-				print(props)
-
-				for g, v in pairs(int:GetAttributes()) do
-					print(g, ", ", v)
-				end
-			end
-
-			if int:IsA("Frame") then
-				local props = {
-					["Active"] = int.Active ,
-					["AnchorPoint"] = int.AnchorPoint ,
-					["AutomaticSize"] = int.AutomaticSize ,
-					["BackgroundColor3"] = int.BackgroundColor3 ,
-					["BackgroundTransparency"] = int.BackgroundTransparency ,
-					["BorderColor3"] = int.BorderColor3 ,
-					["BorderMode"] = int.BorderMode ,
-					["BorderSizePixel"] = int.BorderSizePixel ,
-					["ClassName"] = int.ClassName ,
-					["LayoutOrder"] = int.LayoutOrder ,
-					["Name"] = int.Name ,
-					["Parent"] = int.Parent ,
-					["Position"] = int.Position ,
-					["Selectable"] = int.Selectable ,
-					["Size"] = int.Size ,
-					["SizeConstraint"] = int.SizeConstraint ,
-					["Style"] = int.Style ,
-					["Visible"] = int.Visible ,
-					["ZIndex"] = int.ZIndex ,
-					["Archivable"] = int.Archivable ,
-					["ClipsDescendants"] = int.ClipsDescendants ,
-					["AutoLocalize"] = int.AutoLocalize ,
-				}
-
-				print("There are " .. length(props) .. " properties for " .. int.Name)
-				print(props)
-
-				for g, v in pairs(int:GetAttributes()) do
-					print(g, ", ", v)
-				end
-			end
-
-			if int:IsA("ScrollingFrame") then
-				local props = {
-					["SelectionImageObject"] = int.SelectionImageObject,
-					["AbsolutePosition"] = int.AbsolutePosition,
-					["AbsoluteRotation"] = int.AbsoluteRotation,
-					["AbsoluteSize"] = int.AbsoluteSize,
-					["Active"] = int.Active,
-					["AnchorPoint"] = int.AnchorPoint ,
-					["AutomaticSize"] = int.AutomaticSize ,
-					["BackgroundColor3"] = int.BackgroundColor3 ,
-					["BackgroundTransparency"] = int.BackgroundTransparency ,
-					["BorderColor3"] = int.BorderColor3 ,
-					["BorderMode"] = int.BorderMode ,
-					["BorderSizePixel"] = int.BorderSizePixel ,
-					["ClassName"] = int.ClassName ,
-					["LayoutOrder"] = int.LayoutOrder ,
-					["Name"] = int.Name ,
-					["Parent"] = int.Parent ,
-					["Position"] = int.Position ,
-					["Rotation"] = int.Rotation,
-					["Selectable"] = int.Selectable ,
-					["Size"] = int.Size ,
-					["SizeConstraint"] = int.SizeConstraint ,
-					["Visible"] = int.Visible ,
-					["ZIndex"] = int.ZIndex ,
-					["Archivable"] = int.Archivable ,
-					["ClipsDescendants"] = int.ClipsDescendants ,
-					["NextSelectionDown"] = int.NextSelectionDown,
-					["NextSelectionLeft"] = int.NextSelectionLeft,
-					["NextSelectionRight"] = int.NextSelectionRight,
-					["NextSelectionUp"] = int.NextSelectionUp,
-					["AbsoluteWindowSize"] = int.AbsoluteWindowSize,
-					["AutomaticCanvasSize"] = int.AutomaticCanvasSize,
-					["BottomImage"] = int.BottomImage,
-					["CanvasPosition"] = int.CanvasPosition,
-					["CanvasSize"] = int.CanvasSize,
-					["ElasticBehavior"] = int.ElasticBehavior,
-					["HorizontalScrollBarInset"] = int.HorizontalScrollBarInset,
-					["MidImage"] = int.MidImage,
-					["ScrollBarImageColor3"] = int.ScrollBarImageColor3,
-					["ScrollBarThickness"] = int.ScrollBarThickness,
-					["ScrollingDirection"] = int.ScrollingDirection,
-					["ScrollingEnabled"] = int.ScrollingEnabled,
-					["TopImage"] = int.TopImage,
-					["VerticalScrollBarInset"] = int.VerticalScrollBarInset,
-					["VerticalScrollBarPosition"] = int.VerticalScrollBarPosition,
-					["AutoLocalize"] = int.AutoLocalize ,
-				}
-
-				print("There are " .. length(props) .. " properties for " .. int.Name)
-				print(props)
-
-				for g, v in pairs(int:GetAttributes()) do
-					print(g, ", ", v)
-				end
-			end
-
-			if int:IsA("TextLabel") then
-				local props = {
-					["SelectionImageObject"] = int.SelectionImageObject,
-					["AbsolutePosition"] = int.AbsolutePosition,
-					["AbsoluteRotation"] = int.AbsoluteRotation,
-					["AbsoluteSize"] = int.AbsoluteSize,
-					["Active"] = int.Active ,
-					["AnchorPoint"] = int.AnchorPoint ,
-					["AutomaticSize"] = int.AutomaticSize ,
-					["BackgroundColor3"] = int.BackgroundColor3 ,
-					["BackgroundTransparency"] = int.BackgroundTransparency ,
-					["BorderColor3"] = int.BorderColor3 ,
-					["BorderMode"] = int.BorderMode ,
-					["BorderSizePixel"] = int.BorderSizePixel ,
-					["ClassName"] = int.ClassName ,
-					["LayoutOrder"] = int.LayoutOrder ,
-					["Name"] = int.Name ,
-					["Parent"] = int.Parent ,
-					["Position"] = int.Position ,
-					["Rotation"] = int.Rotation,
-					["Selectable"] = int.Selectable ,
-					["Size"] = int.Size ,
-					["SizeConstraint"] = int.SizeConstraint ,
-					["Visible"] = int.Visible ,
-					["ZIndex"] = int.ZIndex ,
-					["Archivable"] = int.Archivable ,
-					["ClipsDescendants"] = int.ClipsDescendants ,
-					["NextSelectionDown"] = int.NextSelectionDown,
-					["NextSelectionLeft"] = int.NextSelectionLeft,
-					["NextSelectionRight"] = int.NextSelectionRight,
-					["NextSelectionUp"] = int.NextSelectionUp,
-					["Font"] = int.Font,
-					["LineHeight"] = int.LineHeight,
-					["RichText"] = int.RichText,
-					["Text"] = int.Text,
-					["TextBounds"] = int.TextBounds,
-					["TextColor3"] = int.TextColor3,
-					["TextSize"] = int.TextSize,
-					["TextStrokeColor3"] = int.TextStrokeColor3,
-					["TextTransparency"] = int.TextTransparency,
-					["TextTruncate"] = int.TextTruncate,
-					["TextWrapped"] = int.TextWrapped,
-					["TextXAllignment"] = int.TextXAllignment,
-					["TextYAllignment"] = int.TextYAllignment,
-					["AutoLocalize"] = int.AutoLocalize
-				}
-
-				print("There are " .. length(props) .. " properties for " .. int.Name)
-				print(props)
-
-				for g, v in pairs(int:GetAttributes()) do
-					print(g, ", ", v)
-				end
-			end
-
-			if int:IsA("TextBox") then
-				local props = {
-					["SelectionImageObject"] = int.SelectionImageObject,
-					["AbsolutePosition"] = int.AbsolutePosition,
-					["AbsoluteRotation"] = int.AbsoluteRotation,
-					["AbsoluteSize"] = int.AbsoluteSize,
-					["Active"] = int.Active ,
-					["AnchorPoint"] = int.AnchorPoint ,
-					["AutomaticSize"] = int.AutomaticSize ,
-					["BackgroundColor3"] = int.BackgroundColor3 ,
-					["BackgroundTransparency"] = int.BackgroundTransparency ,
-					["BorderColor3"] = int.BorderColor3 ,
-					["BorderMode"] = int.BorderMode ,
-					["BorderSizePixel"] = int.BorderSizePixel ,
-					["ClassName"] = int.ClassName ,
-					["ClearTextOnFocus"] = int.ClearTextOnFocus,
-					["CursorPosition"] = int.CursorPosition,
-					["LayoutOrder"] = int.LayoutOrder ,
-					["MultiLine"] = int.MultiLine,
-					["Name"] = int.Name ,
-					["Parent"] = int.Parent ,
-					["Position"] = int.Position ,
-					["Rotation"] = int.Rotation,
-					["Selectable"] = int.Selectable ,
-					["SelectionStart"] = int.SelectionStart,
-					["Size"] = int.Size ,
-					["SizeConstraint"] = int.SizeConstraint ,
-					["TextEditable"] = int.TextEditable,
-					["Visible"] = int.Visible ,
-					["ZIndex"] = int.ZIndex ,
-					["Archivable"] = int.Archivable ,
-					["ClipsDescendants"] = int.ClipsDescendants ,
-					["NextSelectionDown"] = int.NextSelectionDown,
-					["NextSelectionLeft"] = int.NextSelectionLeft,
-					["NextSelectionRight"] = int.NextSelectionRight,
-					["NextSelectionUp"] = int.NextSelectionUp,
-					["Font"] = int.Font,
-					["LineHeight"] = int.LineHeight,
-					["PlaceholderColor3"] = int.PlaceholderColor3,
-					["PlaceholderText"] = int.PlaceholderText,
-					["RichText"] = int.RichText,
-					["Text"] = int.Text,
-					["TextBounds"] = int.TextBounds,
-					["TextColor3"] = int.TextColor3,
-					["TextSize"] = int.TextSize,
-					["TextStrokeColor3"] = int.TextStrokeColor3,
-					["TextTransparency"] = int.TextTransparency,
-					["TextTruncate"] = int.TextTruncate,
-					["TextWrapped"] = int.TextWrapped,
-					["TextXAllignment"] = int.TextXAllignment,
-					["TextYAllignment"] = int.TextYAllignment,
-					["AutoLocalize"] = int.AutoLocalize
-				}
-
-				print("There are " .. length(props) .. " properties for " .. int.Name)
-				print(props)
-
-				for g, v in pairs(int:GetAttributes()) do
-					print(g, ", ", v)
-				end
-			end
-
-			if int:IsA("TextButton") then
-				local props = {
-					["SelectionImageObject"] = int.SelectionImageObject,
-					["AbsolutePosition"] = int.AbsolutePosition,
-					["AbsoluteRotation"] = int.AbsoluteRotation,
-					["AbsoluteSize"] = int.AbsoluteSize,
-					["Active"] = int.Active ,
-					["AnchorPoint"] = int.AnchorPoint ,
-					["AutomaticSize"] = int.AutomaticSize ,
-					["BackgroundColor3"] = int.BackgroundColor3 ,
-					["BackgroundTransparency"] = int.BackgroundTransparency ,
-					["BorderColor3"] = int.BorderColor3 ,
-					["BorderMode"] = int.BorderMode ,
-					["BorderSizePixel"] = int.BorderSizePixel ,
-					["ClassName"] = int.ClassName ,
-					["LayoutOrder"] = int.LayoutOrder ,
-					["Name"] = int.Name ,
-					["Parent"] = int.Parent ,
-					["Position"] = int.Position ,
-					["Rotation"] = int.Rotation,
-					["Selectable"] = int.Selectable ,
-					["Size"] = int.Size ,
-					["SizeConstraint"] = int.SizeConstraint ,
-					["Visible"] = int.Visible ,
-					["ZIndex"] = int.ZIndex ,
-					["Archivable"] = int.Archivable ,
-					["ClipsDescendants"] = int.ClipsDescendants ,
-					["NextSelectionDown"] = int.NextSelectionDown,
-					["NextSelectionLeft"] = int.NextSelectionLeft,
-					["NextSelectionRight"] = int.NextSelectionRight,
-					["NextSelectionUp"] = int.NextSelectionUp,
-					["Font"] = int.Font,
-					["LineHeight"] = int.LineHeight,
-					["RichText"] = int.RichText,
-					["Text"] = int.Text,
-					["TextBounds"] = int.TextBounds,
-					["TextColor3"] = int.TextColor3,
-					["TextSize"] = int.TextSize,
-					["TextStrokeColor3"] = int.TextStrokeColor3,
-					["TextTransparency"] = int.TextTransparency,
-					["TextTruncate"] = int.TextTruncate,
-					["TextWrapped"] = int.TextWrapped,
-					["TextXAllignment"] = int.TextXAllignment,
-					["TextYAllignment"] = int.TextYAllignment,
-					["AutoLocalize"] = int.AutoLocalize
-				}
-
-				print("There are " .. length(props) .. " properties for " .. int.Name)
-				print(props)
-
-				for g, v in pairs(int:GetAttributes()) do
-					print(g, ", ", v)
-				end
-			end
-
-			if int:IsA("ImageButton") then
-				local props = {
-					["SelectionImageObject"] = int.SelectionImageObject,
-					["AbsolutePosition"] = int.AbsolutePosition,
-					["AbsoluteRotation"] = int.AbsoluteRotation,
-					["AbsoluteSize"] = int.AbsoluteSize,
-					["Active"] = int.Active ,
-					["AnchorPoint"] = int.AnchorPoint ,
-					["AutomaticSize"] = int.AutomaticSize ,
-					["BackgroundColor3"] = int.BackgroundColor3 ,
-					["BackgroundTransparency"] = int.BackgroundTransparency ,
-					["BorderColor3"] = int.BorderColor3 ,
-					["BorderMode"] = int.BorderMode ,
-					["BorderSizePixel"] = int.BorderSizePixel ,
-					["ClassName"] = int.ClassName ,
-					["LayoutOrder"] = int.LayoutOrder ,
-					["Name"] = int.Name ,
-					["Parent"] = int.Parent ,
-					["Position"] = int.Position ,
-					["Rotation"] = int.Rotation,
-					["Selectable"] = int.Selectable ,
-					["Size"] = int.Size ,
-					["SizeConstraint"] = int.SizeConstraint ,
-					["Visible"] = int.Visible ,
-					["ZIndex"] = int.ZIndex ,
-					["Archivable"] = int.Archivable ,
-					["ClipsDescendants"] = int.ClipsDescendants ,
-					["NextSelectionDown"] = int.NextSelectionDown,
-					["NextSelectionLeft"] = int.NextSelectionLeft,
-					["NextSelectionRight"] = int.NextSelectionRight,
-					["NextSelectionUp"] = int.NextSelectionUp,
-					["HoverImage"] = int.HoverImage,
-					["Image"] = int.Image,
-					["ImageColor3"] = int.ImageColor3,
-					["ImageRectOffset"] = int.ImageRectOffset,
-					["ImageRectSize"] = int.ImageRectSize,
-					["ImageTransparency"] = int.ImageTransparency,
-					["IsLoaded"] = int.IsLoaded,
-					["PressedImage"] = int.PressedImage,
-					["ScaleType"] = int.ScaleType,
-					["SliceScale"] = int.SliceScale,
-					["AutoLocalize"] = int.AutoLocalize
-				}
-
-				print("There are " .. length(props) .. " properties for " .. int.Name)
-				print(props)
-
-				for g, v in pairs(int:GetAttributes()) do
-					print(g, ", ", v)
-				end
-			end
-
-			if int:IsA("ImageLabel") then
-				local props = {
-					["SelectionImageObject"] = int.SelectionImageObject,
-					["AbsolutePosition"] = int.AbsolutePosition,
-					["AbsoluteRotation"] = int.AbsoluteRotation,
-					["AbsoluteSize"] = int.AbsoluteSize,
-					["Active"] = int.Active ,
-					["AnchorPoint"] = int.AnchorPoint ,
-					["AutomaticSize"] = int.AutomaticSize ,
-					["BackgroundColor3"] = int.BackgroundColor3 ,
-					["BackgroundTransparency"] = int.BackgroundTransparency ,
-					["BorderColor3"] = int.BorderColor3 ,
-					["BorderMode"] = int.BorderMode ,
-					["BorderSizePixel"] = int.BorderSizePixel ,
-					["ClassName"] = int.ClassName ,
-					["LayoutOrder"] = int.LayoutOrder ,
-					["Name"] = int.Name ,
-					["Parent"] = int.Parent ,
-					["Position"] = int.Position ,
-					["Rotation"] = int.Rotation,
-					["Selectable"] = int.Selectable ,
-					["Size"] = int.Size ,
-					["SizeConstraint"] = int.SizeConstraint ,
-					["Visible"] = int.Visible ,
-					["ZIndex"] = int.ZIndex ,
-					["Archivable"] = int.Archivable ,
-					["ClipsDescendants"] = int.ClipsDescendants ,
-					["NextSelectionDown"] = int.NextSelectionDown,
-					["NextSelectionLeft"] = int.NextSelectionLeft,
-					["NextSelectionRight"] = int.NextSelectionRight,
-					["NextSelectionUp"] = int.NextSelectionUp,
-					["Image"] = int.Image,
-					["ImageColor3"] = int.ImageColor3,
-					["ImageRectOffset"] = int.ImageRectOffset,
-					["ImageRectSize"] = int.ImageRectSize,
-					["ImageTransparency"] = int.ImageTransparency,
-					["IsLoaded"] = int.IsLoaded,
-					["ScaleType"] = int.ScaleType,
-					["SliceScale"] = int.SliceScale,
-					["AutoLocalize"] = int.AutoLocalize
-				}
-
-				print("There are " .. length(props) .. " properties for " .. int.Name)
-				print(props)
-
-				for g, v in pairs(int:GetAttributes()) do
-					print(g, ", ", v)
-				end
-			end
-
-			if int:IsA("ViewportFrame") then
-				local props = {
-					["Ambient"] = int.Ambient,
-					["LightColor"] = int.LightColor,
-					["LightDirection"] = int.LightDirection,
-					["SelectionImageObject"] = int.SelectionImageObject,
-					["AbsolutePosition"] = int.AbsolutePosition,
-					["AbsoluteRotation"] = int.AbsoluteRotation,
-					["AbsoluteSize"] = int.AbsoluteSize,
-					["Active"] = int.Active ,
-					["AnchorPoint"] = int.AnchorPoint ,
-					["AutomaticSize"] = int.AutomaticSize ,
-					["BackgroundColor3"] = int.BackgroundColor3 ,
-					["BackgroundTransparency"] = int.BackgroundTransparency ,
-					["BorderColor3"] = int.BorderColor3 ,
-					["BorderMode"] = int.BorderMode ,
-					["BorderSizePixel"] = int.BorderSizePixel ,
-					["ClassName"] = int.ClassName ,
-					["LayoutOrder"] = int.LayoutOrder ,
-					["Name"] = int.Name ,
-					["Parent"] = int.Parent ,
-					["Position"] = int.Position ,
-					["Rotation"] = int.Rotation,
-					["Selectable"] = int.Selectable ,
-					["Size"] = int.Size ,
-					["SizeConstraint"] = int.SizeConstraint ,
-					["Visible"] = int.Visible ,
-					["ZIndex"] = int.ZIndex ,
-					["Archivable"] = int.Archivable ,
-					["ClipsDescendants"] = int.ClipsDescendants ,
-					["NextSelectionDown"] = int.NextSelectionDown,
-					["NextSelectionLeft"] = int.NextSelectionLeft,
-					["NextSelectionRight"] = int.NextSelectionRight,
-					["NextSelectionUp"] = int.NextSelectionUp,
-					["ImageColor3"] = int.ImageColor3,
-					["ImageTransparency"] = int.ImageTransparency,
-					["AutoLocalize"] = int.AutoLocalize
-				}
-
-				print("There are " .. length(props) .. " properties for " .. int.Name)
-				print(props)
-
-				for g, v in pairs(int:GetAttributes()) do
-					print(g, ", ", v)
-				end
-			end
-
-			if int:IsA("VideoFrame") then
-				local props = {
-					["SelectionImageObject"] = int.SelectionImageObject,
-					["AbsolutePosition"] = int.AbsolutePosition,
-					["AbsoluteRotation"] = int.AbsoluteRotation,
-					["AbsoluteSize"] = int.AbsoluteSize,
-					["Active"] = int.Active ,
-					["AnchorPoint"] = int.AnchorPoint ,
-					["AutomaticSize"] = int.AutomaticSize ,
-					["BackgroundColor3"] = int.BackgroundColor3 ,
-					["BackgroundTransparency"] = int.BackgroundTransparency ,
-					["BorderColor3"] = int.BorderColor3 ,
-					["BorderMode"] = int.BorderMode ,
-					["BorderSizePixel"] = int.BorderSizePixel ,
-					["ClassName"] = int.ClassName ,
-					["LayoutOrder"] = int.LayoutOrder ,
-					["Name"] = int.Name ,
-					["Parent"] = int.Parent ,
-					["Position"] = int.Position ,
-					["Rotation"] = int.Rotation,
-					["Selectable"] = int.Selectable ,
-					["Size"] = int.Size ,
-					["SizeConstraint"] = int.SizeConstraint ,
-					["Visible"] = int.Visible ,
-					["ZIndex"] = int.ZIndex ,
-					["Archivable"] = int.Archivable ,
-					["ClipsDescendants"] = int.ClipsDescendants ,
-					["NextSelectionDown"] = int.NextSelectionDown,
-					["NextSelectionLeft"] = int.NextSelectionLeft,
-					["NextSelectionRight"] = int.NextSelectionRight,
-					["NextSelectionUp"] = int.NextSelectionUp,
-					["IsLoaded"] = int.IsLoaded,
-					["Looped"] = int.Looped,
-					["Playing"] = int.Playing,
-					["Resolution"] = int.Resolution,
-					["Timelength"] = int.Timelength,
-					["TimePosition"] = int.TimePosition,
-					["Video"] = int.Video,
-					["Volume"] = int.Volume,
-					["AutoLocalize"] = int.AutoLocalize
-				}
-
-				print("There are " .. length(props) .. " properties for " .. int.Name)
-				print(props)
-
-				for g, v in pairs(int:GetAttributes()) do
+				for g, v in pairs(instance:GetAttributes()) do
 					print(g, ", ", v)
 				end
 			end
 		end
 
-		if int:IsA("UIAspectRatioConstraint") then
-			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable,
-				["AspectRatio"] = int.AspectRatio,
-				["AspectType"] = int.AspectType,
-				["DominantAxis"] = int.DominantAxis
-			}
-
-			print("There are " .. length(props) .. " properties for " .. int.Name)
-			print(props)
-
-			for g, v in pairs(int:GetAttributes()) do
-				print(g, ", ", v)
-			end
-		end
-
-		if int:IsA("UICorner") then
-			local props = {
-				["CornerRadius"] = int.CornerRadius,
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable
-			}
-
-			print("There are " .. length(props) .. " properties for " .. int.Name)
-			print(props)
-
-			for g, v in pairs(int:GetAttributes()) do
-				print(g, ", ", v)
-			end
-		end
-
-		if int:IsA("UIGradient") then
-			local props = {
-				["Color"] = int.Color,
-				["Enabled"] = int.Enabled,
-				["Offset"] = int.Offset,
-				["Rotation"] = int.Rotation,
-				["Transparency"] = int.Transparency,
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable
-			}
-
-			print("There are " .. length(props) .. " properties for " .. int.Name)
-			print(props)
-
-			for g, v in pairs(int:GetAttributes()) do
-				print(g, ", ", v)
-			end
-		end
-
-		if int:IsA("UIGridLayout") then
-			local props = {
-				["CellPadding"] = int.CellPadding,
-				["CellSize"] = int.CellSize,
-				["AbsoluteCellCount"] = int.AbsoluteCellCount,
-				["AbsoluteCellSize"] = int.AbsoluteCellSize,
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable,
-				["FillDirection"] = int.FillDirection,
-				["FillDirectionMaxCells"] = int.FillDirectionMaxCells,
-				["HorizontalAlignment"] = int.HorizontalAlignment,
-				["SortOrder"] = int.SortOrder,
-				["StartCorner"] = int.StartCorner,
-				["VerticalAlignment"] = int.VerticalAlignment
-			}
-
-			print("There are " .. length(props) .. " properties for " .. int.Name)
-			print(props)
-
-			for g, v in pairs(int:GetAttributes()) do
-				print(g, ", ", v)
-			end
-		end
-
-		if int:IsA("UIListLayout") then
-			local props = {
-				["Padding"] = int.Padding,
-				["AbsoluteContentSize"] = int.AbsoluteContentSize,
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable,
-				["FillDirection"] = int.FillDirection,
-				["HorizontalAlignment"] = int.HorizontalAlignment,
-				["SortOrder"] = int.SortOrder,
-				["VerticalAlignment"] = int.VerticalAlignment
-			}
-
-			print("There are " .. length(props) .. " properties for " .. int.Name)
-			print(props)
-
-			for g, v in pairs(int:GetAttributes()) do
-				print(g, ", ", v)
-			end
-		end
-
-		if int:IsA("UIPadding") then
-			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable,
-				["PaddingBottom"] = int.PaddingBottom,
-				["PaddingLeft"] = int.PaddingLeft,
-				["PaddingRight"] = int.PaddingRight,
-				["PaddingTop"] = int.PaddingTop
-			}
-
-			print("There are " .. length(props) .. " properties for " .. int.Name)
-			print(props)
-
-			for g, v in pairs(int:GetAttributes()) do
-				print(g, ", ", v)
-			end
-		end
-
-		if int:IsA("UIPageLayout") then
-			local props = {
-				["Animated"] = int.Animated,
-				["Circular"] = int.Circular,
-				["EasingDirection"] = int.EasingDirection,
-				["EasingStyle"] = int.EasingStyle,
-				["Padding"] = int.Padding,
-				["TweenTime"] = int.TweenTime,
-				["AbsoluteContentSize"] = int.AbsoluteContentSize,
-				["ClassName"] = int.ClassName,
-				["CurrentPage"] = int.CurrentPage,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable,
-				["FillDirection"] = int.FillDirection,
-				["HorizontalAlignment"] = int.HorizontalAlignment,
-				["SortOrder"] = int.SortOrder,
-				["VerticalAlignment"] = int.VerticalAlignment
-			}
-
-			print("There are " .. length(props) .. " properties for " .. int.Name)
-			print(props)
-
-			for g, v in pairs(int:GetAttributes()) do
-				print(g, ", ", v)
-			end
-		end
-
-		if int:IsA("UIScale") then
-			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable,
-				["Scale"] = int.Scale
-			}
-
-			print("There are " .. length(props) .. " properties for " .. int.Name)
-			print(props)
-
-			for g, v in pairs(int:GetAttributes()) do
-				print(g, ", ", v)
-			end
-		end
-
-		if int:IsA("UISizeConstraint") then
-			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable,
-				["MaxSize"] = int.MaxSize,
-				["MinSize"] = int.MinSize
-			}
-
-			print("There are " .. length(props) .. " properties for " .. int.Name)
-			print(props)
-
-			for g, v in pairs(int:GetAttributes()) do
-				print(g, ", ", v)
-			end
-		end
-
-		if int:IsA("UIStroke") then
-			local props = {
-				["ApplyStrokeMode"] = int.ApplyStrokeMode,
-				["Color"] = int.Color,
-				["LineJoinMode"] = int.LineJoinMode,
-				["Thickness"] = int.Thickness,
-				["Transparency"] = int.Transparency,
-				["ClassName"] = int.ClassName,
-				["Enabled"] = int.Enabled,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable
-			}
-
-			print("There are " .. length(props) .. " properties for " .. int.Name)
-			print(props)
-
-			for g, v in pairs(int:GetAttributes()) do
-				print(g, ", ", v)
-			end
-		end
-
-		if int:IsA("UITableLayout") then
-			local props = {
-				["FillEmptySpaceColumns"] = int.FillEmptySpaceColumns,
-				["FillEmptySpaceRows"] = int.FillEmptySpaceRows,
-				["Padding"] = int.Padding,
-				["AbsoluteContentSize"] = int.AbsoluteContentSize,
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable,
-				["FillDirection"] = int.FillDirection,
-				["HorizontalAlignment"] = int.HorizontalAlignment,
-				["MajorAxis"] = int.MajorAxis,
-				["SortOrder"] = int.SortOrder,
-				["VerticalAlignment"] = int.VerticalAlignment
-			}
-
-			print("There are " .. length(props) .. " properties for " .. int.Name)
-			print(props)
-
-			for g, v in pairs(int:GetAttributes()) do
-				print(g, ", ", v)
-			end
-		end
-
-		if int:IsA("UITextSizeConstraint") then
-			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable,
-				["MaxTextSize"] = int.MaxTextSize,
-				["MinTextSize"] = int.MinTextSize
-			}
-
-			print("There are " .. length(props) .. " properties for " .. int.Name)
-			print(props)
-
-			for g, v in pairs(int:GetAttributes()) do
-				print(g, ", ", v)
-			end
-		end
-
-		if int:IsA("Tool") then
-			local props = {
-				["GripForward"] = int.GripForward,
-				["GripPos"] = int.GripForward,
-				["GripRight"] = int.GripRight,
-				["GripUp"] = int.GripUp,
-				["ToolTip"] = int.ToolTip,
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["TextureId"] = int.TextureId,
-				["Enabled"] = int.Enabled,
-				["Archivable"] = int.Archivable,
-				["CanBeDropped"] = int.CanBeDropped,
-				["ManualActivationOnly"] = int.ManualActivationOnly,
-				["RequiresHandle"] = int.RequiresHandle
-			}
-
-			print("There are " .. length(props) .. " properties for " .. int.Name)
-			print(props)
-
-			for g, v in pairs(int:GetAttributes()) do
-				print(g, ", ", v)
-			end
-		end
-
-		if int:IsA("Sparkles") then
-			local props = {
-				["ClassName"] = int.ClassName,
-				["Enabled"] = int.Enabled,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["SparkleColor"] = int.SparkleColor,
-				["Archivable"] = int.Archivable
-			}
-
-			print("There are " .. length(props) .. " properties for " .. int.Name)
-			print(props)
-
-			for g, v in pairs(int:GetAttributes()) do
-				print(g, ", ", v)
-			end
-		end
-
-		if int:IsA("Explosion") then
-			local props = {
-				["BlastPressure"] = int.BlastPressure,
-				["BlastRadius"] = int.BlastRadius,
-				["ClassName"] = int.ClassName,
-				["DestroyJointRadiusPercent"] = int.DestroyJointRadiusPercent,
-				["ExplosionType"] = int.ExplosionType,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Position"] = int.Position,
-				["Visible"] = int.Visible,
-				["Archivable"] = int.Archivable
-			}
-
-			print("There are " .. length(props) .. " properties for " .. int.Name)
-			print(props)
-
-			for g, v in pairs(int:GetAttributes()) do
-				print(g, ", ", v)
-			end
-		end
-
-		if int:IsA("ParticleEmitter") then
-			local props = {
-				["Color"] = int.Color,
-				["LightEmission"] = int.LightMission,
-				["LightInfluence"] = int.LightInfluence,
-				["Orientation"] = int.Orientation,
-				["Size"] = int.Size,
-				["Texture"] = int.Texture,
-				["Transparency"] = int.Transparency,
-				["ZOffset"] = int.ZOffset,
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable,
-				["Acceleration"] = int.Acceleration,
-				["Drag"] = int.Drag,
-				["LockedToPart"] = int.LockedToPart,
-				["TimeScale"] = int.TimeScale,
-				["VelocityInheritance"] = int.VelocityInheritance,
-				["EmissionDIrection"] = int.EmissionDIrectionm,
-				["Enabled"] = int.Enabled,
-				["Lifetime"] = int.Lifetime,
-				["Rate"] = int.Rate,
-				["Rotation"] = int.Rotation,
-				["RotSpeed"] = int.RotSpeed,
-				["Speed"] = int.Speed,
-				["SpreadAngle"] = int.SpreadAngle
+		if instance:IsA("GuiObject") then
+			if instance:IsA("ScreenGui") then
+				local props = {
+					["AbsolutePosition"] = instance.AbsolutePosition,
+					["AbsoluteRotation"] = instance.AbsoluteRotation,
+					["AbsoluteSize"] = instance.AbsoluteSize,
+					["ClassName"] = instance.ClassName,
+					["DisplayOrder"] = instance.DisplayOrder,
+					["Enabled"] = instance.Enabled,
+					["IgnoreGuiInset"] = instance.IgnoreGuiInset,
+					["Name"] = instance.Name,
+					["Parent"] = instance.Parent,
+					["ResetOnSpawn"] = instance.ResetOnSpawn,
+					["ZIndexBehavior"] = instance.ZIndexBehavior,
+					["Archivable"] = instance.Archivable,
+					["AutoLocalize"] = instance.AutoLocalize
+				}
+
+				print("There are " .. length(props) .. " properties for " .. instance.Name)
+				print(props)
+
+				for g, v in pairs(instance:GetAttributes()) do
+					print(g, ", ", v)
+				end
+			end
+
+			if instance:IsA("Frame") then
+				local props = {
+					["Active"] = instance.Active ,
+					["AnchorPoinstance"] = instance.AnchorPoinstance ,
+					["AutomaticSize"] = instance.AutomaticSize ,
+					["BackgroundColor3"] = instance.BackgroundColor3 ,
+					["BackgroundTransparency"] = instance.BackgroundTransparency ,
+					["BorderColor3"] = instance.BorderColor3 ,
+					["BorderMode"] = instance.BorderMode ,
+					["BorderSizePixel"] = instance.BorderSizePixel ,
+					["ClassName"] = instance.ClassName ,
+					["LayoutOrder"] = instance.LayoutOrder ,
+					["Name"] = instance.Name ,
+					["Parent"] = instance.Parent ,
+					["Position"] = instance.Position ,
+					["Selectable"] = instance.Selectable ,
+					["Size"] = instance.Size ,
+					["SizeConstrainstance"] = instance.SizeConstrainstance ,
+					["Style"] = instance.Style ,
+					["Visible"] = instance.Visible ,
+					["ZIndex"] = instance.ZIndex ,
+					["Archivable"] = instance.Archivable ,
+					["ClipsDescendants"] = instance.ClipsDescendants ,
+					["AutoLocalize"] = instance.AutoLocalize ,
+				}
+
+				print("There are " .. length(props) .. " properties for " .. instance.Name)
+				print(props)
+
+				for g, v in pairs(instance:GetAttributes()) do
+					print(g, ", ", v)
+				end
+			end
+
+			if instance:IsA("ScrollingFrame") then
+				local props = {
+					["SelectionImageObject"] = instance.SelectionImageObject,
+					["AbsolutePosition"] = instance.AbsolutePosition,
+					["AbsoluteRotation"] = instance.AbsoluteRotation,
+					["AbsoluteSize"] = instance.AbsoluteSize,
+					["Active"] = instance.Active,
+					["AnchorPoinstance"] = instance.AnchorPoinstance ,
+					["AutomaticSize"] = instance.AutomaticSize ,
+					["BackgroundColor3"] = instance.BackgroundColor3 ,
+					["BackgroundTransparency"] = instance.BackgroundTransparency ,
+					["BorderColor3"] = instance.BorderColor3 ,
+					["BorderMode"] = instance.BorderMode ,
+					["BorderSizePixel"] = instance.BorderSizePixel ,
+					["ClassName"] = instance.ClassName ,
+					["LayoutOrder"] = instance.LayoutOrder ,
+					["Name"] = instance.Name ,
+					["Parent"] = instance.Parent ,
+					["Position"] = instance.Position ,
+					["Rotation"] = instance.Rotation,
+					["Selectable"] = instance.Selectable ,
+					["Size"] = instance.Size ,
+					["SizeConstrainstance"] = instance.SizeConstrainstance ,
+					["Visible"] = instance.Visible ,
+					["ZIndex"] = instance.ZIndex ,
+					["Archivable"] = instance.Archivable ,
+					["ClipsDescendants"] = instance.ClipsDescendants ,
+					["NextSelectionDown"] = instance.NextSelectionDown,
+					["NextSelectionLeft"] = instance.NextSelectionLeft,
+					["NextSelectionRight"] = instance.NextSelectionRight,
+					["NextSelectionUp"] = instance.NextSelectionUp,
+					["AbsoluteWindowSize"] = instance.AbsoluteWindowSize,
+					["AutomaticCanvasSize"] = instance.AutomaticCanvasSize,
+					["BottomImage"] = instance.BottomImage,
+					["CanvasPosition"] = instance.CanvasPosition,
+					["CanvasSize"] = instance.CanvasSize,
+					["ElasticBehavior"] = instance.ElasticBehavior,
+					["HorizontalScrollBarInset"] = instance.HorizontalScrollBarInset,
+					["MidImage"] = instance.MidImage,
+					["ScrollBarImageColor3"] = instance.ScrollBarImageColor3,
+					["ScrollBarThickness"] = instance.ScrollBarThickness,
+					["ScrollingDirection"] = instance.ScrollingDirection,
+					["ScrollingEnabled"] = instance.ScrollingEnabled,
+					["TopImage"] = instance.TopImage,
+					["VerticalScrollBarInset"] = instance.VerticalScrollBarInset,
+					["VerticalScrollBarPosition"] = instance.VerticalScrollBarPosition,
+					["AutoLocalize"] = instance.AutoLocalize ,
+				}
+
+				print("There are " .. length(props) .. " properties for " .. instance.Name)
+				print(props)
+
+				for g, v in pairs(instance:GetAttributes()) do
+					print(g, ", ", v)
+				end
+			end
+
+			if instance:IsA("TextLabel") then
+				local props = {
+					["SelectionImageObject"] = instance.SelectionImageObject,
+					["AbsolutePosition"] = instance.AbsolutePosition,
+					["AbsoluteRotation"] = instance.AbsoluteRotation,
+					["AbsoluteSize"] = instance.AbsoluteSize,
+					["Active"] = instance.Active ,
+					["AnchorPoinstance"] = instance.AnchorPoinstance ,
+					["AutomaticSize"] = instance.AutomaticSize ,
+					["BackgroundColor3"] = instance.BackgroundColor3 ,
+					["BackgroundTransparency"] = instance.BackgroundTransparency ,
+					["BorderColor3"] = instance.BorderColor3 ,
+					["BorderMode"] = instance.BorderMode ,
+					["BorderSizePixel"] = instance.BorderSizePixel ,
+					["ClassName"] = instance.ClassName ,
+					["LayoutOrder"] = instance.LayoutOrder ,
+					["Name"] = instance.Name ,
+					["Parent"] = instance.Parent ,
+					["Position"] = instance.Position ,
+					["Rotation"] = instance.Rotation,
+					["Selectable"] = instance.Selectable ,
+					["Size"] = instance.Size ,
+					["SizeConstrainstance"] = instance.SizeConstrainstance ,
+					["Visible"] = instance.Visible ,
+					["ZIndex"] = instance.ZIndex ,
+					["Archivable"] = instance.Archivable ,
+					["ClipsDescendants"] = instance.ClipsDescendants ,
+					["NextSelectionDown"] = instance.NextSelectionDown,
+					["NextSelectionLeft"] = instance.NextSelectionLeft,
+					["NextSelectionRight"] = instance.NextSelectionRight,
+					["NextSelectionUp"] = instance.NextSelectionUp,
+					["Font"] = instance.Font,
+					["LineHeight"] = instance.LineHeight,
+					["RichText"] = instance.RichText,
+					["Text"] = instance.Text,
+					["TextBounds"] = instance.TextBounds,
+					["TextColor3"] = instance.TextColor3,
+					["TextSize"] = instance.TextSize,
+					["TextStrokeColor3"] = instance.TextStrokeColor3,
+					["TextTransparency"] = instance.TextTransparency,
+					["TextTruncate"] = instance.TextTruncate,
+					["TextWrapped"] = instance.TextWrapped,
+					["TextXAllignment"] = instance.TextXAllignment,
+					["TextYAllignment"] = instance.TextYAllignment,
+					["AutoLocalize"] = instance.AutoLocalize
+				}
+
+				print("There are " .. length(props) .. " properties for " .. instance.Name)
+				print(props)
+
+				for g, v in pairs(instance:GetAttributes()) do
+					print(g, ", ", v)
+				end
+			end
+
+			if instance:IsA("TextBox") then
+				local props = {
+					["SelectionImageObject"] = instance.SelectionImageObject,
+					["AbsolutePosition"] = instance.AbsolutePosition,
+					["AbsoluteRotation"] = instance.AbsoluteRotation,
+					["AbsoluteSize"] = instance.AbsoluteSize,
+					["Active"] = instance.Active ,
+					["AnchorPoinstance"] = instance.AnchorPoinstance ,
+					["AutomaticSize"] = instance.AutomaticSize ,
+					["BackgroundColor3"] = instance.BackgroundColor3 ,
+					["BackgroundTransparency"] = instance.BackgroundTransparency ,
+					["BorderColor3"] = instance.BorderColor3 ,
+					["BorderMode"] = instance.BorderMode ,
+					["BorderSizePixel"] = instance.BorderSizePixel ,
+					["ClassName"] = instance.ClassName ,
+					["ClearTextOnFocus"] = instance.ClearTextOnFocus,
+					["CursorPosition"] = instance.CursorPosition,
+					["LayoutOrder"] = instance.LayoutOrder ,
+					["MultiLine"] = instance.MultiLine,
+					["Name"] = instance.Name ,
+					["Parent"] = instance.Parent ,
+					["Position"] = instance.Position ,
+					["Rotation"] = instance.Rotation,
+					["Selectable"] = instance.Selectable ,
+					["SelectionStart"] = instance.SelectionStart,
+					["Size"] = instance.Size ,
+					["SizeConstrainstance"] = instance.SizeConstrainstance ,
+					["TextEditable"] = instance.TextEditable,
+					["Visible"] = instance.Visible ,
+					["ZIndex"] = instance.ZIndex ,
+					["Archivable"] = instance.Archivable ,
+					["ClipsDescendants"] = instance.ClipsDescendants ,
+					["NextSelectionDown"] = instance.NextSelectionDown,
+					["NextSelectionLeft"] = instance.NextSelectionLeft,
+					["NextSelectionRight"] = instance.NextSelectionRight,
+					["NextSelectionUp"] = instance.NextSelectionUp,
+					["Font"] = instance.Font,
+					["LineHeight"] = instance.LineHeight,
+					["PlaceholderColor3"] = instance.PlaceholderColor3,
+					["PlaceholderText"] = instance.PlaceholderText,
+					["RichText"] = instance.RichText,
+					["Text"] = instance.Text,
+					["TextBounds"] = instance.TextBounds,
+					["TextColor3"] = instance.TextColor3,
+					["TextSize"] = instance.TextSize,
+					["TextStrokeColor3"] = instance.TextStrokeColor3,
+					["TextTransparency"] = instance.TextTransparency,
+					["TextTruncate"] = instance.TextTruncate,
+					["TextWrapped"] = instance.TextWrapped,
+					["TextXAllignment"] = instance.TextXAllignment,
+					["TextYAllignment"] = instance.TextYAllignment,
+					["AutoLocalize"] = instance.AutoLocalize
+				}
+
+				print("There are " .. length(props) .. " properties for " .. instance.Name)
+				print(props)
+
+				for g, v in pairs(instance:GetAttributes()) do
+					print(g, ", ", v)
+				end
+			end
+
+			if instance:IsA("TextButton") then
+				local props = {
+					["SelectionImageObject"] = instance.SelectionImageObject,
+					["AbsolutePosition"] = instance.AbsolutePosition,
+					["AbsoluteRotation"] = instance.AbsoluteRotation,
+					["AbsoluteSize"] = instance.AbsoluteSize,
+					["Active"] = instance.Active ,
+					["AnchorPoinstance"] = instance.AnchorPoinstance ,
+					["AutomaticSize"] = instance.AutomaticSize ,
+					["BackgroundColor3"] = instance.BackgroundColor3 ,
+					["BackgroundTransparency"] = instance.BackgroundTransparency ,
+					["BorderColor3"] = instance.BorderColor3 ,
+					["BorderMode"] = instance.BorderMode ,
+					["BorderSizePixel"] = instance.BorderSizePixel ,
+					["ClassName"] = instance.ClassName ,
+					["LayoutOrder"] = instance.LayoutOrder ,
+					["Name"] = instance.Name ,
+					["Parent"] = instance.Parent ,
+					["Position"] = instance.Position ,
+					["Rotation"] = instance.Rotation,
+					["Selectable"] = instance.Selectable ,
+					["Size"] = instance.Size ,
+					["SizeConstrainstance"] = instance.SizeConstrainstance ,
+					["Visible"] = instance.Visible ,
+					["ZIndex"] = instance.ZIndex ,
+					["Archivable"] = instance.Archivable ,
+					["ClipsDescendants"] = instance.ClipsDescendants ,
+					["NextSelectionDown"] = instance.NextSelectionDown,
+					["NextSelectionLeft"] = instance.NextSelectionLeft,
+					["NextSelectionRight"] = instance.NextSelectionRight,
+					["NextSelectionUp"] = instance.NextSelectionUp,
+					["Font"] = instance.Font,
+					["LineHeight"] = instance.LineHeight,
+					["RichText"] = instance.RichText,
+					["Text"] = instance.Text,
+					["TextBounds"] = instance.TextBounds,
+					["TextColor3"] = instance.TextColor3,
+					["TextSize"] = instance.TextSize,
+					["TextStrokeColor3"] = instance.TextStrokeColor3,
+					["TextTransparency"] = instance.TextTransparency,
+					["TextTruncate"] = instance.TextTruncate,
+					["TextWrapped"] = instance.TextWrapped,
+					["TextXAllignment"] = instance.TextXAllignment,
+					["TextYAllignment"] = instance.TextYAllignment,
+					["AutoLocalize"] = instance.AutoLocalize
+				}
+
+				print("There are " .. length(props) .. " properties for " .. instance.Name)
+				print(props)
+
+				for g, v in pairs(instance:GetAttributes()) do
+					print(g, ", ", v)
+				end
+			end
+
+			if instance:IsA("ImageButton") then
+				local props = {
+					["SelectionImageObject"] = instance.SelectionImageObject,
+					["AbsolutePosition"] = instance.AbsolutePosition,
+					["AbsoluteRotation"] = instance.AbsoluteRotation,
+					["AbsoluteSize"] = instance.AbsoluteSize,
+					["Active"] = instance.Active ,
+					["AnchorPoinstance"] = instance.AnchorPoinstance ,
+					["AutomaticSize"] = instance.AutomaticSize ,
+					["BackgroundColor3"] = instance.BackgroundColor3 ,
+					["BackgroundTransparency"] = instance.BackgroundTransparency ,
+					["BorderColor3"] = instance.BorderColor3 ,
+					["BorderMode"] = instance.BorderMode ,
+					["BorderSizePixel"] = instance.BorderSizePixel ,
+					["ClassName"] = instance.ClassName ,
+					["LayoutOrder"] = instance.LayoutOrder ,
+					["Name"] = instance.Name ,
+					["Parent"] = instance.Parent ,
+					["Position"] = instance.Position ,
+					["Rotation"] = instance.Rotation,
+					["Selectable"] = instance.Selectable ,
+					["Size"] = instance.Size ,
+					["SizeConstrainstance"] = instance.SizeConstrainstance ,
+					["Visible"] = instance.Visible ,
+					["ZIndex"] = instance.ZIndex ,
+					["Archivable"] = instance.Archivable ,
+					["ClipsDescendants"] = instance.ClipsDescendants ,
+					["NextSelectionDown"] = instance.NextSelectionDown,
+					["NextSelectionLeft"] = instance.NextSelectionLeft,
+					["NextSelectionRight"] = instance.NextSelectionRight,
+					["NextSelectionUp"] = instance.NextSelectionUp,
+					["HoverImage"] = instance.HoverImage,
+					["Image"] = instance.Image,
+					["ImageColor3"] = instance.ImageColor3,
+					["ImageRectOffset"] = instance.ImageRectOffset,
+					["ImageRectSize"] = instance.ImageRectSize,
+					["ImageTransparency"] = instance.ImageTransparency,
+					["IsLoaded"] = instance.IsLoaded,
+					["PressedImage"] = instance.PressedImage,
+					["ScaleType"] = instance.ScaleType,
+					["SliceScale"] = instance.SliceScale,
+					["AutoLocalize"] = instance.AutoLocalize
+				}
+
+				print("There are " .. length(props) .. " properties for " .. instance.Name)
+				print(props)
+
+				for g, v in pairs(instance:GetAttributes()) do
+					print(g, ", ", v)
+				end
+			end
+
+			if instance:IsA("ImageLabel") then
+				local props = {
+					["SelectionImageObject"] = instance.SelectionImageObject,
+					["AbsolutePosition"] = instance.AbsolutePosition,
+					["AbsoluteRotation"] = instance.AbsoluteRotation,
+					["AbsoluteSize"] = instance.AbsoluteSize,
+					["Active"] = instance.Active ,
+					["AnchorPoinstance"] = instance.AnchorPoinstance ,
+					["AutomaticSize"] = instance.AutomaticSize ,
+					["BackgroundColor3"] = instance.BackgroundColor3 ,
+					["BackgroundTransparency"] = instance.BackgroundTransparency ,
+					["BorderColor3"] = instance.BorderColor3 ,
+					["BorderMode"] = instance.BorderMode ,
+					["BorderSizePixel"] = instance.BorderSizePixel ,
+					["ClassName"] = instance.ClassName ,
+					["LayoutOrder"] = instance.LayoutOrder ,
+					["Name"] = instance.Name ,
+					["Parent"] = instance.Parent ,
+					["Position"] = instance.Position ,
+					["Rotation"] = instance.Rotation,
+					["Selectable"] = instance.Selectable ,
+					["Size"] = instance.Size ,
+					["SizeConstrainstance"] = instance.SizeConstrainstance ,
+					["Visible"] = instance.Visible ,
+					["ZIndex"] = instance.ZIndex ,
+					["Archivable"] = instance.Archivable ,
+					["ClipsDescendants"] = instance.ClipsDescendants ,
+					["NextSelectionDown"] = instance.NextSelectionDown,
+					["NextSelectionLeft"] = instance.NextSelectionLeft,
+					["NextSelectionRight"] = instance.NextSelectionRight,
+					["NextSelectionUp"] = instance.NextSelectionUp,
+					["Image"] = instance.Image,
+					["ImageColor3"] = instance.ImageColor3,
+					["ImageRectOffset"] = instance.ImageRectOffset,
+					["ImageRectSize"] = instance.ImageRectSize,
+					["ImageTransparency"] = instance.ImageTransparency,
+					["IsLoaded"] = instance.IsLoaded,
+					["ScaleType"] = instance.ScaleType,
+					["SliceScale"] = instance.SliceScale,
+					["AutoLocalize"] = instance.AutoLocalize
+				}
+
+				print("There are " .. length(props) .. " properties for " .. instance.Name)
+				print(props)
+
+				for g, v in pairs(instance:GetAttributes()) do
+					print(g, ", ", v)
+				end
+			end
+
+			if instance:IsA("ViewportFrame") then
+				local props = {
+					["Ambient"] = instance.Ambient,
+					["LightColor"] = instance.LightColor,
+					["LightDirection"] = instance.LightDirection,
+					["SelectionImageObject"] = instance.SelectionImageObject,
+					["AbsolutePosition"] = instance.AbsolutePosition,
+					["AbsoluteRotation"] = instance.AbsoluteRotation,
+					["AbsoluteSize"] = instance.AbsoluteSize,
+					["Active"] = instance.Active ,
+					["AnchorPoinstance"] = instance.AnchorPoinstance ,
+					["AutomaticSize"] = instance.AutomaticSize ,
+					["BackgroundColor3"] = instance.BackgroundColor3 ,
+					["BackgroundTransparency"] = instance.BackgroundTransparency ,
+					["BorderColor3"] = instance.BorderColor3 ,
+					["BorderMode"] = instance.BorderMode ,
+					["BorderSizePixel"] = instance.BorderSizePixel ,
+					["ClassName"] = instance.ClassName ,
+					["LayoutOrder"] = instance.LayoutOrder ,
+					["Name"] = instance.Name ,
+					["Parent"] = instance.Parent ,
+					["Position"] = instance.Position ,
+					["Rotation"] = instance.Rotation,
+					["Selectable"] = instance.Selectable ,
+					["Size"] = instance.Size ,
+					["SizeConstrainstance"] = instance.SizeConstrainstance ,
+					["Visible"] = instance.Visible ,
+					["ZIndex"] = instance.ZIndex ,
+					["Archivable"] = instance.Archivable ,
+					["ClipsDescendants"] = instance.ClipsDescendants ,
+					["NextSelectionDown"] = instance.NextSelectionDown,
+					["NextSelectionLeft"] = instance.NextSelectionLeft,
+					["NextSelectionRight"] = instance.NextSelectionRight,
+					["NextSelectionUp"] = instance.NextSelectionUp,
+					["ImageColor3"] = instance.ImageColor3,
+					["ImageTransparency"] = instance.ImageTransparency,
+					["AutoLocalize"] = instance.AutoLocalize
+				}
+
+				print("There are " .. length(props) .. " properties for " .. instance.Name)
+				print(props)
+
+				for g, v in pairs(instance:GetAttributes()) do
+					print(g, ", ", v)
+				end
+			end
+
+			if instance:IsA("VideoFrame") then
+				local props = {
+					["SelectionImageObject"] = instance.SelectionImageObject,
+					["AbsolutePosition"] = instance.AbsolutePosition,
+					["AbsoluteRotation"] = instance.AbsoluteRotation,
+					["AbsoluteSize"] = instance.AbsoluteSize,
+					["Active"] = instance.Active ,
+					["AnchorPoinstance"] = instance.AnchorPoinstance ,
+					["AutomaticSize"] = instance.AutomaticSize ,
+					["BackgroundColor3"] = instance.BackgroundColor3 ,
+					["BackgroundTransparency"] = instance.BackgroundTransparency ,
+					["BorderColor3"] = instance.BorderColor3 ,
+					["BorderMode"] = instance.BorderMode ,
+					["BorderSizePixel"] = instance.BorderSizePixel ,
+					["ClassName"] = instance.ClassName ,
+					["LayoutOrder"] = instance.LayoutOrder ,
+					["Name"] = instance.Name ,
+					["Parent"] = instance.Parent ,
+					["Position"] = instance.Position ,
+					["Rotation"] = instance.Rotation,
+					["Selectable"] = instance.Selectable ,
+					["Size"] = instance.Size ,
+					["SizeConstrainstance"] = instance.SizeConstrainstance ,
+					["Visible"] = instance.Visible ,
+					["ZIndex"] = instance.ZIndex ,
+					["Archivable"] = instance.Archivable ,
+					["ClipsDescendants"] = instance.ClipsDescendants ,
+					["NextSelectionDown"] = instance.NextSelectionDown,
+					["NextSelectionLeft"] = instance.NextSelectionLeft,
+					["NextSelectionRight"] = instance.NextSelectionRight,
+					["NextSelectionUp"] = instance.NextSelectionUp,
+					["IsLoaded"] = instance.IsLoaded,
+					["Looped"] = instance.Looped,
+					["Playing"] = instance.Playing,
+					["Resolution"] = instance.Resolution,
+					["Timelength"] = instance.Timelength,
+					["TimePosition"] = instance.TimePosition,
+					["Video"] = instance.Video,
+					["Volume"] = instance.Volume,
+					["AutoLocalize"] = instance.AutoLocalize
+				}
+
+				print("There are " .. length(props) .. " properties for " .. instance.Name)
+				print(props)
+
+				for g, v in pairs(instance:GetAttributes()) do
+					print(g, ", ", v)
+				end
+			end
+		end
+
+		if instance:IsA("UIAspectRatioConstraint") then
+			local props = {
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable,
+				["AspectRatio"] = instance.AspectRatio,
+				["AspectType"] = instance.AspectType,
+				["DominantAxis"] = instance.DominantAxis
+			}
+
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
+			print(props)
+
+			for g, v in pairs(instance:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if instance:IsA("UICorner") then
+			local props = {
+				["CornerRadius"] = instance.CornerRadius,
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable
+			}
+
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
+			print(props)
+
+			for g, v in pairs(instance:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if instance:IsA("UIGradient") then
+			local props = {
+				["Color"] = instance.Color,
+				["Enabled"] = instance.Enabled,
+				["Offset"] = instance.Offset,
+				["Rotation"] = instance.Rotation,
+				["Transparency"] = instance.Transparency,
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable
+			}
+
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
+			print(props)
+
+			for g, v in pairs(instance:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if instance:IsA("UIGridLayout") then
+			local props = {
+				["CellPadding"] = instance.CellPadding,
+				["CellSize"] = instance.CellSize,
+				["AbsoluteCellCount"] = instance.AbsoluteCellCount,
+				["AbsoluteCellSize"] = instance.AbsoluteCellSize,
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable,
+				["FillDirection"] = instance.FillDirection,
+				["FillDirectionMaxCells"] = instance.FillDirectionMaxCells,
+				["HorizontalAlignment"] = instance.HorizontalAlignment,
+				["SortOrder"] = instance.SortOrder,
+				["StartCorner"] = instance.StartCorner,
+				["VerticalAlignment"] = instance.VerticalAlignment
+			}
+
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
+			print(props)
+
+			for g, v in pairs(instance:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if instance:IsA("UIListLayout") then
+			local props = {
+				["Padding"] = instance.Padding,
+				["AbsoluteContentSize"] = instance.AbsoluteContentSize,
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable,
+				["FillDirection"] = instance.FillDirection,
+				["HorizontalAlignment"] = instance.HorizontalAlignment,
+				["SortOrder"] = instance.SortOrder,
+				["VerticalAlignment"] = instance.VerticalAlignment
+			}
+
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
+			print(props)
+
+			for g, v in pairs(instance:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if instance:IsA("UIPadding") then
+			local props = {
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable,
+				["PaddingBottom"] = instance.PaddingBottom,
+				["PaddingLeft"] = instance.PaddingLeft,
+				["PaddingRight"] = instance.PaddingRight,
+				["PaddingTop"] = instance.PaddingTop
+			}
+
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
+			print(props)
+
+			for g, v in pairs(instance:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if instance:IsA("UIPageLayout") then
+			local props = {
+				["Animated"] = instance.Animated,
+				["Circular"] = instance.Circular,
+				["EasingDirection"] = instance.EasingDirection,
+				["EasingStyle"] = instance.EasingStyle,
+				["Padding"] = instance.Padding,
+				["TweenTime"] = instance.TweenTime,
+				["AbsoluteContentSize"] = instance.AbsoluteContentSize,
+				["ClassName"] = instance.ClassName,
+				["CurrentPage"] = instance.CurrentPage,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable,
+				["FillDirection"] = instance.FillDirection,
+				["HorizontalAlignment"] = instance.HorizontalAlignment,
+				["SortOrder"] = instance.SortOrder,
+				["VerticalAlignment"] = instance.VerticalAlignment
+			}
+
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
+			print(props)
+
+			for g, v in pairs(instance:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if instance:IsA("UIScale") then
+			local props = {
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable,
+				["Scale"] = instance.Scale
+			}
+
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
+			print(props)
+
+			for g, v in pairs(instance:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if instance:IsA("UISizeConstraint") then
+			local props = {
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable,
+				["MaxSize"] = instance.MaxSize,
+				["MinSize"] = instance.MinSize
+			}
+
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
+			print(props)
+
+			for g, v in pairs(instance:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if instance:IsA("UIStroke") then
+			local props = {
+				["ApplyStrokeMode"] = instance.ApplyStrokeMode,
+				["Color"] = instance.Color,
+				["LineJoinMode"] = instance.LineJoinMode,
+				["Thickness"] = instance.Thickness,
+				["Transparency"] = instance.Transparency,
+				["ClassName"] = instance.ClassName,
+				["Enabled"] = instance.Enabled,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable
+			}
+
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
+			print(props)
+
+			for g, v in pairs(instance:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if instance:IsA("UITableLayout") then
+			local props = {
+				["FillEmptySpaceColumns"] = instance.FillEmptySpaceColumns,
+				["FillEmptySpaceRows"] = instance.FillEmptySpaceRows,
+				["Padding"] = instance.Padding,
+				["AbsoluteContentSize"] = instance.AbsoluteContentSize,
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable,
+				["FillDirection"] = instance.FillDirection,
+				["HorizontalAlignment"] = instance.HorizontalAlignment,
+				["MajorAxis"] = instance.MajorAxis,
+				["SortOrder"] = instance.SortOrder,
+				["VerticalAlignment"] = instance.VerticalAlignment
+			}
+
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
+			print(props)
+
+			for g, v in pairs(instance:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if instance:IsA("UITextSizeConstraint") then
+			local props = {
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable,
+				["MaxTextSize"] = instance.MaxTextSize,
+				["MinstanceextSize"] = instance.MinstanceextSize
+			}
+
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
+			print(props)
+
+			for g, v in pairs(instance:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if instance:IsA("Tool") then
+			local props = {
+				["GripForward"] = instance.GripForward,
+				["GripPos"] = instance.GripForward,
+				["GripRight"] = instance.GripRight,
+				["GripUp"] = instance.GripUp,
+				["ToolTip"] = instance.ToolTip,
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["TextureId"] = instance.TextureId,
+				["Enabled"] = instance.Enabled,
+				["Archivable"] = instance.Archivable,
+				["CanBeDropped"] = instance.CanBeDropped,
+				["ManualActivationOnly"] = instance.ManualActivationOnly,
+				["RequiresHandle"] = instance.RequiresHandle
+			}
+
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
+			print(props)
+
+			for g, v in pairs(instance:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if instance:IsA("Sparkles") then
+			local props = {
+				["ClassName"] = instance.ClassName,
+				["Enabled"] = instance.Enabled,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["SparkleColor"] = instance.SparkleColor,
+				["Archivable"] = instance.Archivable
+			}
+
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
+			print(props)
+
+			for g, v in pairs(instance:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if instance:IsA("Explosion") then
+			local props = {
+				["BlastPressure"] = instance.BlastPressure,
+				["BlastRadius"] = instance.BlastRadius,
+				["ClassName"] = instance.ClassName,
+				["DestroyJoinstanceRadiusPercent"] = instance.DestroyJoinstanceRadiusPercent,
+				["ExplosionType"] = instance.ExplosionType,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Position"] = instance.Position,
+				["Visible"] = instance.Visible,
+				["Archivable"] = instance.Archivable
+			}
+
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
+			print(props)
+
+			for g, v in pairs(instance:GetAttributes()) do
+				print(g, ", ", v)
+			end
+		end
+
+		if instance:IsA("ParticleEmitter") then
+			local props = {
+				["Color"] = instance.Color,
+				["LightEmission"] = instance.LightMission,
+				["LightInfluence"] = instance.LightInfluence,
+				["Orientation"] = instance.Orientation,
+				["Size"] = instance.Size,
+				["Texture"] = instance.Texture,
+				["Transparency"] = instance.Transparency,
+				["ZOffset"] = instance.ZOffset,
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable,
+				["Acceleration"] = instance.Acceleration,
+				["Drag"] = instance.Drag,
+				["LockedToPart"] = instance.LockedToPart,
+				["TimeScale"] = instance.TimeScale,
+				["VelocityInheritance"] = instance.VelocityInheritance,
+				["EmissionDIrection"] = instance.EmissionDIrectionm,
+				["Enabled"] = instance.Enabled,
+				["Lifetime"] = instance.Lifetime,
+				["Rate"] = instance.Rate,
+				["Rotation"] = instance.Rotation,
+				["RotSpeed"] = instance.RotSpeed,
+				["Speed"] = instance.Speed,
+				["SpreadAngle"] = instance.SpreadAngle
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("Fire") then
+		if instance:IsA("Fire") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Color"] = int.Color,
-				["Enabled"] = int.Enabled,
-				["Heat"] = int.Heat,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["SecondaryColor"] = int.SecondaryColor,
-				["Size"] = int.Size,
-				["Archivable"] = int.Archivable
+				["ClassName"] = instance.ClassName,
+				["Color"] = instance.Color,
+				["Enabled"] = instance.Enabled,
+				["Heat"] = instance.Heat,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["SecondaryColor"] = instance.SecondaryColor,
+				["Size"] = instance.Size,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("Smoke") then
+		if instance:IsA("Smoke") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Color"] = int.Color,
-				["Enabled"] = int.Enabled,
-				["Name"] = int.Name,
-				["Opacity"] = int.Opacity,
-				["Parent"] = int.Parent,
-				["RiseVelocity"] = int.RiseVelocity,
-				["Size"] = int.Size,
-				["Archivable"] = int.Archivable
+				["ClassName"] = instance.ClassName,
+				["Color"] = instance.Color,
+				["Enabled"] = instance.Enabled,
+				["Name"] = instance.Name,
+				["Opacity"] = instance.Opacity,
+				["Parent"] = instance.Parent,
+				["RiseVelocity"] = instance.RiseVelocity,
+				["Size"] = instance.Size,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("Trail") then
+		if instance:IsA("Trail") then
 			local props = {
-				["Color"] = int.Color,
-				["FaceCamera"] = int.FaceCamera,
-				["LightEmission"] = int.LightMission,
-				["LightInfluence"] = int.LightInfluence,
-				["Texture"] = int.Texture,
-				["Texturelength"] = int.Texturelength,
-				["TextureMode"] = int.TextureMode,
-				["Transparency"] = int.Transparency,
-				["Attachment0"] = int.Attachment0,
-				["Attachment1"] = int.Attachment1,
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable,
-				["Enabled"] = int.Enabled,
-				["Lifetime"] = int.Lifetime,
-				["Maxlength"] = int.Maxlength,
-				["Minlength"] = int.Minlength,
-				["WidthScale"] = int.WidthScale
+				["Color"] = instance.Color,
+				["FaceCamera"] = instance.FaceCamera,
+				["LightEmission"] = instance.LightMission,
+				["LightInfluence"] = instance.LightInfluence,
+				["Texture"] = instance.Texture,
+				["Texturelength"] = instance.Texturelength,
+				["TextureMode"] = instance.TextureMode,
+				["Transparency"] = instance.Transparency,
+				["Attachment0"] = instance.Attachment0,
+				["Attachment1"] = instance.Attachment1,
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable,
+				["Enabled"] = instance.Enabled,
+				["Lifetime"] = instance.Lifetime,
+				["Maxlength"] = instance.Maxlength,
+				["Minlength"] = instance.Minlength,
+				["WidthScale"] = instance.WidthScale
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("Decal") then
+		if instance:IsA("Decal") then
 			local props = {
-				["Color3"] = int.Color3,
-				["Texture"] = int.Texture,
-				["Transparency"] = int.Transparency,
-				["ClassName"] = int.ClassName,
-				["Face"] = int.Face,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable
+				["Color3"] = instance.Color3,
+				["Texture"] = instance.Texture,
+				["Transparency"] = instance.Transparency,
+				["ClassName"] = instance.ClassName,
+				["Face"] = instance.Face,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("Texture") then
+		if instance:IsA("Texture") then
 			local props = {
-				["Color3"] = int.Color3,
-				["OffsetStudsU"] = int.OffsetStudsU,
-				["OffsetStudsV"] = int.OffsetStudsV,
-				["StudsPerTileU"] = int.StudsPerTileU,
-				["StudsPerTileOffsetStudsU"] = int.StudsPerTileOffsetStudsU,
-				["Texture"] = int.Texture,
-				["Transparency"] = int.Transparency,
-				["ClassName"] = int.ClassName,
-				["Face"] = int.Face,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable
+				["Color3"] = instance.Color3,
+				["OffsetStudsU"] = instance.OffsetStudsU,
+				["OffsetStudsV"] = instance.OffsetStudsV,
+				["StudsPerTileU"] = instance.StudsPerTileU,
+				["StudsPerTileOffsetStudsU"] = instance.StudsPerTileOffsetStudsU,
+				["Texture"] = instance.Texture,
+				["Transparency"] = instance.Transparency,
+				["ClassName"] = instance.ClassName,
+				["Face"] = instance.Face,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("SurfaceAppearance") then
+		if instance:IsA("SurfaceAppearance") then
 			local props = {
-				["AlphaMode"] = int.AlphaMode,
-				["ColorMap"] = int.ColorMap,
-				["MetalnessMap"] = int.MetanessMap,
-				["NormalMap"] = int.NormalMap,
-				["RoughnessMap"] = int.RoughnessMap,
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable
+				["AlphaMode"] = instance.AlphaMode,
+				["ColorMap"] = instance.ColorMap,
+				["MetalnessMap"] = instance.MetanessMap,
+				["NormalMap"] = instance.NormalMap,
+				["RoughnessMap"] = instance.RoughnessMap,
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("Folder") then
+		if instance:IsA("Folder") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("Configuration") then
+		if instance:IsA("Configuration") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("Accessory") then
+		if instance:IsA("Accessory") then
 			local props = {
-				["AttachmentForward"] = int.AttachmentForward,
-				["AttachmentPos"] = int.AttachmentPos,
-				["AttachmentRight"] = int.AttachmentRight,
-				["AttachmentUp"] = int.AttachmentUp,
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable
+				["AttachmentForward"] = instance.AttachmentForward,
+				["AttachmentPos"] = instance.AttachmentPos,
+				["AttachmentRight"] = instance.AttachmentRight,
+				["AttachmentUp"] = instance.AttachmentUp,
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("BodyColors") then
+		if instance:IsA("BodyColors") then
 			local props = {
-				["HeadColor"] = int.HeadColor,
-				["HeadColor3"] = int.HeadColor3,
-				["LeftArmColor"] = int.LeftArmColor,
-				["LeftArmColor3"] = int.LeftArmColor3,
-				["LeftLegColor"] = int.LeftLegColor,
-				["LeftLegColor3"] = int.LeftLegColor3,
-				["RightArmColor"] = int.RightArmColor,
-				["RightArmColor3"] = int.RightArmColor3,
-				["RightLegColor"] = int.RightLegColor,
-				["RightLegColor3"] = int.RightLegColor3,
-				["TorsoColor"] = int.TorsoColor,
-				["TorsoColor3"] = int.TorsoColor3,
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable
+				["HeadColor"] = instance.HeadColor,
+				["HeadColor3"] = instance.HeadColor3,
+				["LeftArmColor"] = instance.LeftArmColor,
+				["LeftArmColor3"] = instance.LeftArmColor3,
+				["LeftLegColor"] = instance.LeftLegColor,
+				["LeftLegColor3"] = instance.LeftLegColor3,
+				["RightArmColor"] = instance.RightArmColor,
+				["RightArmColor3"] = instance.RightArmColor3,
+				["RightLegColor"] = instance.RightLegColor,
+				["RightLegColor3"] = instance.RightLegColor3,
+				["TorsoColor"] = instance.TorsoColor,
+				["TorsoColor3"] = instance.TorsoColor3,
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("ForceField") then
+		if instance:IsA("ForceField") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Visible"] = int.Visibe,
-				["Archivable"] = int.Archivable
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Visible"] = instance.Visibe,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("Humanoid") then
+		if instance:IsA("Humanoid") then
 			local props = {
-				["CameraOffset"] = int.CameraOffset,
-				["ClassName"] = int.ClassName,
-				["DisplayDistanceType"] = int.DisplayDistanceType,
-				["DisplayName"] = int.DisplayName,
-				["HealthDisplayDistance"] = int.HealthDisplayDistance,
-				["HealthDisplayType"] = int.HealthDisplayType,
-				["Name"] = int.Name,
-				["NameDisplayDistance"] = int.NameDisplayDistance,
-				["NameOcclusion"] = int.NameOcclusion,
-				["Parent"] = int.Parent,
-				["RigType"] = int.RigType,
-				["RootPart"] = int.RootPart,
-				["Archivable"] = int.Archivable,
-				["BreakJointsOnDeath"] = int.BreakJointsOnDeath,
-				["RequiresNeck"] = int.RequiresNeck,
-				["AutoJumpEnabled"] = int.AutoJumpEnabled,
-				["JumpPower"] = int.JumpPower,
-				["UseJumpPower"] = int.UseJumpPower,
-				["AutoRotate"] = int.AutoRotate,
-				["FloorMaterial"] = int.FloorMaterial,
-				["Jump"] = int.Jump,
-				["MoveDirection"] = int.MoveDirection,
-				["PlatformStand"] = int.PlatformStand,
-				["SeatPart"] = int.SeatPart,
-				["Sit"] = int.Sit,
-				["TargetPoint"] = int.TargetPoint,
-				["WalkToPart"] = int.WalkToPart,
-				["WalkToPoint"] = int.WalkToPoint,
-				["AutomaticScalingEnabled"] = int.AutomaticScalingEnabled,
-				["Health"] = int.Health,
-				["HipHeight"] = int.HipHeight,
-				["MaxHealth"] = int.MaxHealth,
-				["MaxSlopeAngle"] = int.MaxSlopeAngle,
-				["WalkSpeed"] = int.WalkSpeed
+				["CameraOffset"] = instance.CameraOffset,
+				["ClassName"] = instance.ClassName,
+				["DisplayDistanceType"] = instance.DisplayDistanceType,
+				["DisplayName"] = instance.DisplayName,
+				["HealthDisplayDistance"] = instance.HealthDisplayDistance,
+				["HealthDisplayType"] = instance.HealthDisplayType,
+				["Name"] = instance.Name,
+				["NameDisplayDistance"] = instance.NameDisplayDistance,
+				["NameOcclusion"] = instance.NameOcclusion,
+				["Parent"] = instance.Parent,
+				["RigType"] = instance.RigType,
+				["RootPart"] = instance.RootPart,
+				["Archivable"] = instance.Archivable,
+				["BreakJoinstancesOnDeath"] = instance.BreakJoinstancesOnDeath,
+				["RequiresNeck"] = instance.RequiresNeck,
+				["AutoJumpEnabled"] = instance.AutoJumpEnabled,
+				["JumpPower"] = instance.JumpPower,
+				["UseJumpPower"] = instance.UseJumpPower,
+				["AutoRotate"] = instance.AutoRotate,
+				["FloorMaterial"] = instance.FloorMaterial,
+				["Jump"] = instance.Jump,
+				["MoveDirection"] = instance.MoveDirection,
+				["PlatformStand"] = instance.PlatformStand,
+				["SeatPart"] = instance.SeatPart,
+				["Sit"] = instance.Sit,
+				["TargetPoinstance"] = instance.TargetPoinstance,
+				["WalkToPart"] = instance.WalkToPart,
+				["WalkToPoinstance"] = instance.WalkToPoinstance,
+				["AutomaticScalingEnabled"] = instance.AutomaticScalingEnabled,
+				["Health"] = instance.Health,
+				["HipHeight"] = instance.HipHeight,
+				["MaxHealth"] = instance.MaxHealth,
+				["MaxSlopeAngle"] = instance.MaxSlopeAngle,
+				["WalkSpeed"] = instance.WalkSpeed
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("HumanoidDescription") then
+		if instance:IsA("HumanoidDescription") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable,
-				["BackAccessory"] = int.BackAccessory,
-				["FaceAccessory"] = int.FaceAccessory,
-				["FrontAccessory"] = int.FrontAccessory,
-				["HairAccessory"] = int.HairAccessory,
-				["HatAccessory"] = int.HatAccessory,
-				["NeckAccessory"] = int.NeckAccessory,
-				["ShouldersAccessory"] = int.ShouldersAccessory,
-				["WaistAccessory"] = int.WaistAccessory,
-				["BodyTypeScale"] = int.BodyTypeScale,
-				["DepthScale"] = int.DepthScale,
-				["HeadScale"] = int.HeadScale,
-				["HeightScale"] = int.HeightScale,
-				["ProportionScale"] = int.ProportionScale,
-				["WidthScale"] = int.WidthScale,
-				["ClimbAnimation"] = int.ClimbAnimation,
-				["FallAnimation"] = int.FallAnimation,
-				["IdleAnimation"] = int.IdleAnimation,
-				["JumpAnimation"] = int.JumpAnimation,
-				["RunAnimation"] = int.RunAnimation,
-				["SwimAnimation"] = int.SwimAnimation,
-				["WalkAnimation"] = int.WalkAnimation,
-				["Face"] = int.Face,
-				["Head"] = int.Head,
-				["LeftArm"] = int.LeftArm,
-				["LeftLeg"] = int.LeftLeg,
-				["RightArm"] = int.RightArm,
-				["RightLeg"] = int.RightLeg,
-				["Torso"] = int.Torso,
-				["GraphicTShirt"] = int.GraphicTShirt,
-				["Pants"] = int.Pants,
-				["Shirt"] = int.Shirt,
-				["HeadColor"] = int.HeadColor,
-				["LeftArmColor"] = int.LeftArmColor,
-				["LeftLegColor"] = int.LeftLegColor,
-				["RightArmColor"] = int.RightArmColor,
-				["RightLegColor"] = int.RightLegColor,
-				["TorsoColor"] = int.TorsoColor
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable,
+				["BackAccessory"] = instance.BackAccessory,
+				["FaceAccessory"] = instance.FaceAccessory,
+				["FrontAccessory"] = instance.FrontAccessory,
+				["HairAccessory"] = instance.HairAccessory,
+				["HatAccessory"] = instance.HatAccessory,
+				["NeckAccessory"] = instance.NeckAccessory,
+				["ShouldersAccessory"] = instance.ShouldersAccessory,
+				["WaistAccessory"] = instance.WaistAccessory,
+				["BodyTypeScale"] = instance.BodyTypeScale,
+				["DepthScale"] = instance.DepthScale,
+				["HeadScale"] = instance.HeadScale,
+				["HeightScale"] = instance.HeightScale,
+				["ProportionScale"] = instance.ProportionScale,
+				["WidthScale"] = instance.WidthScale,
+				["ClimbAnimation"] = instance.ClimbAnimation,
+				["FallAnimation"] = instance.FallAnimation,
+				["IdleAnimation"] = instance.IdleAnimation,
+				["JumpAnimation"] = instance.JumpAnimation,
+				["RunAnimation"] = instance.RunAnimation,
+				["SwimAnimation"] = instance.SwimAnimation,
+				["WalkAnimation"] = instance.WalkAnimation,
+				["Face"] = instance.Face,
+				["Head"] = instance.Head,
+				["LeftArm"] = instance.LeftArm,
+				["LeftLeg"] = instance.LeftLeg,
+				["RightArm"] = instance.RightArm,
+				["RightLeg"] = instance.RightLeg,
+				["Torso"] = instance.Torso,
+				["GraphicTShirt"] = instance.GraphicTShirt,
+				["Pants"] = instance.Pants,
+				["Shirt"] = instance.Shirt,
+				["HeadColor"] = instance.HeadColor,
+				["LeftArmColor"] = instance.LeftArmColor,
+				["LeftLegColor"] = instance.LeftLegColor,
+				["RightArmColor"] = instance.RightArmColor,
+				["RightLegColor"] = instance.RightLegColor,
+				["TorsoColor"] = instance.TorsoColor
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("Pants") then
+		if instance:IsA("Pants") then
 			local props = {
-				["Color3"] = int.Color3,
-				["PantsTemplate"] = int.PantsTemplate,
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable
+				["Color3"] = instance.Color3,
+				["PantsTemplate"] = instance.PantsTemplate,
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable
 			}
 
 			print(props)
 		end
 
-		if int:IsA("Shirt") then
+		if instance:IsA("Shirt") then
 			local props = {
-				["Color3"] = int.Color3,
-				["ShirtTemplate"] = int.ShirtTemplate,
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable
+				["Color3"] = instance.Color3,
+				["ShirtTemplate"] = instance.ShirtTemplate,
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("ShirtGraphic") then
+		if instance:IsA("ShirtGraphic") then
 			local props = {
-				["Color"] = int.Color,
-				["Graphic"] = int.Graphic,
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable
+				["Color"] = instance.Color,
+				["Graphic"] = instance.Graphic,
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("AlignOrientation") then
+		if instance:IsA("AlignOrientation") then
 			local props = {
-				["Color"] = int.Color,
-				["Visible"] = int.Visible,
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Active"] = int.Active,
-				["Archivable"] = int.Archivable,
-				["Enabled"] = int.Enabled,
-				["PrimaryAxisOnly"] = int.PrimaryAxisOnly,
-				["ReactionTorqueEnabled"] = int.ReactionTorqueEnabled,
-				["RigidtyEnabled"] = int.RigidityEnabled,
-				["MaxAngularVelocity"] = int.MaxAngularVelocity,
-				["MaxTorque"] = int.MaxTorque,
-				["Responsiveness"] = int.Responsiveness,
-				["Attachment0"] = int.Attachment0,
-				["Attachment1"] = int.Attachment1
+				["Color"] = instance.Color,
+				["Visible"] = instance.Visible,
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Active"] = instance.Active,
+				["Archivable"] = instance.Archivable,
+				["Enabled"] = instance.Enabled,
+				["PrimaryAxisOnly"] = instance.PrimaryAxisOnly,
+				["ReactionTorqueEnabled"] = instance.ReactionTorqueEnabled,
+				["RigidtyEnabled"] = instance.RigidityEnabled,
+				["MaxAngularVelocity"] = instance.MaxAngularVelocity,
+				["MaxTorque"] = instance.MaxTorque,
+				["Responsiveness"] = instance.Responsiveness,
+				["Attachment0"] = instance.Attachment0,
+				["Attachment1"] = instance.Attachment1
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("AlignPosition") then
+		if instance:IsA("AlignPosition") then
 			local props = {
-				["Color"] = int.Color,
-				["Visible"] = int.Visible,
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Active"] = int.Active,
-				["Archivable"] = int.Archivable,
-				["Enabled"] = int.Enabled,
-				["MaxForce"] = int.MaxAngularVelocity,
-				["MaxVelocity"] = int.MaxTorque,
-				["Responsiveness"] = int.Responsiveness,
-				["ApplyAtCenterOfMass"] = int.ApplyAtCenterOfMass,
-				["ReactionTorqueEnabled"] = int.ReactionTorqueEnabled,
-				["RigidtyEnabled"] = int.RigidityEnabled,
-				["Attachment0"] = int.Attachment0,
-				["Attachment1"] = int.Attachment1
+				["Color"] = instance.Color,
+				["Visible"] = instance.Visible,
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Active"] = instance.Active,
+				["Archivable"] = instance.Archivable,
+				["Enabled"] = instance.Enabled,
+				["MaxForce"] = instance.MaxAngularVelocity,
+				["MaxVelocity"] = instance.MaxTorque,
+				["Responsiveness"] = instance.Responsiveness,
+				["ApplyAtCenterOfMass"] = instance.ApplyAtCenterOfMass,
+				["ReactionTorqueEnabled"] = instance.ReactionTorqueEnabled,
+				["RigidtyEnabled"] = instance.RigidityEnabled,
+				["Attachment0"] = instance.Attachment0,
+				["Attachment1"] = instance.Attachment1
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("AngularVelocity") then
+		if instance:IsA("AngularVelocity") then
 			local props = {
-				["Color"] = int.Color,
-				["Visible"] = int.Visible,
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Active"] = int.Active,
-				["Archivable"] = int.Archivable,
-				["Enabled"] = int.Enabled,
-				["AngularVelocity"] = int.AngularVelocity,
-				["MaxTorque"] = int.MaxTorque,
-				["RelativeTo"] = int.RelativeTo,
-				["Attachment0"] = int.Attachment0
+				["Color"] = instance.Color,
+				["Visible"] = instance.Visible,
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Active"] = instance.Active,
+				["Archivable"] = instance.Archivable,
+				["Enabled"] = instance.Enabled,
+				["AngularVelocity"] = instance.AngularVelocity,
+				["MaxTorque"] = instance.MaxTorque,
+				["RelativeTo"] = instance.RelativeTo,
+				["Attachment0"] = instance.Attachment0
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("BallSocketConstraint") then
+		if instance:IsA("BallSocketConstraint") then
 			local props = {
-				["Color"] = int.Color,
-				["Radius"] = int.Radius,
-				["Visible"] = int.Visible,
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Active"] = int.Active,
-				["Archivable"] = int.Archivable,
-				["Enabled"] = int.Enabled,
-				["LimitsEnabled"] = int.LimitsEnabled,
-				["MaxFrictionTorque"] = int.MaxFrictionTorque,
-				["Attachment0"] = int.Attachment0,
-				["Attachment1"] = int.Attachment1
+				["Color"] = instance.Color,
+				["Radius"] = instance.Radius,
+				["Visible"] = instance.Visible,
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Active"] = instance.Active,
+				["Archivable"] = instance.Archivable,
+				["Enabled"] = instance.Enabled,
+				["LimitsEnabled"] = instance.LimitsEnabled,
+				["MaxFrictionTorque"] = instance.MaxFrictionTorque,
+				["Attachment0"] = instance.Attachment0,
+				["Attachment1"] = instance.Attachment1
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("CylindricalConstraint") then
+		if instance:IsA("CylindricalConstraint") then
 			local props = {
-				["Color"] = int.Color,
-				["RotationAxisVisible"] = int.RotationAxisVisible,
-				["Size"] = int.Size,
-				["Visible"] = int.Visible,
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Active"] = int.Active,
-				["Archivable"] = int.Archivable,
-				["Enabled"] = int.Enabled,
-				["AngularActuatorType"] = int.AngularActuatorType,
-				["AngularLimitsEnabled"] = int.AngularLimitsEnabled,
-				["InclinationAngle"] = int.InclinationAngle,
-				["ActuatorType"] = int.ActuatorType,
-				["LimitsEnabled"] = int.LimitsEnabled,
-				["Attachment0"] = int.Attachment0,
-				["Attachment1"] = int.Attachment1
+				["Color"] = instance.Color,
+				["RotationAxisVisible"] = instance.RotationAxisVisible,
+				["Size"] = instance.Size,
+				["Visible"] = instance.Visible,
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Active"] = instance.Active,
+				["Archivable"] = instance.Archivable,
+				["Enabled"] = instance.Enabled,
+				["AngularActuatorType"] = instance.AngularActuatorType,
+				["AngularLimitsEnabled"] = instance.AngularLimitsEnabled,
+				["InclinationAngle"] = instance.InclinationAngle,
+				["ActuatorType"] = instance.ActuatorType,
+				["LimitsEnabled"] = instance.LimitsEnabled,
+				["Attachment0"] = instance.Attachment0,
+				["Attachment1"] = instance.Attachment1
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("HingeConstraint") then
+		if instance:IsA("HingeConstraint") then
 			local props = {
-				["Color"] = int.Color,
-				["Radius"] = int.Radius,
-				["Visible"] = int.Visible,
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Active"] = int.Active,
-				["Archivable"] = int.Archivable,
-				["Enabled"] = int.Enabled,
-				["ActuatorType"] = int.ActuatorType,
-				["LimitsEnabled"] = int.LimitsEnabled,
-				["Attachment0"] = int.Attachment0,
-				["Attachment1"] = int.Attachment1
+				["Color"] = instance.Color,
+				["Radius"] = instance.Radius,
+				["Visible"] = instance.Visible,
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Active"] = instance.Active,
+				["Archivable"] = instance.Archivable,
+				["Enabled"] = instance.Enabled,
+				["ActuatorType"] = instance.ActuatorType,
+				["LimitsEnabled"] = instance.LimitsEnabled,
+				["Attachment0"] = instance.Attachment0,
+				["Attachment1"] = instance.Attachment1
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("LineForce") then
+		if instance:IsA("LineForce") then
 			local props = {
-				["Color"] = int.Color,
-				["Visible"] = int.Visible,
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Active"] = int.Active,
-				["Archivable"] = int.Archivable,
-				["Enabled"] = int.Enabled,
-				["ApplyAtCenterOfMass"] = int.ApplyAtCenterOfMass,
-				["InverseSquareLaw"] = int.InverseSquareLaw,
-				["Magnitude"] = int.Magnitude,
-				["ReactionForceEnabled"] = int.ReactionForceEnabled,
-				["Attachment0"] = int.Attachment0,
-				["Attachment1"] = int.Attachment1
+				["Color"] = instance.Color,
+				["Visible"] = instance.Visible,
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Active"] = instance.Active,
+				["Archivable"] = instance.Archivable,
+				["Enabled"] = instance.Enabled,
+				["ApplyAtCenterOfMass"] = instance.ApplyAtCenterOfMass,
+				["InverseSquareLaw"] = instance.InverseSquareLaw,
+				["Magnitude"] = instance.Magnitude,
+				["ReactionForceEnabled"] = instance.ReactionForceEnabled,
+				["Attachment0"] = instance.Attachment0,
+				["Attachment1"] = instance.Attachment1
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("NoCollisionConstraint") then
+		if instance:IsA("NoCollisionConstraint") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Active"] = int.Active,
-				["Archivable"] = int.Archivable,
-				["Enabled"] = int.Enabled,
-				["Part0"] = int.Part,
-				["Part1"] = int.Part
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Active"] = instance.Active,
+				["Archivable"] = instance.Archivable,
+				["Enabled"] = instance.Enabled,
+				["Part0"] = instance.Part,
+				["Part1"] = instance.Part
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("RodConstraint") then
+		if instance:IsA("RodConstraint") then
 			local props = {
-				["Color"] = int.Color,
-				["Thickness"] = int.Thickness,
-				["Visible"] = int.Visible,
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Active"] = int.Active,
-				["Archivable"] = int.Archivable,
-				["Enabled"] = int.Enabled,
-				["length"] = int.Minlength,
-				["LimitsEnabled"] = int.LimitsEnabled,
-				["Attachment0"] = int.Attachment0,
-				["Attachment1"] = int.Attachment1
+				["Color"] = instance.Color,
+				["Thickness"] = instance.Thickness,
+				["Visible"] = instance.Visible,
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Active"] = instance.Active,
+				["Archivable"] = instance.Archivable,
+				["Enabled"] = instance.Enabled,
+				["length"] = instance.Minlength,
+				["LimitsEnabled"] = instance.LimitsEnabled,
+				["Attachment0"] = instance.Attachment0,
+				["Attachment1"] = instance.Attachment1
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("RopeConstraint") then
+		if instance:IsA("RopeConstraint") then
 			local props = {
-				["Color"] = int.Color,
-				["Thickness"] = int.Thickness,
-				["Visible"] = int.Visible,
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Active"] = int.Active,
-				["Archivable"] = int.Archivable,
-				["Enabled"] = int.Enabled,
-				["length"] = int.Minlength,
-				["Resitution"] = int.Resitution,
-				["Attachment0"] = int.Attachment0,
-				["Attachment1"] = int.Attachment1
+				["Color"] = instance.Color,
+				["Thickness"] = instance.Thickness,
+				["Visible"] = instance.Visible,
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Active"] = instance.Active,
+				["Archivable"] = instance.Archivable,
+				["Enabled"] = instance.Enabled,
+				["length"] = instance.Minlength,
+				["Resitution"] = instance.Resitution,
+				["Attachment0"] = instance.Attachment0,
+				["Attachment1"] = instance.Attachment1
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("SpringConstraint") then
+		if instance:IsA("SpringConstraint") then
 			local props = {
-				["Coils"] = int.Coils,
-				["Color"] = int.Color,
-				["Radius"] = int.Radius,
-				["Thickness"] = int.Thickness,
-				["Visible"] = int.Visible,
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Active"] = int.Active,
-				["Archivable"] = int.Archivable,
-				["Enabled"] = int.Enabled,
-				["Damping"] = int.Damping,
-				["Freelength"] = int.Freelength,
-				["LimitsEnabled"] = int.LimitsEnabled,
-				["MaxForce"] = int.MaxForce,
-				["Stiffness"] = int.Stiffness,
-				["Attachment0"] = int.Attachment0,
-				["Attachment1"] = int.Attachment1
+				["Coils"] = instance.Coils,
+				["Color"] = instance.Color,
+				["Radius"] = instance.Radius,
+				["Thickness"] = instance.Thickness,
+				["Visible"] = instance.Visible,
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Active"] = instance.Active,
+				["Archivable"] = instance.Archivable,
+				["Enabled"] = instance.Enabled,
+				["Damping"] = instance.Damping,
+				["Freelength"] = instance.Freelength,
+				["LimitsEnabled"] = instance.LimitsEnabled,
+				["MaxForce"] = instance.MaxForce,
+				["Stiffness"] = instance.Stiffness,
+				["Attachment0"] = instance.Attachment0,
+				["Attachment1"] = instance.Attachment1
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("Torque") then
+		if instance:IsA("Torque") then
 			local props = {
-				["Color"] = int.Color,
-				["Visible"] = int.Visible,
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Active"] = int.Active,
-				["Archivable"] = int.Archivable,
-				["Enabled"] = int.Enabled,
-				["RelativeTo"] = int.RelativeTo,
-				["Torque"] = int.Torque,
-				["Attachment0"] = int.Attachment0
+				["Color"] = instance.Color,
+				["Visible"] = instance.Visible,
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Active"] = instance.Active,
+				["Archivable"] = instance.Archivable,
+				["Enabled"] = instance.Enabled,
+				["RelativeTo"] = instance.RelativeTo,
+				["Torque"] = instance.Torque,
+				["Attachment0"] = instance.Attachment0
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("TorsionSpringConstraint") then
+		if instance:IsA("TorsionSpringConstraint") then
 			local props = {
-				["Coils"] = int.Coils,
-				["Color"] = int.Color,
-				["Radius"] = int.Radius,
-				["Visible"] = int.Visible,
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Active"] = int.Active,
-				["Archivable"] = int.Archivable,
-				["Enabled"] = int.Enabled,
-				["Damping"] = int.Damping,
-				["LimitsEnabled"] = int.LimitsEnabled,
-				["MaxForce"] = int.MaxForce,
-				["Stiffness"] = int.Stiffness,
-				["Attachment0"] = int.Attachment0,
-				["Attachment1"] = int.Attachment1
+				["Coils"] = instance.Coils,
+				["Color"] = instance.Color,
+				["Radius"] = instance.Radius,
+				["Visible"] = instance.Visible,
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Active"] = instance.Active,
+				["Archivable"] = instance.Archivable,
+				["Enabled"] = instance.Enabled,
+				["Damping"] = instance.Damping,
+				["LimitsEnabled"] = instance.LimitsEnabled,
+				["MaxForce"] = instance.MaxForce,
+				["Stiffness"] = instance.Stiffness,
+				["Attachment0"] = instance.Attachment0,
+				["Attachment1"] = instance.Attachment1
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("UniversalConstraint") then
+		if instance:IsA("UniversalConstraint") then
 			local props = {
-				["Color"] = int.Color,
-				["Radius"] = int.Radius,
-				["Visible"] = int.Visible,
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Active"] = int.Active,
-				["Archivable"] = int.Archivable,
-				["Enabled"] = int.Enabled,
-				["LimitsEnabled"] = int.LimitsEnabled,
-				["Attachment0"] = int.Attachment0,
-				["Attachment1"] = int.Attachment1
+				["Color"] = instance.Color,
+				["Radius"] = instance.Radius,
+				["Visible"] = instance.Visible,
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Active"] = instance.Active,
+				["Archivable"] = instance.Archivable,
+				["Enabled"] = instance.Enabled,
+				["LimitsEnabled"] = instance.LimitsEnabled,
+				["Attachment0"] = instance.Attachment0,
+				["Attachment1"] = instance.Attachment1
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("VectorForce") then
+		if instance:IsA("VectorForce") then
 			local props = {
-				["Color"] = int.Color,
-				["Visible"] = int.Visible,
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Active"] = int.Active,
-				["Archivable"] = int.Archivable,
-				["Enabled"] = int.Enabled,
-				["ApplyAtCenterOfMass"] = int.ApplyAtCenterOfMass,
-				["Force"] = int.Force,
-				["RelativeTo"] = int.RelativeTo,
-				["Attachment0"] = int.Attachment0
+				["Color"] = instance.Color,
+				["Visible"] = instance.Visible,
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Active"] = instance.Active,
+				["Archivable"] = instance.Archivable,
+				["Enabled"] = instance.Enabled,
+				["ApplyAtCenterOfMass"] = instance.ApplyAtCenterOfMass,
+				["Force"] = instance.Force,
+				["RelativeTo"] = instance.RelativeTo,
+				["Attachment0"] = instance.Attachment0
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("WeldConstraint") then
+		if instance:IsA("WeldConstraint") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Active"] = int.Active,
-				["Archivable"] = int.Archivable,
-				["Enabled"] = int.Enabled,
-				["Part0"] = int.Part0,
-				["Part1"] = int.Part1
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Active"] = instance.Active,
+				["Archivable"] = instance.Archivable,
+				["Enabled"] = instance.Enabled,
+				["Part0"] = instance.Part0,
+				["Part1"] = instance.Part1
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("Weld") then
+		if instance:IsA("Weld") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Part0"] = int.Part0,
-				["Part1"] = int.Part1,
-				["Active"] = int.Active,
-				["Archivable"] = int.Archivable,
-				["Enabled"] = int.Enabled
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Part0"] = instance.Part0,
+				["Part1"] = instance.Part1,
+				["Active"] = instance.Active,
+				["Archivable"] = instance.Archivable,
+				["Enabled"] = instance.Enabled
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("Snap") then
+		if instance:IsA("Snap") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Part0"] = int.Part0,
-				["Part1"] = int.Part1,
-				["Active"] = int.Active,
-				["Archivable"] = int.Archivable,
-				["Enabled"] = int.Enabled
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Part0"] = instance.Part0,
+				["Part1"] = instance.Part1,
+				["Active"] = instance.Active,
+				["Archivable"] = instance.Archivable,
+				["Enabled"] = instance.Enabled
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("PointLight") then
+		if instance:IsA("PointLight") then
 			local props = {
-				["Brightness"] = int.Brightness,
-				["Color"] = int.Color,
-				["Enabled"] = int.Enabled,
-				["Range"] = int.Range,
-				["Shadows"] = int.Shadows,
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable
+				["Brightness"] = instance.Brightness,
+				["Color"] = instance.Color,
+				["Enabled"] = instance.Enabled,
+				["Range"] = instance.Range,
+				["Shadows"] = instance.Shadows,
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("SpotLight") then
+		if instance:IsA("SpotLight") then
 			local props = {
-				["Angle"] = int.Angle,
-				["Brightness"] = int.Brightness,
-				["Color"] = int.Color,
-				["Enabled"] = int.Enabled,
-				["Face"] = int.Face,
-				["Range"] = int.Range,
-				["Shadows"] = int.Shadows,
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable
+				["Angle"] = instance.Angle,
+				["Brightness"] = instance.Brightness,
+				["Color"] = instance.Color,
+				["Enabled"] = instance.Enabled,
+				["Face"] = instance.Face,
+				["Range"] = instance.Range,
+				["Shadows"] = instance.Shadows,
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("SurfaceLight") then
+		if instance:IsA("SurfaceLight") then
 			local props = {
-				["Angle"] = int.Angle,
-				["Brightness"] = int.Brightness,
-				["Color"] = int.Color,
-				["Enabled"] = int.Enabled,
-				["Face"] = int.Face,
-				["Range"] = int.Range,
-				["Shadows"] = int.Shadows,
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable
+				["Angle"] = instance.Angle,
+				["Brightness"] = instance.Brightness,
+				["Color"] = instance.Color,
+				["Enabled"] = instance.Enabled,
+				["Face"] = instance.Face,
+				["Range"] = instance.Range,
+				["Shadows"] = instance.Shadows,
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("Seat") then
+		if instance:IsA("Seat") then
 			local props = {
-				["BrickColor"] = int.BrickColor,
-				["CastShadow"] = int.CastShadow,
-				["Color"] = int.Color,
-				["Material"] = int.Material,
-				["Reflectance"] = int.Reflectance,
-				["Transparency"] = int.Transparency,
-				["CenterOfMass"] = int.CenterOfMass,
-				["ClassName"] = int.ClassName,
-				["Mass"] = int.Mass,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Position"] = int.Position,
-				["Orientation"] = int.Orientation,
-				["Anchored"] = int.Anchored,
-				["Archivable"] = int.Archivable,
-				["CanCollide"] = int.CanCollide,
-				["CanTouch"] = int.CanTouch,
-				["CollisionGroupId"] = int.CollisionGroupId,
-				["Locked"] = int.Locked,
-				["Massless"] = int.Massless,
-				["ResizeableFaces"] = int.ResizeableFaces,
-				["ResizeIncrement"] = int.ResizeIncrement,
-				["Disabled"] = int.Disabled,
-				["Occupant"] = int.Occupant,
-				["CustomPhysicalProperties"] = int.CustomPhysicalProperties,
-				["RootPriority"] = int.RootPriority,
-				["Shape"] = int.Shape,
-				["Size"] = int.Size,
-				["AssemblyLinearVelocity"] = int.AssemblyLinearVelocity,
-				["AssemblyAngularVelocity"] = int.AssemblyAngularVelocity,
-				["AssemblyCenterOfMass"] = int.AssemblyCenterOfMass,
-				["AssemblyMass"] = int.AssemblyMass,
-				["AssemblyRootPart"] = int.AssemblyRootPart
+				["BrickColor"] = instance.BrickColor,
+				["CastShadow"] = instance.CastShadow,
+				["Color"] = instance.Color,
+				["Material"] = instance.Material,
+				["Reflectance"] = instance.Reflectance,
+				["Transparency"] = instance.Transparency,
+				["CenterOfMass"] = instance.CenterOfMass,
+				["ClassName"] = instance.ClassName,
+				["Mass"] = instance.Mass,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Position"] = instance.Position,
+				["Orientation"] = instance.Orientation,
+				["Anchored"] = instance.Anchored,
+				["Archivable"] = instance.Archivable,
+				["CanCollide"] = instance.CanCollide,
+				["CanTouch"] = instance.CanTouch,
+				["CollisionGroupId"] = instance.CollisionGroupId,
+				["Locked"] = instance.Locked,
+				["Massless"] = instance.Massless,
+				["ResizeableFaces"] = instance.ResizeableFaces,
+				["ResizeIncrement"] = instance.ResizeIncrement,
+				["Disabled"] = instance.Disabled,
+				["Occupant"] = instance.Occupant,
+				["CustomPhysicalProperties"] = instance.CustomPhysicalProperties,
+				["RootPriority"] = instance.RootPriority,
+				["Shape"] = instance.Shape,
+				["Size"] = instance.Size,
+				["AssemblyLinearVelocity"] = instance.AssemblyLinearVelocity,
+				["AssemblyAngularVelocity"] = instance.AssemblyAngularVelocity,
+				["AssemblyCenterOfMass"] = instance.AssemblyCenterOfMass,
+				["AssemblyMass"] = instance.AssemblyMass,
+				["AssemblyRootPart"] = instance.AssemblyRootPart
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("VehicleSeat") then
+		if instance:IsA("VehicleSeat") then
 			local props = {
-				["BrickColor"] = int.BrickColor,
-				["CastShadow"] = int.CastShadow,
-				["Color"] = int.Color,
-				["Material"] = int.Material,
-				["Reflectance"] = int.Reflectance,
-				["Transparency"] = int.Transparency,
-				["CenterOfMass"] = int.CenterOfMass,
-				["ClassName"] = int.ClassName,
-				["Mass"] = int.Mass,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Position"] = int.Position,
-				["Orientation"] = int.Orientation,
-				["Anchored"] = int.Anchored,
-				["Archivable"] = int.Archivable,
-				["CanCollide"] = int.CanCollide,
-				["CanTouch"] = int.CanTouch,
-				["CollisionGroupId"] = int.CollisionGroupId,
-				["Locked"] = int.Locked,
-				["Massless"] = int.Massless,
-				["ResizeableFaces"] = int.ResizeableFaces,
-				["ResizeIncrement"] = int.ResizeIncrement,
-				["AreHingesDetected"] = int.AreHingesDetected,
-				["Disabled"] = int.Disabled,
-				["HeadsUpDisplay"] = int.HeadsUpDisplay,
-				["MaxSpeed"] = int.MaxSpeed,
-				["Occupant"] = int.Occupant,
-				["Steer"] = int.Steer,
-				["SteerFloat"] = int.SteerFloat,
-				["Throttle"] = int.Throttle,
-				["ThrottleFloat"] = int.ThrottleFloat,
-				["Torque"] = int.Torque,
-				["TurnSpeed"] = int.TurnSpeed,
-				["CustomPhysicalProperties"] = int.CustomPhysicalProperties,
-				["RootPriority"] = int.RootPriority,
-				["Shape"] = int.Shape,
-				["Size"] = int.Size,
-				["AssemblyLinearVelocity"] = int.AssemblyLinearVelocity,
-				["AssemblyAngularVelocity"] = int.AssemblyAngularVelocity,
-				["AssemblyCenterOfMass"] = int.AssemblyCenterOfMass,
-				["AssemblyMass"] = int.AssemblyMass,
-				["AssemblyRootPart"] = int.AssemblyRootPart
+				["BrickColor"] = instance.BrickColor,
+				["CastShadow"] = instance.CastShadow,
+				["Color"] = instance.Color,
+				["Material"] = instance.Material,
+				["Reflectance"] = instance.Reflectance,
+				["Transparency"] = instance.Transparency,
+				["CenterOfMass"] = instance.CenterOfMass,
+				["ClassName"] = instance.ClassName,
+				["Mass"] = instance.Mass,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Position"] = instance.Position,
+				["Orientation"] = instance.Orientation,
+				["Anchored"] = instance.Anchored,
+				["Archivable"] = instance.Archivable,
+				["CanCollide"] = instance.CanCollide,
+				["CanTouch"] = instance.CanTouch,
+				["CollisionGroupId"] = instance.CollisionGroupId,
+				["Locked"] = instance.Locked,
+				["Massless"] = instance.Massless,
+				["ResizeableFaces"] = instance.ResizeableFaces,
+				["ResizeIncrement"] = instance.ResizeIncrement,
+				["AreHingesDetected"] = instance.AreHingesDetected,
+				["Disabled"] = instance.Disabled,
+				["HeadsUpDisplay"] = instance.HeadsUpDisplay,
+				["MaxSpeed"] = instance.MaxSpeed,
+				["Occupant"] = instance.Occupant,
+				["Steer"] = instance.Steer,
+				["SteerFloat"] = instance.SteerFloat,
+				["Throttle"] = instance.Throttle,
+				["ThrottleFloat"] = instance.ThrottleFloat,
+				["Torque"] = instance.Torque,
+				["TurnSpeed"] = instance.TurnSpeed,
+				["CustomPhysicalProperties"] = instance.CustomPhysicalProperties,
+				["RootPriority"] = instance.RootPriority,
+				["Shape"] = instance.Shape,
+				["Size"] = instance.Size,
+				["AssemblyLinearVelocity"] = instance.AssemblyLinearVelocity,
+				["AssemblyAngularVelocity"] = instance.AssemblyAngularVelocity,
+				["AssemblyCenterOfMass"] = instance.AssemblyCenterOfMass,
+				["AssemblyMass"] = instance.AssemblyMass,
+				["AssemblyRootPart"] = instance.AssemblyRootPart
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("BodyAngularVelocity") then
+		if instance:IsA("BodyAngularVelocity") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable,
-				["AngularVelocity"] = int.AngularVelocity,
-				["MaxTorque"] = int.MaxTorque,
-				["P"] = int.P
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable,
+				["AngularVelocity"] = instance.AngularVelocity,
+				["MaxTorque"] = instance.MaxTorque,
+				["P"] = instance.P
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("BodyForce") then
+		if instance:IsA("BodyForce") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable,
-				["Force"] = int.Force,
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable,
+				["Force"] = instance.Force,
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("BodyGyro") then
+		if instance:IsA("BodyGyro") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable,
-				["D"] = int.D,
-				["MaxTorque"] = int.MaxTorque,
-				["P"] = int.P
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable,
+				["D"] = instance.D,
+				["MaxTorque"] = instance.MaxTorque,
+				["P"] = instance.P
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("BodyPosition") then
+		if instance:IsA("BodyPosition") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable,
-				["D"] = int.D,
-				["MaxTorque"] = int.MaxTorque,
-				["P"] = int.P,
-				["Position"] = int.Position
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable,
+				["D"] = instance.D,
+				["MaxTorque"] = instance.MaxTorque,
+				["P"] = instance.P,
+				["Position"] = instance.Position
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA('BodyThrust') then
+		if instance:IsA('BodyThrust') then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable,
-				["Force"] = int.Force,
-				["Location"] = int.Location
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable,
+				["Force"] = instance.Force,
+				["Location"] = instance.Location
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("BodyVelocity") then
+		if instance:IsA("BodyVelocity") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable,
-				["MaxTorque"] = int.MaxTorque,
-				["P"] = int.P,
-				["Velocity"] = int.Velocity
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable,
+				["MaxTorque"] = instance.MaxTorque,
+				["P"] = instance.P,
+				["Velocity"] = instance.Velocity
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("RocketPropulsion") then
+		if instance:IsA("RocketPropulsion") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable,
-				["CartoonFactor"] = int.CartoonFactor,
-				["Target"] = int.Target,
-				["TargetOffset"] = int.TargetOffset,
-				["TargetRadius"] = int.TargetRadius,
-				["MaxSpeed"] = int.MaxSpeed,
-				["MaxThrust"] = int.MaxThrust,
-				["ThrustD"] = int.ThrustD,
-				["ThrustP"] = int.ThrustP,
-				["MaxTorque"] = int.MaxTorque,
-				["TurnD"] = int.TurnD,
-				["TurnP"] = int.TurnP
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable,
+				["CartoonFactor"] = instance.CartoonFactor,
+				["Target"] = instance.Target,
+				["TargetOffset"] = instance.TargetOffset,
+				["TargetRadius"] = instance.TargetRadius,
+				["MaxSpeed"] = instance.MaxSpeed,
+				["MaxThrust"] = instance.MaxThrust,
+				["ThrustD"] = instance.ThrustD,
+				["ThrustP"] = instance.ThrustP,
+				["MaxTorque"] = instance.MaxTorque,
+				["TurnD"] = instance.TurnD,
+				["TurnP"] = instance.TurnP
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("Script") then
+		if instance:IsA("Script") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable,
-				["Disabled"] = int.Disabled
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable,
+				["Disabled"] = instance.Disabled
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("LocalScript") then
+		if instance:IsA("LocalScript") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable,
-				["Disabled"] = int.Disabled
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable,
+				["Disabled"] = instance.Disabled
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("ModuleScript") then
+		if instance:IsA("ModuleScript") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("BindableFunction") then
+		if instance:IsA("BindableFunction") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("BindableEvent") then
+		if instance:IsA("BindableEvent") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("RemoteFunction") then
+		if instance:IsA("RemoteFunction") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("RemoteEvent") then
+		if instance:IsA("RemoteEvent") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("Actor") then
+		if instance:IsA("Actor") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["PrimaryPart"] = int.PrimaryPart,
-				["Archivable"] = int.Archivable
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["PrimaryPart"] = instance.PrimaryPart,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("WorldModel") then
+		if instance:IsA("WorldModel") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["PrimaryPart"] = int.PrimaryPart,
-				["Archivable"] = int.Archivable
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["PrimaryPart"] = instance.PrimaryPart,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("ArcHandles") then
+		if instance:IsA("ArcHandles") then
 			local props = {
-				["Color3"] = int.Color3,
-				["Transparency"] = int.Transparency,
-				["Adornee"] = int.Adornee,
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Visible"] = int.Visible,
-				["Archivable"] = int.Archivable
+				["Color3"] = instance.Color3,
+				["Transparency"] = instance.Transparency,
+				["Adornee"] = instance.Adornee,
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Visible"] = instance.Visible,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("BoxHandleAdornment") then
+		if instance:IsA("BoxHandleAdornment") then
 			local props = {
-				["Color3"] = int.Color3,
-				["Transparency"] = int.Transparency,
-				["AdornCullingMode"] = int.AdornCullingMode,
-				["Adornee"] = int.Adornee,
-				["AlwaysOnTop"] = int.AlwaysOnTop,
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Size"] = int.Size,
-				["SizeRelativeOffset"] = int.SizeRelativeOffset,
-				["Visible"] = int.Visible,
-				["ZIndex"] = int.ZIndex,
-				["Archivable"] = int.Archivable
+				["Color3"] = instance.Color3,
+				["Transparency"] = instance.Transparency,
+				["AdornCullingMode"] = instance.AdornCullingMode,
+				["Adornee"] = instance.Adornee,
+				["AlwaysOnTop"] = instance.AlwaysOnTop,
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Size"] = instance.Size,
+				["SizeRelativeOffset"] = instance.SizeRelativeOffset,
+				["Visible"] = instance.Visible,
+				["ZIndex"] = instance.ZIndex,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("ConeHandleAdornment") then
+		if instance:IsA("ConeHandleAdornment") then
 			local props = {
-				["Color3"] = int.Color3,
-				["Transparency"] = int.Transparency,
-				["AdornCullingMode"] = int.AdornCullingMode,
-				["Adornee"] = int.Adornee,
-				["AlwaysOnTop"] = int.AlwaysOnTop,
-				["ClassName"] = int.ClassName,
-				["Height"] = int.Height,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Radius"] = int.Radius,
-				["SizeRelativeOffset"] = int.SizeRelativeOffset,
-				["Visible"] = int.Visible,
-				["ZIndex"] = int.ZIndex,
-				["Archivable"] = int.Archivable
+				["Color3"] = instance.Color3,
+				["Transparency"] = instance.Transparency,
+				["AdornCullingMode"] = instance.AdornCullingMode,
+				["Adornee"] = instance.Adornee,
+				["AlwaysOnTop"] = instance.AlwaysOnTop,
+				["ClassName"] = instance.ClassName,
+				["Height"] = instance.Height,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Radius"] = instance.Radius,
+				["SizeRelativeOffset"] = instance.SizeRelativeOffset,
+				["Visible"] = instance.Visible,
+				["ZIndex"] = instance.ZIndex,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("CylinderHandleAdornment") then
+		if instance:IsA("CylinderHandleAdornment") then
 			local props = {
-				["Color3"] = int.Color3,
-				["Transparency"] = int.Transparency,
-				["AdornCullingMode"] = int.AdornCullingMode,
-				["Adornee"] = int.Adornee,
-				["AlwaysOnTop"] = int.AlwaysOnTop,
-				["Angle"] = int.Angle,
-				["ClassName"] = int.ClassName,
-				["Height"] = int.Height,
-				["InnerRadius"] = int.InnerRadius,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Radius"] = int.Radius,
-				["SizeRelativeOffset"] = int.SizeRelativeOffset,
-				["Visible"] = int.Visible,
-				["ZIndex"] = int.ZIndex,
-				["Archivable"] = int.Archivable
+				["Color3"] = instance.Color3,
+				["Transparency"] = instance.Transparency,
+				["AdornCullingMode"] = instance.AdornCullingMode,
+				["Adornee"] = instance.Adornee,
+				["AlwaysOnTop"] = instance.AlwaysOnTop,
+				["Angle"] = instance.Angle,
+				["ClassName"] = instance.ClassName,
+				["Height"] = instance.Height,
+				["InnerRadius"] = instance.InnerRadius,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Radius"] = instance.Radius,
+				["SizeRelativeOffset"] = instance.SizeRelativeOffset,
+				["Visible"] = instance.Visible,
+				["ZIndex"] = instance.ZIndex,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("ImageHandleAdornment") then
+		if instance:IsA("ImageHandleAdornment") then
 			local props = {
-				["Color3"] = int.Color3,
-				["Transparency"] = int.Transparency,
-				["AdornCullingMode"] = int.AdornCullingMode,
-				["Adornee"] = int.Adornee,
-				["AlwaysOnTop"] = int.AlwaysOnTop,
-				["ClassName"] = int.ClassName,
-				["Image"] = int.Image,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Size"] = int.Size,
-				["SizeRelativeOffset"] = int.SizeRelativeOffset,
-				["Visible"] = int.Visible,
-				["ZIndex"] = int.ZIndex,
-				["Archivable"] = int.Archivable
+				["Color3"] = instance.Color3,
+				["Transparency"] = instance.Transparency,
+				["AdornCullingMode"] = instance.AdornCullingMode,
+				["Adornee"] = instance.Adornee,
+				["AlwaysOnTop"] = instance.AlwaysOnTop,
+				["ClassName"] = instance.ClassName,
+				["Image"] = instance.Image,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Size"] = instance.Size,
+				["SizeRelativeOffset"] = instance.SizeRelativeOffset,
+				["Visible"] = instance.Visible,
+				["ZIndex"] = instance.ZIndex,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("LineHandleAdornment") then
+		if instance:IsA("LineHandleAdornment") then
 			local props = {
-				["Color3"] = int.Color3,
-				["Transparency"] = int.Transparency,
-				["AdornCullingMode"] = int.AdornCullingMode,
-				["Adornee"] = int.Adornee,
-				["AlwaysOnTop"] = int.AlwaysOnTop,
-				["ClassName"] = int.ClassName,
-				["length"] = int.length,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Size"] = int.Size,
-				["SizeRelativeOffset"] = int.SizeRelativeOffset,
-				["Visible"] = int.Visible,
-				["ZIndex"] = int.ZIndex,
-				["Archivable"] = int.Archivable
+				["Color3"] = instance.Color3,
+				["Transparency"] = instance.Transparency,
+				["AdornCullingMode"] = instance.AdornCullingMode,
+				["Adornee"] = instance.Adornee,
+				["AlwaysOnTop"] = instance.AlwaysOnTop,
+				["ClassName"] = instance.ClassName,
+				["length"] = instance.length,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Size"] = instance.Size,
+				["SizeRelativeOffset"] = instance.SizeRelativeOffset,
+				["Visible"] = instance.Visible,
+				["ZIndex"] = instance.ZIndex,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("SphereHandleAdornment") then
+		if instance:IsA("SphereHandleAdornment") then
 			local props = {
-				["Color3"] = int.Color3,
-				["Transparency"] = int.Transparency,
-				["AdornCullingMode"] = int.AdornCullingMode,
-				["Adornee"] = int.Adornee,
-				["AlwaysOnTop"] = int.AlwaysOnTop,
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Radius"] = int.Radius,
-				["SizeRelativeOffset"] = int.SizeRelativeOffset,
-				["Visible"] = int.Visible,
-				["ZIndex"] = int.ZIndex,
-				["Archivable"] = int.Archivable
+				["Color3"] = instance.Color3,
+				["Transparency"] = instance.Transparency,
+				["AdornCullingMode"] = instance.AdornCullingMode,
+				["Adornee"] = instance.Adornee,
+				["AlwaysOnTop"] = instance.AlwaysOnTop,
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Radius"] = instance.Radius,
+				["SizeRelativeOffset"] = instance.SizeRelativeOffset,
+				["Visible"] = instance.Visible,
+				["ZIndex"] = instance.ZIndex,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("SelectionBox") then
+		if instance:IsA("SelectionBox") then
 			local props = {
-				["Color3"] = int.Color3,
-				["LineThickness"] = int.LineThickness,
-				["SurfaceColor3"] = int.SurfaceColor3,
-				["SurfaceTransparency"] = int.SurfaceTransparency,
-				["Transparency"] = int.Transparency,
-				["Adornee"] = int.Adornee,
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Visible"] = int.Visible,
-				["Archivable"] = int.Archivable
+				["Color3"] = instance.Color3,
+				["LineThickness"] = instance.LineThickness,
+				["SurfaceColor3"] = instance.SurfaceColor3,
+				["SurfaceTransparency"] = instance.SurfaceTransparency,
+				["Transparency"] = instance.Transparency,
+				["Adornee"] = instance.Adornee,
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Visible"] = instance.Visible,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("SelectionSphere") then
+		if instance:IsA("SelectionSphere") then
 			local props = {
-				["Color3"] = int.Color3,
-				["SurfaceColor3"] = int.SurfaceColor3,
-				["SurfaceTransparency"] = int.SurfaceTransparency,
-				["Transparency"] = int.Transparency,
-				["Adornee"] = int.Adornee,
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Visible"] = int.Visible,
-				["Archivable"] = int.Archivable
+				["Color3"] = instance.Color3,
+				["SurfaceColor3"] = instance.SurfaceColor3,
+				["SurfaceTransparency"] = instance.SurfaceTransparency,
+				["Transparency"] = instance.Transparency,
+				["Adornee"] = instance.Adornee,
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Visible"] = instance.Visible,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("SurfaceSelection") then
+		if instance:IsA("SurfaceSelection") then
 			local props = {
-				["Color3"] = int.Color3,
-				["Transparency"] = int.Transparency,
-				["Adornee"] = int.Adornee,
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Visible"] = int.Visible,
-				["Archivable"] = int.Archivable
+				["Color3"] = instance.Color3,
+				["Transparency"] = instance.Transparency,
+				["Adornee"] = instance.Adornee,
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Visible"] = instance.Visible,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("Dialog") then
+		if instance:IsA("Dialog") then
 			local props = {
-				["BehaviorType"] = int.BehaviorType,
-				["ClassName"] = int.ClassName,
-				["ConversationDistance"] = int.ConversationDistance,
-				["GoodbyeChoiceActive"] = int.GoodbyeChoiceActive,
-				["GoodbyeDialog"] = int.GoodbyeDialog,
-				["InitialPrompt"] = int.InitialPrompt,
-				["InUse"] = int.InUse,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Purpose"] = int.Purpose,
-				["Tone"] = int.Tone,
-				["TriggerDistance"] = int.TriggerDistance,
-				["TriggerOffset"] = int.TriggerOffset,
-				["Archivable"] = int.Archivable
+				["BehaviorType"] = instance.BehaviorType,
+				["ClassName"] = instance.ClassName,
+				["ConversationDistance"] = instance.ConversationDistance,
+				["GoodbyeChoiceActive"] = instance.GoodbyeChoiceActive,
+				["GoodbyeDialog"] = instance.GoodbyeDialog,
+				["InitialPrompt"] = instance.InitialPrompt,
+				["InUse"] = instance.InUse,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Purpose"] = instance.Purpose,
+				["Tone"] = instance.Tone,
+				["TriggerDistance"] = instance.TriggerDistance,
+				["TriggerOffset"] = instance.TriggerOffset,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("DialogChoice") then
+		if instance:IsA("DialogChoice") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["GoodbyeChoiceActive"] = int.GoodbyeChoiceActive,
-				["GoodbyeDialog"] = int.GoodbyeDialog,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["ResponseDialog"] = int.ResponseDialog,
-				["UserDialog"] = int.UserDialog,
-				["Archivable"] = int.Archivable
+				["ClassName"] = instance.ClassName,
+				["GoodbyeChoiceActive"] = instance.GoodbyeChoiceActive,
+				["GoodbyeDialog"] = instance.GoodbyeDialog,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["ResponseDialog"] = instance.ResponseDialog,
+				["UserDialog"] = instance.UserDialog,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("Motor6D") then
+		if instance:IsA("Motor6D") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["CurrentAngle"] = int.CurrentAngle,
-				["DesiredAngle"] = int.DesiredAngle,
-				["MaxVelocity"] = int.MaxVelocity,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Part0"] = int.Part0,
-				["Part1"] = int.Part1,
-				["Active"] = int.Active,
-				["Archivable"] = int.Archivable,
-				["Enabled"] = int.Enabled,
+				["ClassName"] = instance.ClassName,
+				["CurrentAngle"] = instance.CurrentAngle,
+				["DesiredAngle"] = instance.DesiredAngle,
+				["MaxVelocity"] = instance.MaxVelocity,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Part0"] = instance.Part0,
+				["Part1"] = instance.Part1,
+				["Active"] = instance.Active,
+				["Archivable"] = instance.Archivable,
+				["Enabled"] = instance.Enabled,
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("Atmosphere") then
+		if instance:IsA("Atmosphere") then
 			local props = {
-				["Density"] = int.Density,
-				["Offset"] = int.Offset,
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Color"] = int.Color,
-				["Decay"] = int.Decay,
-				["Glare"] = int.Glare,
-				["Haze"] = int.Haze,
-				["Archivable"] = int.Archivable
+				["Density"] = instance.Density,
+				["Offset"] = instance.Offset,
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Color"] = instance.Color,
+				["Decay"] = instance.Decay,
+				["Glare"] = instance.Glare,
+				["Haze"] = instance.Haze,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("Clouds") then
+		if instance:IsA("Clouds") then
 			local props = {
-				["CoverDensity"] = int.Cover,
-				["Density"] = int.Density,
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable
+				["CoverDensity"] = instance.Cover,
+				["Density"] = instance.Density,
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("Sky") then
+		if instance:IsA("Sky") then
 			local props = {
-				["CelestialBodiesShown"] = int.CelestialBodiesShown,
-				["MoonAngularSize"] = int.MoonAngularSize,
-				["MoonTexureId"] = int.MoonTexureId,
-				["SkyboxBk"] = int.SkyboxBk,
-				["SkyboxDn"] = int.SkyboxDn,
-				["SkyboxFt"] = int.SkyboxFt,
-				["SkyboxLf"] = int.SkyboxLf,
-				["SkyboxRt"] = int.SkyboxRt,
-				["SkyboxUp"] = int.SkyboxUp,
-				["StarCount"] = int.StarCount,
-				["SunAngularSize"] = int.SunAngularSize,
-				["SunTextureId"] = int.SunTextureId,
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable
+				["CelestialBodiesShown"] = instance.CelestialBodiesShown,
+				["MoonAngularSize"] = instance.MoonAngularSize,
+				["MoonTexureId"] = instance.MoonTexureId,
+				["SkyboxBk"] = instance.SkyboxBk,
+				["SkyboxDn"] = instance.SkyboxDn,
+				["SkyboxFt"] = instance.SkyboxFt,
+				["SkyboxLf"] = instance.SkyboxLf,
+				["SkyboxRt"] = instance.SkyboxRt,
+				["SkyboxUp"] = instance.SkyboxUp,
+				["StarCount"] = instance.StarCount,
+				["SunAngularSize"] = instance.SunAngularSize,
+				["SunTextureId"] = instance.SunTextureId,
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("SunRaysEffect") then
+		if instance:IsA("SunRaysEffect") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Enabled"] = int.Enabled,
-				["Intensity"] = int.Intensity,
-				["Spread"] = int.Spread,
-				["Archivable"] = int.Archivable
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Enabled"] = instance.Enabled,
+				["instanceensity"] = instance.instanceensity,
+				["Spread"] = instance.Spread,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("BloomEffect") then
+		if instance:IsA("BloomEffect") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Enabled"] = int.Enabled,
-				["Intensity"] = int.Intensity,
-				["Size"] = int.Size,
-				["Threshold"] = int.Threshold,
-				["Archivable"] = int.Archivable
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Enabled"] = instance.Enabled,
+				["instanceensity"] = instance.instanceensity,
+				["Size"] = instance.Size,
+				["Threshold"] = instance.Threshold,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("BlurEffect") then
+		if instance:IsA("BlurEffect") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Enabled"] = int.Enabled,
-				["Size"] = int.Size,
-				["Archivable"] = int.Archivable
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Enabled"] = instance.Enabled,
+				["Size"] = instance.Size,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("ColorCorrectionEffect") then
+		if instance:IsA("ColorCorrectionEffect") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Brightness"] = int.Brightness,
-				["Contrast"] = int.Contrast,
-				["Enabled"] = int.Enabled,
-				["Saturation"] = int.Saturation,
-				["TintColor"] = int.TintColor,
-				["Archivable"] = int.Archivable
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Brightness"] = instance.Brightness,
+				["Contrast"] = instance.Contrast,
+				["Enabled"] = instance.Enabled,
+				["Saturation"] = instance.Saturation,
+				["TinstanceColor"] = instance.TinstanceColor,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("DepthOfFieldEffect") then
+		if instance:IsA("DepthOfFieldEffect") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Enabled"] = int.Enabled,
-				["FarIntensity"] = int.FarIntensity,
-				["FocusDistance"] = int.FocusDistance,
-				["InFocusRadius"] = int.InFocusRadius,
-				["NearIntensity"] = int.NearIntensity,
-				["Archivable"] = int.Archivable
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Enabled"] = instance.Enabled,
+				["Farinstanceensity"] = instance.Farinstanceensity,
+				["FocusDistance"] = instance.FocusDistance,
+				["InFocusRadius"] = instance.InFocusRadius,
+				["Nearinstanceensity"] = instance.Nearinstanceensity,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("ClickDetector") then
+		if instance:IsA("ClickDetector") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["MaxActivationDistance"] = int.MaxActivationDistance,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable,
-				["CursorIcon"] = int.CursorIcon
+				["ClassName"] = instance.ClassName,
+				["MaxActivationDistance"] = instance.MaxActivationDistance,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable,
+				["CursorIcon"] = instance.CursorIcon
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("ProximityPrompt") then
+		if instance:IsA("ProximityPrompt") then
 			local props = {
-				["ActionText"] = int.ActionText,
-				["ClassName"] = int.ClassName,
-				["ClickablePrompt"] = int.ClickablePrompt,
-				["Enabled"] = int.Enabled,
-				["Exclusivity"] = int.Exclusivity,
-				["GamepadKeyCode"] = int.GamepadKeyCode,
-				["HoldDuration"] = int.HoldDuration,
-				["KeyboardKeyCode"] = int.KeyboardKeyCode,
-				["MaxActivationDistance"] = int.MaxActivationDistance,
-				["Name"] = int.Name,
-				["ObjectText"] = int.ObjectText,
-				["Parent"] = int.Parent,
-				["RequiresLineOfSight"] = int.RequiresLineOfSight,
-				["Style"] = int.Style,
-				["UIOffset"] = int.UIOffset,
-				["Archivable"] = int.Archivable,
-				["AutoLocalize"] = int.AutoLocalize
+				["ActionText"] = instance.ActionText,
+				["ClassName"] = instance.ClassName,
+				["ClickablePrompt"] = instance.ClickablePrompt,
+				["Enabled"] = instance.Enabled,
+				["Exclusivity"] = instance.Exclusivity,
+				["GamepadKeyCode"] = instance.GamepadKeyCode,
+				["HoldDuration"] = instance.HoldDuration,
+				["KeyboardKeyCode"] = instance.KeyboardKeyCode,
+				["MaxActivationDistance"] = instance.MaxActivationDistance,
+				["Name"] = instance.Name,
+				["ObjectText"] = instance.ObjectText,
+				["Parent"] = instance.Parent,
+				["RequiresLineOfSight"] = instance.RequiresLineOfSight,
+				["Style"] = instance.Style,
+				["UIOffset"] = instance.UIOffset,
+				["Archivable"] = instance.Archivable,
+				["AutoLocalize"] = instance.AutoLocalize
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("PackageLink") then
+		if instance:IsA("PackageLink") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Creator"] = int.Creator,
-				["Name"] = int.Name,
-				["PackageAssetName"] = int.PackageAssetName,
-				["Parent"] = int.Parent,
-				["PermissionLevel"] = int.PermissionLevel,
-				["Archivable"] = int.Archivable,
-				["AutoUpdate"] = int.AutoUpdate,
-				["PackageId"] = int.PackageId,
-				["Status"] = int.Status,
-				["VersionNumber"] = int.VersionNumber
+				["ClassName"] = instance.ClassName,
+				["Creator"] = instance.Creator,
+				["Name"] = instance.Name,
+				["PackageAssetName"] = instance.PackageAssetName,
+				["Parent"] = instance.Parent,
+				["PermissionLevel"] = instance.PermissionLevel,
+				["Archivable"] = instance.Archivable,
+				["AutoUpdate"] = instance.AutoUpdate,
+				["PackageId"] = instance.PackageId,
+				["Status"] = instance.Status,
+				["VersionNumber"] = instance.VersionNumber
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("LocalizationTable") then
+		if instance:IsA("LocalizationTable") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable,
-				["SourceLocaleId"] = int.SourceLocaleId
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable,
+				["SourceLocaleId"] = instance.SourceLocaleId
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("BlockMesh") then
+		if instance:IsA("BlockMesh") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Offset"] = int.Offset,
-				["Parent"] = int.Parent,
-				["Scale"] = int.Scale,
-				["VertexColor"] = int.VertexColor,
-				["Archivable"] = int.Archivable
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Offset"] = instance.Offset,
+				["Parent"] = instance.Parent,
+				["Scale"] = instance.Scale,
+				["VertexColor"] = instance.VertexColor,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("SpecialMesh") then
+		if instance:IsA("SpecialMesh") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["MeshId"] = int.MeshId,
-				["MeshType"] = int.MeshType,
-				["Name"] = int.Name,
-				["Offset"] = int.Offset,
-				["Parent"] = int.Parent,
-				["Scale"] = int.Scale,
-				["TextureId"] = int.TextureId,
-				["VertexColor"] = int.VertexColor,
-				["Archivable"] = int.Archivable
+				["ClassName"] = instance.ClassName,
+				["MeshId"] = instance.MeshId,
+				["MeshType"] = instance.MeshType,
+				["Name"] = instance.Name,
+				["Offset"] = instance.Offset,
+				["Parent"] = instance.Parent,
+				["Scale"] = instance.Scale,
+				["TextureId"] = instance.TextureId,
+				["VertexColor"] = instance.VertexColor,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("Sound") then
+		if instance:IsA("Sound") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["IsLoaded"] = int.IsLoaded,
-				["IsPaused"] = int.IsPaused,
-				["IsPlaying"] = int.IsPlaying,
-				["Looped"] = int.Looped,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["PlaybackLoudness"] = int.PlaybackLoudness,
-				["PlaybackSpeed"] = int.PlaybackSpeed,
-				["Playing"] = int.Playing,
-				["RollOffMaxDistance"] = int.RollOffMaxDistance,
-				["RollOffMinDistance"] = int.RollOffMinDistance,
-				["RollOffMode"] = int.RollOffMode,
-				["SoundGroup"] = int.SoundGroup,
+				["ClassName"] = instance.ClassName,
+				["IsLoaded"] = instance.IsLoaded,
+				["IsPaused"] = instance.IsPaused,
+				["IsPlaying"] = instance.IsPlaying,
+				["Looped"] = instance.Looped,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["PlaybackLoudness"] = instance.PlaybackLoudness,
+				["PlaybackSpeed"] = instance.PlaybackSpeed,
+				["Playing"] = instance.Playing,
+				["RollOffMaxDistance"] = instance.RollOffMaxDistance,
+				["RollOffMinDistance"] = instance.RollOffMinDistance,
+				["RollOffMode"] = instance.RollOffMode,
+				["SoundGroup"] = instance.SoundGroup,
 				["SoundId"] = {
-					int.SoundId,
-					["Preview"] = int.Preview
+					instance.SoundId,
+					["Preview"] = instance.Preview
 				},
-				["Timelength"] = int.Timelength,
-				["TimePosition"] = int.TimePosition,
-				["Volume"] = int.Volume,
-				["Archivable"] = int.Archivable,
-				["PlayOnRemove"] = int.PlayOnRemove
+				["Timelength"] = instance.Timelength,
+				["TimePosition"] = instance.TimePosition,
+				["Volume"] = instance.Volume,
+				["Archivable"] = instance.Archivable,
+				["PlayOnRemove"] = instance.PlayOnRemove
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("SoundGroup") then
+		if instance:IsA("SoundGroup") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Volume"] = int.Volume,
-				["Archivable"] = int.Archivable
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Volume"] = instance.Volume,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("ChorusSoundEffect") then
+		if instance:IsA("ChorusSoundEffect") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Depth"] = int.Depth,
-				["Enabled"] = int.Enabled,
-				["Mix"] = int.Mix,
-				["Priority"] = int.Priority,
-				["Rate"] = int.Rate,
-				["Archivable"] = int.Archivable
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Depth"] = instance.Depth,
+				["Enabled"] = instance.Enabled,
+				["Mix"] = instance.Mix,
+				["Priority"] = instance.Priority,
+				["Rate"] = instance.Rate,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("DistortionSoundEffect") then
+		if instance:IsA("DistortionSoundEffect") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Enabled"] = int.Enabled,
-				["Level"] = int.Level,
-				["Priority"] = int.Priority,
-				["Archivable"] = int.Archivable
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Enabled"] = instance.Enabled,
+				["Level"] = instance.Level,
+				["Priority"] = instance.Priority,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("CompressorSoundEffect") then
+		if instance:IsA("CompressorSoundEffect") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Attack"] = int.Attack,
-				["Enabled"] = int.Enabled,
-				["GainMakeup"] = int.GainMakeup,
-				["Priority"] = int.Priority,
-				["Ratio"] = int.Ratio,
-				["Release"] = int.Release,
-				["SideChain"] = int.SideChain,
-				["Threshold"] = int.Threshold,
-				["Archivable"] = int.Archivable
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Attack"] = instance.Attack,
+				["Enabled"] = instance.Enabled,
+				["GainMakeup"] = instance.GainMakeup,
+				["Priority"] = instance.Priority,
+				["Ratio"] = instance.Ratio,
+				["Release"] = instance.Release,
+				["SideChain"] = instance.SideChain,
+				["Threshold"] = instance.Threshold,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("EchoSoundEffect") then
+		if instance:IsA("EchoSoundEffect") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Delay"] = int.Delay,
-				["DryLevel"] = int.DryLevel,
-				["Enabled"] = int.Enabled,
-				["Feedback"] = int.Feedback,
-				["Priority"] = int.Priority,
-				["WetLevel"] = int.Level,
-				["Archivable"] = int.Archivable
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Delay"] = instance.Delay,
+				["DryLevel"] = instance.DryLevel,
+				["Enabled"] = instance.Enabled,
+				["Feedback"] = instance.Feedback,
+				["Priority"] = instance.Priority,
+				["WetLevel"] = instance.Level,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("EqualizerSoundEffect") then
+		if instance:IsA("EqualizerSoundEffect") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Enabled"] = int.Enabled,
-				["HighGain"] = int.HighGain,
-				["LowGain"] = int.LowGain,
-				["MidGain"] = int.MidGain,
-				["Priority"] = int.Priority,
-				["Archivable"] = int.Archivable
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Enabled"] = instance.Enabled,
+				["HighGain"] = instance.HighGain,
+				["LowGain"] = instance.LowGain,
+				["MidGain"] = instance.MidGain,
+				["Priority"] = instance.Priority,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("FlangeSoundEffect") then
+		if instance:IsA("FlangeSoundEffect") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Depth"] = int.Depth,
-				["Enabled"] = int.Enabled,
-				["Mix"] = int.Mix,
-				["Priority"] = int.Priority,
-				["Rate"] = int.Rate,
-				["Archivable"] = int.Archivable
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Depth"] = instance.Depth,
+				["Enabled"] = instance.Enabled,
+				["Mix"] = instance.Mix,
+				["Priority"] = instance.Priority,
+				["Rate"] = instance.Rate,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("PitchShiftSoundEffect") then
+		if instance:IsA("PitchShiftSoundEffect") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Enabled"] = int.Enabled,
-				["Octave"] = int.Octave,
-				["Priority"] = int.Priority,
-				["Archivable"] = int.Archivable
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Enabled"] = instance.Enabled,
+				["Octave"] = instance.Octave,
+				["Priority"] = instance.Priority,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("ReverbSoundEffect") then
+		if instance:IsA("ReverbSoundEffect") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["DecayTime"] = int.DecayTime,
-				["Density"] = int.Density,
-				["Diffusion"] = int.Diffusion,
-				["DryLevel"] = int.DryLevel,
-				["Enabled"] = int.Enabled,
-				["Priority"] = int.Priority,
-				["WetLevel"] = int.WetLevel,
-				["Archivable"] = int.Archivable
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["DecayTime"] = instance.DecayTime,
+				["Density"] = instance.Density,
+				["Diffusion"] = instance.Diffusion,
+				["DryLevel"] = instance.DryLevel,
+				["Enabled"] = instance.Enabled,
+				["Priority"] = instance.Priority,
+				["WetLevel"] = instance.WetLevel,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("TremoloSoundEffect") then
+		if instance:IsA("TremoloSoundEffect") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Depth"] = int.Depth,
-				["Duty"] = int.Duty,
-				["Enabled"] = int.Enabled,
-				["Frequency"] = int.Frequency,
-				["Priority"] = int.Priority,
-				["Archivable"] = int.Archivable
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Depth"] = instance.Depth,
+				["Duty"] = instance.Duty,
+				["Enabled"] = instance.Enabled,
+				["Frequency"] = instance.Frequency,
+				["Priority"] = instance.Priority,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("BoolValue") then
+		if instance:IsA("BoolValue") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Value"] = int.Value,
-				["Archivable"] = int.Archivable
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Value"] = instance.Value,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("BrickColorValue") then
+		if instance:IsA("BrickColorValue") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Value"] = int.Value,
-				["Archivable"] = int.Archivable
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Value"] = instance.Value,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("CFrameValue") then
+		if instance:IsA("CFrameValue") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("Color3Value") then
+		if instance:IsA("Color3Value") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Value"] = int.Value,
-				["Archivable"] = int.Archivable
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Value"] = instance.Value,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("IntValue") then
+		if instance:IsA("IntValue") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Value"] = int.Value,
-				["Archivable"] = int.Archivable
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Value"] = instance.Value,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("NumberValue") then
+		if instance:IsA("NumberValue") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Value"] = int.Value,
-				["Archivable"] = int.Archivable
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Value"] = instance.Value,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("ObjectValue") then
+		if instance:IsA("ObjectValue") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Value"] = int.Value,
-				["Archivable"] = int.Archivable
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Value"] = instance.Value,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("RayValue") then
+		if instance:IsA("RayValue") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("StringValue") then
+		if instance:IsA("StringValue") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Value"] = int.Value,
-				["Archivable"] = int.Archivable
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Value"] = instance.Value,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("Vector3Value") then
+		if instance:IsA("Vector3Value") then
 			local props = {
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Value"] = int.Value,
-				["Archivable"] = int.Archivable
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Value"] = instance.Value,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("WrapLayer") then
+		if instance:IsA("WrapLayer") then
 			local props = {
-				["CageMeshId"] = int.CageMeshId,
-				["Order"] = int.Order,
-				["Puffiness"] = int.Puffiness,
-				["ReferenceMeshId"] = int.ReferenceMeshId,
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable,
-				["Enabled"] = int.Enabled,
-				["ShrinkFactor"] = int.ShrinkFactor
+				["CageMeshId"] = instance.CageMeshId,
+				["Order"] = instance.Order,
+				["Puffiness"] = instance.Puffiness,
+				["ReferenceMeshId"] = instance.ReferenceMeshId,
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable,
+				["Enabled"] = instance.Enabled,
+				["ShrinkFactor"] = instance.ShrinkFactor
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 
-		if int:IsA("WrapTarget") then
+		if instance:IsA("WrapTarget") then
 			local props = {
-				["CageMeshId"] = int.CageMeshId,
-				["Stiffness"] = int.Stiffness,
-				["ClassName"] = int.ClassName,
-				["Name"] = int.Name,
-				["Parent"] = int.Parent,
-				["Archivable"] = int.Archivable
+				["CageMeshId"] = instance.CageMeshId,
+				["Stiffness"] = instance.Stiffness,
+				["ClassName"] = instance.ClassName,
+				["Name"] = instance.Name,
+				["Parent"] = instance.Parent,
+				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. int.Name)
+			print("There are " .. length(props) .. " properties for " .. instance.Name)
 			print(props)
 
-			for g, v in pairs(int:GetAttributes()) do
+			for g, v in pairs(instance:GetAttributes()) do
 				print(g, ", ", v)
 			end
 		end
 	end
 
-	if not int:IsA("Instance") then
+	if not instance:IsA("Instance") then
 		error("instance isn't supported in the module")
 	end
 
-	return int
-end
-
-function Properties:APIGetProperties(instance: string)
-	local Property do
-		-- ClassProperties is a Dictionary of sorted arrays of Properties of Classes
-		-- Pulls from anaminus.github.io
-		-- Ignores deprecated and RobloxPluginSecurity Properties
-		-- Make sure HttpService is Enabled (Roblox Studio -> Home Tab -> Game Settings -> Security -> Allow HTTP requests = "On")
-
-		-- Source: https://scriptinghelpers.org/questions/50784/how-to-get-list-of-object-properties
-
-		Property = {}
-		local HttpService = game:GetService("HttpService")
-
-		local Data = HttpService:JSONDecode(HttpService:GetAsync("https://anaminus.github.io/rbx/json/api/latest.json"))
-
-		for i = 1, #Data do
-			local Table = Data[i]
-			local Type = Table.type
-
-			if Type == "Class" then
-				local ClassData = {}
-
-				local Superclass = Property[Table.Superclass]
-
-				if Superclass then
-					for j = 1, #Superclass do
-						ClassData[j] = Superclass[j]
-					end
-				end
-
-				Property[Table.Name] = ClassData
-			elseif Type == "Property" then
-				if not next(Table.tags) then
-					local Class = Property[Table.Class]
-					local Property = Table.Name
-					local Inserted
-
-					for j = 1, #Class do
-						if Property < Class[j] then
-							Inserted = true
-							table.insert(Class, j, Property)
-							break
-						end
-					end
-
-					if not Inserted then
-						table.insert(Class, Property)
-					end
-				end
-			elseif Type == "Function" then
-			elseif Type == "YieldFunction" then
-			elseif Type == "Event" then
-			elseif Type == "Callback" then
-			elseif Type == "Enum" then
-			elseif Type == "EnumItem" then
-			end
-		end
-	end
-
-	table.foreach(Property[tostring(instance)], print)
+	return instance
 end
 
 function Properties:ReadEnumerator(enum: Enum)
 	return print(enum:GetEnumItems())
 end
 
-function Properties:SetName(int: any, strName: string)
-	if not int ~= nil then
-		int.Name = strName
-	elseif int ~= nil or not int then
+function Properties:SetName(instance: any, strName: string)
+	if not instance ~= nil then
+		instance.Name = strName
+	elseif instance ~= nil or not instance then
 		error("instance doesn't exist...")
 	end
 
 	return
 end
 
-function Properties:GetName(int: any)
-	return int.Name
+function Properties:GetName(instance: any)
+	return instance.Name
 end
 
-function Properties:SetValue(int: any, value: any)
-	int = value
+function Properties:SetValue(instance: any, value: any)
+	instance = value
 
-	if int ~= value then
-		int = value
+	if instance ~= value then
+		instance = value
 	end
 
-	return int, value
+	return instance, value
 end
 
 function Properties:GetValue(value: any)
