@@ -53,7 +53,7 @@ function Properties.GetProperties(instance: any)
 				["FallenPartsDestroyHeight"] = instance.FallenPartsDestroyHeight,
 				["FilteringEnabled"] = instance.FilteringEnabled,
 				["Gravity"] = instance.Gravity,
-				["instanceerpolationThrottling"] = instance.instanceerpolationThrottling,
+				["InterpolationThrottling"] = instance.InterpolationThrottling,
 				["StreamingEnabled"] = instance.StreamingEnabled
 			}
 
@@ -1226,7 +1226,7 @@ function Properties.GetProperties(instance: any)
 					["Looped"] = instance.Looped,
 					["Playing"] = instance.Playing,
 					["Resolution"] = instance.Resolution,
-					["Timelength"] = instance.Timelength,
+					["TimeLength"] = instance.TimeLength,
 					["TimePosition"] = instance.TimePosition,
 					["Video"] = instance.Video,
 					["Volume"] = instance.Volume,
@@ -3576,7 +3576,7 @@ function Properties.GetProperties(instance: any)
 				["RollOffMode"] = instance.RollOffMode,
 				["SoundGroup"] = instance.SoundGroup,
 				["SoundId"] = instance.SoundId,
-				["Timelength"] = instance.Timelength,
+				["TimeLength"] = instance.TimeLength,
 				["TimePosition"] = instance.TimePosition,
 				["Volume"] = instance.Volume,
 				["Archivable"] = instance.Archivable,
