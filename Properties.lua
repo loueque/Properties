@@ -4028,11 +4028,11 @@ function Properties.GetProperties(instance: any)
 	return instance
 end
 
-function Properties:ReadEnumerator(enum: Enum)
+function Properties.ReadEnumerator(enum: Enum)
 	return enum:GetEnumItems()
 end
 
-function Properties:SetName(instance: any, strName: string)
+function Properties.SetName(instance: any, strName: string)
 	if not instance ~= nil then
 		instance.Name = strName
 	elseif instance ~= nil or not instance then
@@ -4042,7 +4042,7 @@ function Properties:SetName(instance: any, strName: string)
 	return
 end
 
-function Properties:SetValue(instance: any, value: any)
+function Properties.SetValue(instance: any, value: any)
 	instance = value
 
 	if instance ~= value then
