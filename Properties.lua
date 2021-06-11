@@ -2772,13 +2772,7 @@ function Properties.GetProperties(instance: any)
 		end
 
 		if instance:IsA("Script") then
-			local props = {
-				["ClassName"] = instance.ClassName,
-				["Name"] = instance.Name,
-				["Parent"] = instance.Parent,
-				["Archivable"] = instance.Archivable,
-				["Disabled"] = instance.Disabled
-			}
+			local props = {instance.ClassName, instance.Name, instance.Parent, instance.Archivable, instance.Disabled}
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -2788,15 +2782,7 @@ function Properties.GetProperties(instance: any)
 		end
 
 		if instance:IsA("LocalScript") then
-			local props = {
-				["ClassName"] = instance.ClassName,
-				["Name"] = instance.Name,
-				["Parent"] = instance.Parent,
-				["Archivable"] = instance.Archivable,
-				["Disabled"] = instance.Disabled
-			}
-
-
+			local props = {instance.ClassName, instance.Name, instance.Parent, instance.Archivable, instance.Disabled}
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -2806,14 +2792,7 @@ function Properties.GetProperties(instance: any)
 		end
 
 		if instance:IsA("ModuleScript") then
-			local props = {
-				["ClassName"] = instance.ClassName,
-				["Name"] = instance.Name,
-				["Parent"] = instance.Parent,
-				["Archivable"] = instance.Archivable
-			}
-
-
+			local props = {instance.ClassName, instance.Name, instance.Parent, instance.Archivable, instance.Disabled}
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -2823,14 +2802,7 @@ function Properties.GetProperties(instance: any)
 		end
 
 		if instance:IsA("BindableFunction") then
-			local props = {
-				["ClassName"] = instance.ClassName,
-				["Name"] = instance.Name,
-				["Parent"] = instance.Parent,
-				["Archivable"] = instance.Archivable
-			}
-
-
+			local props = {instance.ClassName, instance.Name, instance.Parent, instance.Archivable, instance.Disabled}
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -2840,14 +2812,7 @@ function Properties.GetProperties(instance: any)
 		end
 
 		if instance:IsA("BindableEvent") then
-			local props = {
-				["ClassName"] = instance.ClassName,
-				["Name"] = instance.Name,
-				["Parent"] = instance.Parent,
-				["Archivable"] = instance.Archivable
-			}
-
-
+			local props = {instance.ClassName, instance.Name, instance.Parent, instance.Archivable, instance.Disabled}
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -2857,14 +2822,7 @@ function Properties.GetProperties(instance: any)
 		end
 
 		if instance:IsA("RemoteFunction") then
-			local props = {
-				["ClassName"] = instance.ClassName,
-				["Name"] = instance.Name,
-				["Parent"] = instance.Parent,
-				["Archivable"] = instance.Archivable
-			}
-
-
+			local props = {instance.ClassName, instance.Name, instance.Parent, instance.Archivable, instance.Disabled}
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -2874,14 +2832,7 @@ function Properties.GetProperties(instance: any)
 		end
 
 		if instance:IsA("RemoteEvent") then
-			local props = {
-				["ClassName"] = instance.ClassName,
-				["Name"] = instance.Name,
-				["Parent"] = instance.Parent,
-				["Archivable"] = instance.Archivable
-			}
-
-
+			local props = {instance.ClassName, instance.Name, instance.Parent, instance.Archivable, instance.Disabled}
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -2909,15 +2860,7 @@ function Properties.GetProperties(instance: any)
 		end
 
 		if instance:IsA("WorldModel") then
-			local props = {
-				["ClassName"] = instance.ClassName,
-				["Name"] = instance.Name,
-				["Parent"] = instance.Parent,
-				["PrimaryPart"] = instance.PrimaryPart,
-				["Archivable"] = instance.Archivable
-			}
-
-
+			local props = {instance.ClassName, instance.Name, instance.Parent, instance.Archivable, instance.Disabled}
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
