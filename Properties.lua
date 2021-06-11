@@ -4,7 +4,7 @@ local Properties = {}
 Properties.__index = {}
 --> Optional: Properties.ClassName = "Properties"
 
-function Properties:GetProperties(instance: any)
+function Properties.GetProperties(instance: any)
 	local function length(Table)
 		local counter = 0
 
@@ -34,12 +34,11 @@ function Properties:GetProperties(instance: any)
 				["Parent"] = instance.Parent
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
-
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance == game:GetService("Workspace") then
@@ -58,12 +57,11 @@ function Properties:GetProperties(instance: any)
 				["StreamingEnabled"] = instance.StreamingEnabled
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
-
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance == game:GetService("Players") then
@@ -81,12 +79,11 @@ function Properties:GetProperties(instance: any)
 				["CharacterAutoLoads"] = instance.CharacterAutoLoads
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
-
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance == game:GetService("CoreGui") then
@@ -99,13 +96,11 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
-
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance == game:GetService("CorePackages") then
@@ -116,12 +111,11 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
-
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance == game:GetService("Lighting") then
@@ -145,12 +139,11 @@ function Properties:GetProperties(instance: any)
 				["ExposureCompensation"] = instance.ExposureCompensation
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
-
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance == game:GetService("PluginDebugService") then
@@ -161,12 +154,11 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
-
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance == game:GetService("PluginGuiService") then
@@ -177,13 +169,11 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
-
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance == game:GetService("ReplicatedFirst") then
@@ -194,12 +184,11 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
-
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance == game:GetService("ReplicatedScriptService") then
@@ -210,12 +199,11 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
-
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance == game:GetService("ReplicatedStorage") then
@@ -226,12 +214,11 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
-
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance == game:GetService("ServerScriptService") then
@@ -242,12 +229,11 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
-
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance == game:GetService("ServerStorage") then
@@ -258,12 +244,11 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
-
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance == game:GetService("StarterGui") then
@@ -276,12 +261,11 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable,
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
-
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance == game:GetService("StarterPack") then
@@ -292,12 +276,11 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
-
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance == game:GetService("StarterPlayer") then
@@ -326,12 +309,11 @@ function Properties:GetProperties(instance: any)
 				["EnableMouseLockOption"] = instance.EnableMouseLockOption
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
-
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance == game:GetService("StarterPlayer").StarterCharacterScripts then
@@ -342,12 +324,11 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
-
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance == game:GetService("StarterPlayer").StarterPlayerScripts then
@@ -358,12 +339,11 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
-
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance == game:GetService("Teams") then
@@ -374,12 +354,11 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
-
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance == game:GetService("SoundService") then
@@ -395,12 +374,11 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
-
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance == game:GetService("Chat") then
@@ -413,12 +391,11 @@ function Properties:GetProperties(instance: any)
 				["LoadDefaultChat"] = instance.LoadDefaultChat
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
-
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance == game:GetService("LocalizationService") then
@@ -431,12 +408,11 @@ function Properties:GetProperties(instance: any)
 				["SystemLocaleId"] = instance.SystemLocaleId
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
-
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance == game:GetService("TestService") then
@@ -459,12 +435,11 @@ function Properties:GetProperties(instance: any)
 				["Timeout"] = instance.Timeout
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
-
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance == game:GetService("Debris") then
@@ -475,12 +450,11 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
-
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("BasePart") then
@@ -519,12 +493,11 @@ function Properties:GetProperties(instance: any)
 					["AssemblyRootPart"] = instance.AssemblyRootPart
 				}
 
-				print("There are " .. length(props) .. " properties for " .. instance.Name)
-				print(props)
-
 				for g, v in pairs(instance:GetAttributes()) do
-					print(g, ", ", v)
+					return g and v
 				end
+
+				return props
 			end
 
 			if instance:IsA("CornerWedgePart") then
@@ -562,12 +535,11 @@ function Properties:GetProperties(instance: any)
 					["AssemblyRootPart"] = instance.AssemblyRootPart
 				}
 
-				print("There are " .. length(props) .. " properties for " .. instance.Name)
-				print(props)
-
 				for g, v in pairs(instance:GetAttributes()) do
-					print(g, ", ", v)
+					return g and v
 				end
+
+				return props
 			end
 
 			if instance:IsA("TrussPart") then
@@ -605,12 +577,11 @@ function Properties:GetProperties(instance: any)
 					["AssemblyRootPart"] = instance.AssemblyRootPart
 				}
 
-				print("There are " .. length(props) .. " properties for " .. instance.Name)
-				print(props)
-
 				for g, v in pairs(instance:GetAttributes()) do
-					print(g, ", ", v)
+					return g and v
 				end
+
+				return props
 			end
 
 			if instance:IsA("WedgePart") then
@@ -648,12 +619,11 @@ function Properties:GetProperties(instance: any)
 					["AssemblyRootPart"] = instance.AssemblyRootPart
 				}
 
-				print("There are " .. length(props) .. " properties for " .. instance.Name)
-				print(props)
-
 				for g, v in pairs(instance:GetAttributes()) do
-					print(g, ", ", v)
+					return g and v
 				end
+
+				return props
 			end
 
 			if instance:IsA("MeshPart") then
@@ -697,12 +667,11 @@ function Properties:GetProperties(instance: any)
 					["AssemblyRootPart"] = instance.AssemblyRootPart
 				}
 
-				print("There are " .. length(props) .. " properties for " .. instance.Name)
-				print(props)
-
 				for g, v in pairs(instance:GetAttributes()) do
-					print(g, ", ", v)
+					return g and v
 				end
+
+				return props
 			end
 
 			if instance:IsA("SpawnLocation") then
@@ -744,12 +713,11 @@ function Properties:GetProperties(instance: any)
 					["AssemblyRootPart"] = instance.AssemblyRootPart
 				}
 
-				print("There are " .. length(props) .. " properties for " .. instance.Name)
-				print(props)
-
 				for g, v in pairs(instance:GetAttributes()) do
-					print(g, ", ", v)
+					return g and v
 				end
+
+				return props
 			end
 
 			if instance:IsA("Terrain") then
@@ -769,12 +737,11 @@ function Properties:GetProperties(instance: any)
 					["CustomPhysicalProperties"] = instance.CustomPhysicalProperties
 				}
 
-				print("There are " .. length(props) .. " properties for " .. instance.Name)
-				print(props)
-
 				for g, v in pairs(instance:GetAttributes()) do
-					print(g, ", ", v)
+					return g and v
 				end
+
+				return props
 			end
 
 			if instance:IsA("Model") then
@@ -786,12 +753,11 @@ function Properties:GetProperties(instance: any)
 					["Archivable"] = instance.Archivable
 				}
 
-				print("There are " .. length(props) .. " properties for " .. instance.Name)
-				print(props)
-
 				for g, v in pairs(instance:GetAttributes()) do
-					print(g, ", ", v)
+					return g and v
 				end
+
+				return props
 			end
 		end
 
@@ -813,12 +779,11 @@ function Properties:GetProperties(instance: any)
 					["AutoLocalize"] = instance.AutoLocalize
 				}
 
-				print("There are " .. length(props) .. " properties for " .. instance.Name)
-				print(props)
-
 				for g, v in pairs(instance:GetAttributes()) do
-					print(g, ", ", v)
+					return g and v
 				end
+
+				return props
 			end
 
 			if instance:IsA("Frame") then
@@ -847,12 +812,11 @@ function Properties:GetProperties(instance: any)
 					["AutoLocalize"] = instance.AutoLocalize ,
 				}
 
-				print("There are " .. length(props) .. " properties for " .. instance.Name)
-				print(props)
-
 				for g, v in pairs(instance:GetAttributes()) do
-					print(g, ", ", v)
+					return g and v
 				end
+
+				return props
 			end
 
 			if instance:IsA("ScrollingFrame") then
@@ -904,12 +868,11 @@ function Properties:GetProperties(instance: any)
 					["AutoLocalize"] = instance.AutoLocalize ,
 				}
 
-				print("There are " .. length(props) .. " properties for " .. instance.Name)
-				print(props)
-
 				for g, v in pairs(instance:GetAttributes()) do
-					print(g, ", ", v)
+					return g and v
 				end
+
+				return props
 			end
 
 			if instance:IsA("TextLabel") then
@@ -959,12 +922,11 @@ function Properties:GetProperties(instance: any)
 					["AutoLocalize"] = instance.AutoLocalize
 				}
 
-				print("There are " .. length(props) .. " properties for " .. instance.Name)
-				print(props)
-
 				for g, v in pairs(instance:GetAttributes()) do
-					print(g, ", ", v)
+					return g and v
 				end
+
+				return props
 			end
 
 			if instance:IsA("TextBox") then
@@ -1021,12 +983,11 @@ function Properties:GetProperties(instance: any)
 					["AutoLocalize"] = instance.AutoLocalize
 				}
 
-				print("There are " .. length(props) .. " properties for " .. instance.Name)
-				print(props)
-
 				for g, v in pairs(instance:GetAttributes()) do
-					print(g, ", ", v)
+					return g and v
 				end
+
+				return props
 			end
 
 			if instance:IsA("TextButton") then
@@ -1076,12 +1037,12 @@ function Properties:GetProperties(instance: any)
 					["AutoLocalize"] = instance.AutoLocalize
 				}
 
-				print("There are " .. length(props) .. " properties for " .. instance.Name)
-				print(props)
 
 				for g, v in pairs(instance:GetAttributes()) do
-					print(g, ", ", v)
+					return g and v
 				end
+
+				return props
 			end
 
 			if instance:IsA("ImageButton") then
@@ -1128,12 +1089,11 @@ function Properties:GetProperties(instance: any)
 					["AutoLocalize"] = instance.AutoLocalize
 				}
 
-				print("There are " .. length(props) .. " properties for " .. instance.Name)
-				print(props)
-
 				for g, v in pairs(instance:GetAttributes()) do
-					print(g, ", ", v)
+					return g and v
 				end
+
+				return props
 			end
 
 			if instance:IsA("ImageLabel") then
@@ -1178,12 +1138,11 @@ function Properties:GetProperties(instance: any)
 					["AutoLocalize"] = instance.AutoLocalize
 				}
 
-				print("There are " .. length(props) .. " properties for " .. instance.Name)
-				print(props)
-
 				for g, v in pairs(instance:GetAttributes()) do
-					print(g, ", ", v)
+					return g and v
 				end
+
+				return props
 			end
 
 			if instance:IsA("ViewportFrame") then
@@ -1225,12 +1184,11 @@ function Properties:GetProperties(instance: any)
 					["AutoLocalize"] = instance.AutoLocalize
 				}
 
-				print("There are " .. length(props) .. " properties for " .. instance.Name)
-				print(props)
-
 				for g, v in pairs(instance:GetAttributes()) do
-					print(g, ", ", v)
+					return g and v
 				end
+
+				return props
 			end
 
 			if instance:IsA("VideoFrame") then
@@ -1275,12 +1233,12 @@ function Properties:GetProperties(instance: any)
 					["AutoLocalize"] = instance.AutoLocalize
 				}
 
-				print("There are " .. length(props) .. " properties for " .. instance.Name)
-				print(props)
 
 				for g, v in pairs(instance:GetAttributes()) do
-					print(g, ", ", v)
+					return g and v
 				end
+
+				return props
 			end
 		end
 
@@ -1295,12 +1253,11 @@ function Properties:GetProperties(instance: any)
 				["DominantAxis"] = instance.DominantAxis
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
-
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("UICorner") then
@@ -1312,12 +1269,11 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
-
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("UIGradient") then
@@ -1333,12 +1289,11 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
-
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("UIGridLayout") then
@@ -1359,12 +1314,11 @@ function Properties:GetProperties(instance: any)
 				["VerticalAlignment"] = instance.VerticalAlignment
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
-
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("UIListLayout") then
@@ -1381,12 +1335,11 @@ function Properties:GetProperties(instance: any)
 				["VerticalAlignment"] = instance.VerticalAlignment
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
-
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("UIPadding") then
@@ -1401,12 +1354,13 @@ function Properties:GetProperties(instance: any)
 				["PaddingTop"] = instance.PaddingTop
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("UIPageLayout") then
@@ -1429,12 +1383,13 @@ function Properties:GetProperties(instance: any)
 				["VerticalAlignment"] = instance.VerticalAlignment
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("UIScale") then
@@ -1446,12 +1401,13 @@ function Properties:GetProperties(instance: any)
 				["Scale"] = instance.Scale
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("UISizeConstraint") then
@@ -1464,12 +1420,13 @@ function Properties:GetProperties(instance: any)
 				["MinSize"] = instance.MinSize
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("UIStroke") then
@@ -1486,12 +1443,13 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("UITableLayout") then
@@ -1511,12 +1469,13 @@ function Properties:GetProperties(instance: any)
 				["VerticalAlignment"] = instance.VerticalAlignment
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("UITextSizeConstraint") then
@@ -1529,12 +1488,13 @@ function Properties:GetProperties(instance: any)
 				["MinstanceextSize"] = instance.MinstanceextSize
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("Tool") then
@@ -1555,12 +1515,13 @@ function Properties:GetProperties(instance: any)
 				["RequiresHandle"] = instance.RequiresHandle
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("Sparkles") then
@@ -1573,12 +1534,13 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("Explosion") then
@@ -1595,12 +1557,13 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("ParticleEmitter") then
@@ -1632,12 +1595,13 @@ function Properties:GetProperties(instance: any)
 				["SpreadAngle"] = instance.SpreadAngle
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("Fire") then
@@ -1653,12 +1617,13 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("Smoke") then
@@ -1674,12 +1639,13 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("Trail") then
@@ -1705,12 +1671,13 @@ function Properties:GetProperties(instance: any)
 				["WidthScale"] = instance.WidthScale
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("Decal") then
@@ -1725,12 +1692,13 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("Texture") then
@@ -1749,12 +1717,13 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("SurfaceAppearance") then
@@ -1770,12 +1739,13 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("Folder") then
@@ -1786,12 +1756,13 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("Configuration") then
@@ -1802,12 +1773,13 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("Accessory") then
@@ -1822,12 +1794,13 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("BodyColors") then
@@ -1850,12 +1823,13 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("ForceField") then
@@ -1867,12 +1841,13 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("Humanoid") then
@@ -1913,12 +1888,13 @@ function Properties:GetProperties(instance: any)
 				["WalkSpeed"] = instance.WalkSpeed
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("HumanoidDescription") then
@@ -1966,12 +1942,13 @@ function Properties:GetProperties(instance: any)
 				["TorsoColor"] = instance.TorsoColor
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("Pants") then
@@ -1997,12 +1974,13 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("ShirtGraphic") then
@@ -2015,12 +1993,13 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("AlignOrientation") then
@@ -2043,12 +2022,13 @@ function Properties:GetProperties(instance: any)
 				["Attachment1"] = instance.Attachment1
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("AlignPosition") then
@@ -2071,12 +2051,13 @@ function Properties:GetProperties(instance: any)
 				["Attachment1"] = instance.Attachment1
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("AngularVelocity") then
@@ -2095,12 +2076,13 @@ function Properties:GetProperties(instance: any)
 				["Attachment0"] = instance.Attachment0
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("BallSocketConstraint") then
@@ -2120,12 +2102,13 @@ function Properties:GetProperties(instance: any)
 				["Attachment1"] = instance.Attachment1
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("CylindricalConstraint") then
@@ -2149,12 +2132,13 @@ function Properties:GetProperties(instance: any)
 				["Attachment1"] = instance.Attachment1
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("HingeConstraint") then
@@ -2174,12 +2158,13 @@ function Properties:GetProperties(instance: any)
 				["Attachment1"] = instance.Attachment1
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("LineForce") then
@@ -2200,12 +2185,13 @@ function Properties:GetProperties(instance: any)
 				["Attachment1"] = instance.Attachment1
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("NoCollisionConstraint") then
@@ -2220,12 +2206,13 @@ function Properties:GetProperties(instance: any)
 				["Part1"] = instance.Part
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("RodConstraint") then
@@ -2245,12 +2232,13 @@ function Properties:GetProperties(instance: any)
 				["Attachment1"] = instance.Attachment1
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("RopeConstraint") then
@@ -2270,12 +2258,13 @@ function Properties:GetProperties(instance: any)
 				["Attachment1"] = instance.Attachment1
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("SpringConstraint") then
@@ -2300,12 +2289,13 @@ function Properties:GetProperties(instance: any)
 				["Attachment1"] = instance.Attachment1
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("Torque") then
@@ -2323,12 +2313,13 @@ function Properties:GetProperties(instance: any)
 				["Attachment0"] = instance.Attachment0
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("TorsionSpringConstraint") then
@@ -2351,12 +2342,11 @@ function Properties:GetProperties(instance: any)
 				["Attachment1"] = instance.Attachment1
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
-
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("UniversalConstraint") then
@@ -2375,12 +2365,13 @@ function Properties:GetProperties(instance: any)
 				["Attachment1"] = instance.Attachment1
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("VectorForce") then
@@ -2399,12 +2390,13 @@ function Properties:GetProperties(instance: any)
 				["Attachment0"] = instance.Attachment0
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("WeldConstraint") then
@@ -2419,12 +2411,13 @@ function Properties:GetProperties(instance: any)
 				["Part1"] = instance.Part1
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("Weld") then
@@ -2439,12 +2432,13 @@ function Properties:GetProperties(instance: any)
 				["Enabled"] = instance.Enabled
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("Snap") then
@@ -2459,12 +2453,13 @@ function Properties:GetProperties(instance: any)
 				["Enabled"] = instance.Enabled
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("PointLight") then
@@ -2480,12 +2475,13 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("SpotLight") then
@@ -2503,12 +2499,13 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("SurfaceLight") then
@@ -2526,12 +2523,13 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("Seat") then
@@ -2571,12 +2569,13 @@ function Properties:GetProperties(instance: any)
 				["AssemblyRootPart"] = instance.AssemblyRootPart
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("VehicleSeat") then
@@ -2625,12 +2624,13 @@ function Properties:GetProperties(instance: any)
 				["AssemblyRootPart"] = instance.AssemblyRootPart
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("BodyAngularVelocity") then
@@ -2644,12 +2644,11 @@ function Properties:GetProperties(instance: any)
 				["P"] = instance.P
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
-
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("BodyForce") then
@@ -2661,12 +2660,13 @@ function Properties:GetProperties(instance: any)
 				["Force"] = instance.Force,
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("BodyGyro") then
@@ -2680,12 +2680,11 @@ function Properties:GetProperties(instance: any)
 				["P"] = instance.P
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
-
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("BodyPosition") then
@@ -2700,12 +2699,13 @@ function Properties:GetProperties(instance: any)
 				["Position"] = instance.Position
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA('BodyThrust') then
@@ -2718,12 +2718,11 @@ function Properties:GetProperties(instance: any)
 				["Location"] = instance.Location
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
-
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("BodyVelocity") then
@@ -2737,12 +2736,13 @@ function Properties:GetProperties(instance: any)
 				["Velocity"] = instance.Velocity
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("RocketPropulsion") then
@@ -2764,12 +2764,11 @@ function Properties:GetProperties(instance: any)
 				["TurnP"] = instance.TurnP
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
-
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("Script") then
@@ -2781,12 +2780,11 @@ function Properties:GetProperties(instance: any)
 				["Disabled"] = instance.Disabled
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
-
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("LocalScript") then
@@ -2798,12 +2796,13 @@ function Properties:GetProperties(instance: any)
 				["Disabled"] = instance.Disabled
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("ModuleScript") then
@@ -2814,12 +2813,13 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("BindableFunction") then
@@ -2830,12 +2830,13 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("BindableEvent") then
@@ -2846,12 +2847,13 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("RemoteFunction") then
@@ -2862,12 +2864,13 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("RemoteEvent") then
@@ -2878,12 +2881,13 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("Actor") then
@@ -2895,12 +2899,13 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("WorldModel") then
@@ -2912,12 +2917,13 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("ArcHandles") then
@@ -2932,12 +2938,13 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("BoxHandleAdornment") then
@@ -2957,12 +2964,13 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("ConeHandleAdornment") then
@@ -2983,12 +2991,13 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("CylinderHandleAdornment") then
@@ -3011,12 +3020,13 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("ImageHandleAdornment") then
@@ -3037,12 +3047,13 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("LineHandleAdornment") then
@@ -3063,12 +3074,13 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("SphereHandleAdornment") then
@@ -3088,12 +3100,13 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("SelectionBox") then
@@ -3111,12 +3124,13 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("SelectionSphere") then
@@ -3133,12 +3147,13 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("SurfaceSelection") then
@@ -3153,12 +3168,13 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("Dialog") then
@@ -3179,12 +3195,13 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("DialogChoice") then
@@ -3199,12 +3216,13 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("Motor6D") then
@@ -3223,12 +3241,13 @@ function Properties:GetProperties(instance: any)
 			}
 
 			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("Atmosphere") then
@@ -3245,12 +3264,13 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("Clouds") then
@@ -3263,12 +3283,13 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("Sky") then
@@ -3291,12 +3312,13 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("SunRaysEffect") then
@@ -3310,12 +3332,13 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("BloomEffect") then
@@ -3330,12 +3353,13 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("BlurEffect") then
@@ -3348,12 +3372,13 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("ColorCorrectionEffect") then
@@ -3369,12 +3394,13 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("DepthOfFieldEffect") then
@@ -3390,12 +3416,13 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("ClickDetector") then
@@ -3408,12 +3435,13 @@ function Properties:GetProperties(instance: any)
 				["CursorIcon"] = instance.CursorIcon
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("ProximityPrompt") then
@@ -3437,12 +3465,13 @@ function Properties:GetProperties(instance: any)
 				["AutoLocalize"] = instance.AutoLocalize
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("PackageLink") then
@@ -3460,12 +3489,13 @@ function Properties:GetProperties(instance: any)
 				["VersionNumber"] = instance.VersionNumber
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("LocalizationTable") then
@@ -3477,12 +3507,13 @@ function Properties:GetProperties(instance: any)
 				["SourceLocaleId"] = instance.SourceLocaleId
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("BlockMesh") then
@@ -3496,12 +3527,13 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("SpecialMesh") then
@@ -3518,12 +3550,13 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("Sound") then
@@ -3542,10 +3575,7 @@ function Properties:GetProperties(instance: any)
 				["RollOffMinDistance"] = instance.RollOffMinDistance,
 				["RollOffMode"] = instance.RollOffMode,
 				["SoundGroup"] = instance.SoundGroup,
-				["SoundId"] = {
-					instance.SoundId,
-					["Preview"] = instance.Preview
-				},
+				["SoundId"] = instance.SoundId,
 				["Timelength"] = instance.Timelength,
 				["TimePosition"] = instance.TimePosition,
 				["Volume"] = instance.Volume,
@@ -3553,12 +3583,13 @@ function Properties:GetProperties(instance: any)
 				["PlayOnRemove"] = instance.PlayOnRemove
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("SoundGroup") then
@@ -3570,12 +3601,13 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("ChorusSoundEffect") then
@@ -3591,12 +3623,13 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("DistortionSoundEffect") then
@@ -3610,12 +3643,13 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("CompressorSoundEffect") then
@@ -3634,12 +3668,13 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("EchoSoundEffect") then
@@ -3656,12 +3691,13 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("EqualizerSoundEffect") then
@@ -3677,12 +3713,13 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("FlangeSoundEffect") then
@@ -3698,12 +3735,13 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("PitchShiftSoundEffect") then
@@ -3717,12 +3755,13 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("ReverbSoundEffect") then
@@ -3740,12 +3779,13 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("TremoloSoundEffect") then
@@ -3761,12 +3801,13 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("BoolValue") then
@@ -3778,12 +3819,13 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("BrickColorValue") then
@@ -3795,12 +3837,13 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("CFrameValue") then
@@ -3811,12 +3854,13 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("Color3Value") then
@@ -3828,12 +3872,13 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("IntValue") then
@@ -3845,12 +3890,13 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("NumberValue") then
@@ -3862,12 +3908,13 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("ObjectValue") then
@@ -3879,12 +3926,13 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
+ 
 
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("RayValue") then
@@ -3895,12 +3943,11 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
-
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("StringValue") then
@@ -3912,12 +3959,11 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
-
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("Vector3Value") then
@@ -3929,12 +3975,11 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
-
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("WrapLayer") then
@@ -3951,12 +3996,11 @@ function Properties:GetProperties(instance: any)
 				["ShrinkFactor"] = instance.ShrinkFactor
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
-
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 
 		if instance:IsA("WrapTarget") then
@@ -3969,24 +4013,23 @@ function Properties:GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
-			print(props)
-
 			for g, v in pairs(instance:GetAttributes()) do
-				print(g, ", ", v)
+				return g and v
 			end
+
+			return props
 		end
 	end
 
 	if not instance:IsA("Instance") then
-		error("instance isn't supported in the module")
+		error("instance isn't supported.")
 	end
 
 	return instance
 end
 
 function Properties:ReadEnumerator(enum: Enum)
-	return print(enum:GetEnumItems())
+	return enum:GetEnumItems()
 end
 
 function Properties:SetName(instance: any, strName: string)
@@ -3999,10 +4042,6 @@ function Properties:SetName(instance: any, strName: string)
 	return
 end
 
-function Properties:GetName(instance: any)
-	return instance.Name
-end
-
 function Properties:SetValue(instance: any, value: any)
 	instance = value
 
@@ -4011,10 +4050,6 @@ function Properties:SetValue(instance: any, value: any)
 	end
 
 	return instance, value
-end
-
-function Properties:GetValue(value: any)
-	return value
 end
 
 return Properties
