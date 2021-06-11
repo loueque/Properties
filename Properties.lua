@@ -1354,7 +1354,7 @@ function Properties.GetProperties(instance: any)
 				["PaddingTop"] = instance.PaddingTop
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -1383,7 +1383,7 @@ function Properties.GetProperties(instance: any)
 				["VerticalAlignment"] = instance.VerticalAlignment
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -1401,7 +1401,7 @@ function Properties.GetProperties(instance: any)
 				["Scale"] = instance.Scale
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -1420,7 +1420,7 @@ function Properties.GetProperties(instance: any)
 				["MinSize"] = instance.MinSize
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -1443,7 +1443,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -1469,7 +1469,7 @@ function Properties.GetProperties(instance: any)
 				["VerticalAlignment"] = instance.VerticalAlignment
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -1488,7 +1488,7 @@ function Properties.GetProperties(instance: any)
 				["MinstanceextSize"] = instance.MinstanceextSize
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -1515,7 +1515,7 @@ function Properties.GetProperties(instance: any)
 				["RequiresHandle"] = instance.RequiresHandle
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -1534,7 +1534,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -1557,7 +1557,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -1595,7 +1595,7 @@ function Properties.GetProperties(instance: any)
 				["SpreadAngle"] = instance.SpreadAngle
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -1617,7 +1617,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -1639,7 +1639,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -1671,7 +1671,7 @@ function Properties.GetProperties(instance: any)
 				["WidthScale"] = instance.WidthScale
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -1692,7 +1692,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -1717,7 +1717,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -1739,7 +1739,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -1756,7 +1756,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -1773,7 +1773,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -1794,7 +1794,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -1823,7 +1823,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -1841,7 +1841,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -1888,7 +1888,7 @@ function Properties.GetProperties(instance: any)
 				["WalkSpeed"] = instance.WalkSpeed
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -1942,7 +1942,7 @@ function Properties.GetProperties(instance: any)
 				["TorsoColor"] = instance.TorsoColor
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -1974,7 +1974,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -1993,7 +1993,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -2022,7 +2022,7 @@ function Properties.GetProperties(instance: any)
 				["Attachment1"] = instance.Attachment1
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -2051,7 +2051,7 @@ function Properties.GetProperties(instance: any)
 				["Attachment1"] = instance.Attachment1
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -2076,7 +2076,7 @@ function Properties.GetProperties(instance: any)
 				["Attachment0"] = instance.Attachment0
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -2102,7 +2102,7 @@ function Properties.GetProperties(instance: any)
 				["Attachment1"] = instance.Attachment1
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -2132,7 +2132,7 @@ function Properties.GetProperties(instance: any)
 				["Attachment1"] = instance.Attachment1
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -2158,7 +2158,7 @@ function Properties.GetProperties(instance: any)
 				["Attachment1"] = instance.Attachment1
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -2185,7 +2185,7 @@ function Properties.GetProperties(instance: any)
 				["Attachment1"] = instance.Attachment1
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -2206,7 +2206,7 @@ function Properties.GetProperties(instance: any)
 				["Part1"] = instance.Part
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -2232,7 +2232,7 @@ function Properties.GetProperties(instance: any)
 				["Attachment1"] = instance.Attachment1
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -2258,7 +2258,7 @@ function Properties.GetProperties(instance: any)
 				["Attachment1"] = instance.Attachment1
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -2289,7 +2289,7 @@ function Properties.GetProperties(instance: any)
 				["Attachment1"] = instance.Attachment1
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -2313,7 +2313,7 @@ function Properties.GetProperties(instance: any)
 				["Attachment0"] = instance.Attachment0
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -2365,7 +2365,7 @@ function Properties.GetProperties(instance: any)
 				["Attachment1"] = instance.Attachment1
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -2390,7 +2390,7 @@ function Properties.GetProperties(instance: any)
 				["Attachment0"] = instance.Attachment0
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -2411,7 +2411,7 @@ function Properties.GetProperties(instance: any)
 				["Part1"] = instance.Part1
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -2432,7 +2432,7 @@ function Properties.GetProperties(instance: any)
 				["Enabled"] = instance.Enabled
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -2453,7 +2453,7 @@ function Properties.GetProperties(instance: any)
 				["Enabled"] = instance.Enabled
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -2475,7 +2475,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -2499,7 +2499,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -2523,7 +2523,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -2569,7 +2569,7 @@ function Properties.GetProperties(instance: any)
 				["AssemblyRootPart"] = instance.AssemblyRootPart
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -2624,7 +2624,7 @@ function Properties.GetProperties(instance: any)
 				["AssemblyRootPart"] = instance.AssemblyRootPart
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -2660,7 +2660,7 @@ function Properties.GetProperties(instance: any)
 				["Force"] = instance.Force,
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -2699,7 +2699,7 @@ function Properties.GetProperties(instance: any)
 				["Position"] = instance.Position
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -2736,7 +2736,7 @@ function Properties.GetProperties(instance: any)
 				["Velocity"] = instance.Velocity
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -2796,7 +2796,7 @@ function Properties.GetProperties(instance: any)
 				["Disabled"] = instance.Disabled
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -2813,7 +2813,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -2830,7 +2830,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -2847,7 +2847,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -2864,7 +2864,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -2881,7 +2881,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -2899,7 +2899,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -2917,7 +2917,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -2938,7 +2938,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -2964,7 +2964,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -2991,7 +2991,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -3020,7 +3020,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -3047,7 +3047,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -3074,7 +3074,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -3100,7 +3100,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -3124,7 +3124,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -3147,7 +3147,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -3168,7 +3168,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -3195,7 +3195,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -3216,7 +3216,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -3241,7 +3241,7 @@ function Properties.GetProperties(instance: any)
 			}
 
 			print("There are " .. length(props) .. " properties for " .. instance.Name)
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -3264,7 +3264,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -3283,7 +3283,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -3312,7 +3312,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -3332,7 +3332,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -3353,7 +3353,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -3372,7 +3372,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -3394,7 +3394,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -3416,7 +3416,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -3435,7 +3435,7 @@ function Properties.GetProperties(instance: any)
 				["CursorIcon"] = instance.CursorIcon
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -3465,7 +3465,7 @@ function Properties.GetProperties(instance: any)
 				["AutoLocalize"] = instance.AutoLocalize
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -3489,7 +3489,7 @@ function Properties.GetProperties(instance: any)
 				["VersionNumber"] = instance.VersionNumber
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -3507,7 +3507,7 @@ function Properties.GetProperties(instance: any)
 				["SourceLocaleId"] = instance.SourceLocaleId
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -3527,7 +3527,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -3550,7 +3550,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -3583,7 +3583,7 @@ function Properties.GetProperties(instance: any)
 				["PlayOnRemove"] = instance.PlayOnRemove
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -3601,7 +3601,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -3623,7 +3623,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -3643,7 +3643,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -3668,7 +3668,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -3691,7 +3691,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -3713,7 +3713,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -3735,7 +3735,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -3755,7 +3755,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -3779,7 +3779,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -3801,7 +3801,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -3819,7 +3819,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -3837,7 +3837,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -3854,7 +3854,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -3872,7 +3872,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -3890,7 +3890,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -3908,7 +3908,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -3926,7 +3926,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
- 
+
 
 			for g, v in pairs(instance:GetAttributes()) do
 				return g and v
@@ -4034,7 +4034,7 @@ end
 
 function Properties.SetName(instance: any, strName: string)
 	if not instance ~= nil then
-		instance.Name = strName
+		return instance.Name == strName -->
 	elseif instance ~= nil or not instance then
 		error("instance doesn't exist...")
 	end
