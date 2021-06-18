@@ -3975,24 +3975,4 @@ function Properties.ReadEnumerator(enum: Enum)
 	return enum:GetEnumItems()
 end
 
-function Properties.SetName(instance: any, strName: string)
-	if not instance ~= nil then
-		return instance.Name == strName -->
-	elseif instance ~= nil or not instance then
-		error("instance doesn't exist...")
-	end
-
-	return
-end
-
-function Properties.SetValue(instance: any, value: any)
-	instance = value
-
-	if instance ~= value then
-		instance = value
-	end
-
-	return instance, value
-end
-
 return Properties
