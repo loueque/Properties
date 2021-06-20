@@ -7,19 +7,18 @@ Take a plugin version: https://www.roblox.com/catalog/6830145259/Properties
 
 This module collects all properties (hand-written, no HTTP at all) and converts into a table, it also collects current values and names of a particular instance.
 
-To call a module, type:
+To call 'GetProperties', type the following:
 
 ```lua
-local Props = require(game.ReplicatedStorage.Properties) -- ...or:
 local Props = require(game:GetService("ReplicatedStorage"):WaitForChild("Properties"))
 ```
 
-Whatever is in your code, call many lines as you want:
+Whatever is in your code, call as many lines as you want:
 
 ```lua
 Props:GetProperties(game.Workspace)
 Props:GetProperties(game.Workspace.Part)
-Props:GetProperties(game.Workspace.Clouds)
+print(Props:GetProperties(game.Workspace.Clouds))
 ```
 
 ...and the output will return a table of all properties!
@@ -29,12 +28,8 @@ Props:GetProperties(game.Workspace.Clouds)
 There are several features that are included into the module, such as:
 
 ```lua
-int:GetProperties(int) --> Returns a table of properties of a particular instance.
+int:GetProperties(instance) --> Returns a table of properties of a particular instance.
 int:ReadEnumerator(enum) --> Use a enum (ex. Material) and reads all EnumItems available to it.
-int:SetName() --> Set(s) a name.
-int:GetName() --> Gets a name of a particular instance.
-int:SetValue() --> Sets a value for a particular instance-property
-int:GetValue() --> Gets a value.
 ```
 
 # Why make this?
