@@ -1,8 +1,8 @@
---> Created all by loueque, props to Halalaluyafail3 for iterations and suggestions, and RuizuKun_Dev for finding spelling mistakes. :thumbs_up:
+--> Created all by loueque, thanks to RuizuKun_Dev for finding spelling mistakes and suggestions. :thumbs_up:
+--> Source of HTTP: https://scriptinghelpers.org/questions/50784/how-to-get-list-of-object-properties
 
 local Properties = {}
 Properties.__index = {}
---> Optional: Properties.ClassName = "Properties"
 
 function Properties.GetProperties(instance: any)
 	local function length(Table)
@@ -3973,6 +3973,67 @@ end
 
 function Properties.ReadEnumerator(enum: Enum)
 	return enum:GetEnumItems()
+end
+
+function Properties.Test(instance)
+	local HttpService = game:GetService('HttpService')
+	local json = 'https://anaminus.github.io/rbx/json/api/latest.json'
+	--local txt = 'https://anaminus.github.io/rbx/raw/api/latest.txt'
+	local data = HttpService:JSONDecode(HttpService:GetAsync(tostring(json)))
+	--[[local data_two = HttpService:JSONDecode(HttpService:GetAsync(tostring(txt)))]]
+
+	local properties do
+		properties = {}
+
+		for i = 1, #data --[[table.getn(data)]] do
+			local tb = data[i]
+			local type = tb.type
+
+			if type == 'Class' then
+				local classtb = {}
+				local super = properties[tb.Superclass]
+
+				if super then
+					for x = 1, #super do
+						classtb[x] = super[x]
+					end
+				end
+
+				properties[tb.Name] = classtb
+			elseif type == 'Property' then
+				if not next(tb.tags) then
+					type b = boolean
+
+					local class = properties[tb.Class]
+					local property = tb.Name
+					local inserted: b
+
+					for x = 1, #class do
+						if property < class[x] then
+							inserted = true
+							table.insert(class, property)
+
+							break
+						end
+					end
+
+					if not inserted or inserted == false then
+						table.insert(class, property)
+					end
+				end
+
+			elseif type == "Function" then return
+			elseif type == "YieldFunction" then return
+			elseif type == "Event" then return
+			elseif type == "Callback" then return
+			elseif type == "Enum" then return
+			elseif type == "EnumItem" then return
+
+			end
+		end
+	end
+
+	return table.foreach(properties[instance])
 end
 
 return Properties
