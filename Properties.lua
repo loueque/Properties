@@ -34,9 +34,7 @@ function Properties.GetProperties(instance: any)
 				["Parent"] = instance.Parent
 			}
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -57,9 +55,7 @@ function Properties.GetProperties(instance: any)
 				["StreamingEnabled"] = instance.StreamingEnabled
 			}
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -79,9 +75,7 @@ function Properties.GetProperties(instance: any)
 				["CharacterAutoLoads"] = instance.CharacterAutoLoads
 			}
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -96,9 +90,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -111,9 +103,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -139,9 +129,7 @@ function Properties.GetProperties(instance: any)
 				["ExposureCompensation"] = instance.ExposureCompensation
 			}
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -154,9 +142,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -169,9 +155,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -184,9 +168,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -199,9 +181,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -214,9 +194,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -229,9 +207,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -244,9 +220,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -261,9 +235,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable,
 			}
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -276,9 +248,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -309,9 +279,7 @@ function Properties.GetProperties(instance: any)
 				["EnableMouseLockOption"] = instance.EnableMouseLockOption
 			}
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -324,9 +292,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -339,9 +305,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -354,9 +318,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -374,9 +336,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -391,9 +351,7 @@ function Properties.GetProperties(instance: any)
 				["LoadDefaultChat"] = instance.LoadDefaultChat
 			}
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -408,9 +366,7 @@ function Properties.GetProperties(instance: any)
 				["SystemLocaleId"] = instance.SystemLocaleId
 			}
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -435,9 +391,7 @@ function Properties.GetProperties(instance: any)
 				["Timeout"] = instance.Timeout
 			}
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -450,9 +404,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -1253,9 +1205,7 @@ function Properties.GetProperties(instance: any)
 				["DominantAxis"] = instance.DominantAxis
 			}
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -1269,9 +1219,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -1289,9 +1237,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -1314,9 +1260,7 @@ function Properties.GetProperties(instance: any)
 				["VerticalAlignment"] = instance.VerticalAlignment
 			}
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -1335,9 +1279,7 @@ function Properties.GetProperties(instance: any)
 				["VerticalAlignment"] = instance.VerticalAlignment
 			}
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -1356,9 +1298,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -1385,9 +1325,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -1403,9 +1341,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -1422,9 +1358,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -1445,9 +1379,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -1471,9 +1403,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -1490,9 +1420,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -1517,9 +1445,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -1536,9 +1462,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -1559,9 +1483,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -1597,9 +1519,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -1619,9 +1539,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -1641,9 +1559,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -1673,9 +1589,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -1694,9 +1608,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -1719,9 +1631,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -1741,9 +1651,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -1758,9 +1666,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -1775,9 +1681,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -1796,9 +1700,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -1823,11 +1725,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-
-
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -1841,11 +1739,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-
-
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -1865,7 +1759,7 @@ function Properties.GetProperties(instance: any)
 				["RigType"] = instance.RigType,
 				["RootPart"] = instance.RootPart,
 				["Archivable"] = instance.Archivable,
-				["BreakJoinstancesOnDeath"] = instance.BreakJoinstancesOnDeath,
+				["BreakJointsOnDeath"] = instance.BreakJointsOnDeath,
 				["RequiresNeck"] = instance.RequiresNeck,
 				["AutoJumpEnabled"] = instance.AutoJumpEnabled,
 				["JumpPower"] = instance.JumpPower,
@@ -1877,9 +1771,9 @@ function Properties.GetProperties(instance: any)
 				["PlatformStand"] = instance.PlatformStand,
 				["SeatPart"] = instance.SeatPart,
 				["Sit"] = instance.Sit,
-				["TargetPoinstance"] = instance.TargetPoinstance,
+				["TargetPoint"] = instance.TargetPoint,
 				["WalkToPart"] = instance.WalkToPart,
-				["WalkToPoinstance"] = instance.WalkToPoinstance,
+				["WalkToPoint"] = instance.WalkToPoint,
 				["AutomaticScalingEnabled"] = instance.AutomaticScalingEnabled,
 				["Health"] = instance.Health,
 				["HipHeight"] = instance.HipHeight,
@@ -1890,9 +1784,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -1944,9 +1836,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -1976,9 +1866,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -1995,9 +1883,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -2024,9 +1910,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -2053,9 +1937,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -2078,9 +1960,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -2104,9 +1984,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -2134,9 +2012,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -2160,9 +2036,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -2187,9 +2061,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -2208,9 +2080,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -2234,9 +2104,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -2260,9 +2128,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -2291,9 +2157,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -2315,9 +2179,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -2342,9 +2204,7 @@ function Properties.GetProperties(instance: any)
 				["Attachment1"] = instance.Attachment1
 			}
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -2367,9 +2227,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -2392,9 +2250,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -2413,9 +2269,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -2434,9 +2288,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -2455,9 +2307,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -2477,9 +2327,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -2501,9 +2349,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -2525,9 +2371,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -2571,9 +2415,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -2626,9 +2468,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -2644,9 +2484,7 @@ function Properties.GetProperties(instance: any)
 				["P"] = instance.P
 			}
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -2662,9 +2500,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -2680,9 +2516,7 @@ function Properties.GetProperties(instance: any)
 				["P"] = instance.P
 			}
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -2701,9 +2535,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -2718,9 +2550,7 @@ function Properties.GetProperties(instance: any)
 				["Location"] = instance.Location
 			}
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -2738,9 +2568,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -2764,9 +2592,7 @@ function Properties.GetProperties(instance: any)
 				["TurnP"] = instance.TurnP
 			}
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -2774,9 +2600,7 @@ function Properties.GetProperties(instance: any)
 		if instance:IsA("Script") then
 			local props = {instance.ClassName, instance.Name, instance.Parent, instance.Archivable, instance.Disabled}
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -2784,9 +2608,7 @@ function Properties.GetProperties(instance: any)
 		if instance:IsA("LocalScript") then
 			local props = {instance.ClassName, instance.Name, instance.Parent, instance.Archivable, instance.Disabled}
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -2794,9 +2616,7 @@ function Properties.GetProperties(instance: any)
 		if instance:IsA("ModuleScript") then
 			local props = {instance.ClassName, instance.Name, instance.Parent, instance.Archivable, instance.Disabled}
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -2804,9 +2624,7 @@ function Properties.GetProperties(instance: any)
 		if instance:IsA("BindableFunction") then
 			local props = {instance.ClassName, instance.Name, instance.Parent, instance.Archivable, instance.Disabled}
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -2814,9 +2632,7 @@ function Properties.GetProperties(instance: any)
 		if instance:IsA("BindableEvent") then
 			local props = {instance.ClassName, instance.Name, instance.Parent, instance.Archivable, instance.Disabled}
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -2824,9 +2640,7 @@ function Properties.GetProperties(instance: any)
 		if instance:IsA("RemoteFunction") then
 			local props = {instance.ClassName, instance.Name, instance.Parent, instance.Archivable, instance.Disabled}
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -2834,9 +2648,7 @@ function Properties.GetProperties(instance: any)
 		if instance:IsA("RemoteEvent") then
 			local props = {instance.ClassName, instance.Name, instance.Parent, instance.Archivable, instance.Disabled}
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -2852,9 +2664,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -2862,9 +2672,7 @@ function Properties.GetProperties(instance: any)
 		if instance:IsA("WorldModel") then
 			local props = {instance.ClassName, instance.Name, instance.Parent, instance.Archivable, instance.Disabled}
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -2883,9 +2691,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -2909,9 +2715,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -2936,9 +2740,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -2965,9 +2767,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -2992,9 +2792,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -3019,9 +2817,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -3045,9 +2841,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -3069,9 +2863,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -3092,9 +2884,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -3113,9 +2903,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -3140,9 +2928,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -3161,9 +2947,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -3186,9 +2970,7 @@ function Properties.GetProperties(instance: any)
 			print("There are " .. length(props) .. " properties for " .. instance.Name)
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -3209,9 +2991,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -3228,9 +3008,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -3257,9 +3035,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -3277,9 +3053,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -3298,9 +3072,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -3317,9 +3089,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -3339,9 +3109,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -3361,9 +3129,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -3380,9 +3146,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -3410,9 +3174,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -3434,9 +3196,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -3452,9 +3212,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -3472,9 +3230,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -3495,9 +3251,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -3528,9 +3282,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -3546,9 +3298,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -3568,9 +3318,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -3588,9 +3336,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -3613,9 +3359,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -3636,9 +3380,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -3658,9 +3400,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -3680,9 +3420,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -3700,9 +3438,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -3724,9 +3460,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -3746,9 +3480,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -3764,9 +3496,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -3782,9 +3512,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -3799,9 +3527,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -3817,9 +3543,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -3835,9 +3559,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -3853,9 +3575,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -3871,9 +3591,7 @@ function Properties.GetProperties(instance: any)
 
 
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -3886,9 +3604,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -3902,9 +3618,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -3918,9 +3632,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -3939,9 +3651,7 @@ function Properties.GetProperties(instance: any)
 				["ShrinkFactor"] = instance.ShrinkFactor
 			}
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
@@ -3956,9 +3666,7 @@ function Properties.GetProperties(instance: any)
 				["Archivable"] = instance.Archivable
 			}
 
-			for g, v in pairs(instance:GetAttributes()) do
-				return g and v
-			end
+ 
 
 			return props
 		end
