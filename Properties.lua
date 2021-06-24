@@ -2957,7 +2957,6 @@ function Properties.GetProperties(instance: any)
 				["Enabled"] = instance.Enabled,
 			}
 
-			print("There are " .. length(props) .. " properties for " .. instance.Name)
 
 
  
