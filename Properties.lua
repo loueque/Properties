@@ -5,16 +5,6 @@ local Properties = {}
 Properties.__index = {}
 
 function Properties.GetProperties(instance: any)
-	local function length(Table)
-		local counter = 0
-
-		for _, _ in pairs(Table) do
-			counter += 1
-		end
-
-		return counter
-	end
-
 	if instance:IsA("Instance") then
 		if instance == game then
 			local props = {
