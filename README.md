@@ -1,5 +1,3 @@
-# NOTE: BIG OVERHAUL COMING SOON, WILL BE OUT LATER THIS WEEK.
-
 # Properties
 Reads all properties (excluding readonly) of a instance into a table from top -> bottom.
 
