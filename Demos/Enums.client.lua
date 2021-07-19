@@ -6,6 +6,6 @@ local a = Enum.Platform
 local b = Enum.Material
 local c = Enum.QualityLevel
 
-print(Properties:ReadEnumerator(a))
-print(Properties:ReadEnumerator(b))
-print(Properties:ReadEnumerator(c))
+print(Properties.ReadEnumerator(a))
+print(Properties.ReadEnumerator(b))
+print(Properties.ReadEnumerator(c))
