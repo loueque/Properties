@@ -3,7 +3,6 @@
 
 local Properties = {}
 Properties.__index = {}
-Properties.__call = print('called')
 
 function Properties.new()
 	local new = {}
