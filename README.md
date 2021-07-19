@@ -12,15 +12,15 @@ This module collects all properties (hand-written, no HTTP at all) and converts 
 To call 'GetProperties', type the following:
 
 ```lua
-local Props = require(game:GetService("ReplicatedStorage"):WaitForChild("Properties"))
+local Props = require(game.ReplicatedStorage.Properties)
 ```
 
 Whatever is in your code, call as many lines as you want:
 
 ```lua
-Props:GetProperties(game.Workspace)
-Props:GetProperties(game.Workspace.Part)
-print(Props:GetProperties(game.Workspace.Clouds))
+Props.GetProperties(game.Workspace)
+Props.GetProperties(game.Workspace.Part)
+print(Props.GetProperties("Part"))
 ```
 
 ...and the output will return a table of all properties!
@@ -30,8 +30,9 @@ print(Props:GetProperties(game.Workspace.Clouds))
 There are several features that are included into the module, such as:
 
 ```lua
-int:GetProperties(instance) --> Returns a table of properties of a particular instance.
-int:ReadEnumerator(enum) --> Use a enum (ex. Material) and reads all EnumItems available to it.
+Props.new() --> Creates a new table, so you can call functions off there.
+Props.GetProperties(instance: string or any) --> Returns a table of properties of a particular instance.
+Props.ReadEnumerator(enum) --> Use a enum (ex. Material) and reads all EnumItems available to it.
 ```
 
 # Why make this?
