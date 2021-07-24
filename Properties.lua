@@ -1,4 +1,4 @@
---> Created all by loueque, thanks to RuizuKun_Dev for finding spelling mistakes and suggestions. :thumbs_up:
+--> Created all by loueque, thanks to RuizuKun_Dev and LucasMZ for finding spelling mistakes and suggestions. :thumbs_up:
 --> Source of HTTP, credits to them with some modifications: https://scriptinghelpers.org/questions/50784/how-to-get-list-of-object-properties
 
 local RunService = game:GetService("RunService")
