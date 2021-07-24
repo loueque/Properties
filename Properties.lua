@@ -43,6 +43,10 @@ function Properties.new()
 	return setmetatable(new, Properties)
 end
 
+function Properties.WaitForDataLoaded()
+	WaitForHttpDataReady()
+end
+
 function Properties.GetProperties(instance: string | any)
 	WaitForHttpDataReady()
 
