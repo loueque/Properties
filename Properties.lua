@@ -94,4 +94,4 @@ function Properties.ReadEnumerator(enum: Enum)
 	return enum:GetEnumItems()
 end
 
-return Properties;
+return Properties
