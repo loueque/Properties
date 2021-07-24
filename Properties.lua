@@ -25,7 +25,7 @@ coroutine.wrap(function()
 			warn("[Properties+ Http Error]: ", data)
 		end
 
-		wait(3)
+		task.wait(3)
 	end
 end)()
 
