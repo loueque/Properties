@@ -2,7 +2,6 @@
 --> Source of HTTP, credits to them with some modifications: https://scriptinghelpers.org/questions/50784/how-to-get-list-of-object-properties
 
 local HttpService = game:GetService("HttpService")
-local JSONLink = tostring("https://anaminus.github.io/rbx/json/api/latest.json")
 local HttpData = HttpService:JSONDecode(HttpService:GetAsync("https://anaminus.github.io/rbx/json/api/latest.json"))
 
 local Properties = {}
