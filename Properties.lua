@@ -3,40 +3,39 @@
 
 local RunService = game:GetService("RunService")
 local HttpService = game:GetService("HttpService")
-local JSONLink = "https://anaminus.github.io/rbx/json/api/latest.json"
 local HttpData;
 
 coroutine.wrap(function()
-    local tries = 0
-    local sucess, data;
-    while true do
-        sucess, data = pcall(
-            HttpService.GetAsync,
-            HttpService,
-            JSONLink
-        )
+	local tries = 0
+	local sucess, data;
+	while true do
+		sucess, data = pcall(
+			HttpService.GetAsync,
+			HttpService,
+			"https://anaminus.github.io/rbx/json/api/latest.json"
+		)
 
-        if sucess then
-            HttpData = HttpService:JSONDecode(data)
-            break
-        end
+		if sucess then
+			HttpData = HttpService:JSONDecode(data)
+			break
+		end
 
-        tries += 1
-        if tries >= 3 then
-            warn("[Properties+ Http Error]: ", data)
-        end
+		tries += 1
+		if tries >= 3 then
+			warn("[Properties+ Http Error]: ", data)
+		end
 
-        wait(3)
-    end
+		wait(3)
+	end
 end)()
 
 local Properties = {}
 Properties.__index = {}
 
 local function WaitForHttpDataReady()
-    while HttpData == nil do
-        RunService.Heartbeat:Wait()
-    end
+	while HttpData == nil do
+		RunService.Heartbeat:Wait()
+	end
 end
 
 function Properties.new()
@@ -47,7 +46,7 @@ end
 function Properties.GetProperties(instance: string | any)
 	WaitForHttpDataReady()
 
-    local Property do
+	local Property do
 		Property = {}
 
 		for i = 1, #HttpData do
