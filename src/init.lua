@@ -2,14 +2,17 @@
 --> Source of HTTP, credits to them with some modifications: https://scriptinghelpers.org/questions/50784/how-to-get-list-of-object-properties
 
 local HttpService = game:GetService("HttpService")
+local IsAPILoaded, APILoaded = false, Instance.new("BindableEvent")
 
-local function getApiData()
+local function GetApiData()
 	local retries = 0
-
 	local sucess, data
 
 	while retries <= 3 do
-		sucess, data = pcall(HttpService.GetAsync, HttpService, "https://anaminus.github.io/rbx/json/api/latest.json")
+		sucess, data = pcall(
+			HttpService.GetAsync, HttpService,
+			"https://anaminus.github.io/rbx/json/api/latest.json"
+		)
 
 		if sucess then
 			return HttpService:JSONDecode(data)
@@ -23,11 +26,11 @@ end
 
 local Classes = {}
 
-local function createPropertiesForClasses()
-	local HttpData = getApiData()
+local function CreatePropertiesForClasses()
+	local HttpData = GetApiData()
+
 	if HttpData then
-		for i = 1, #HttpData do
-			local Table = HttpData[i]
+		for _, Table in ipairs(HttpData) do
 			local Type = Table.type
 
 			if Type == "Class" then
@@ -45,45 +48,46 @@ local function createPropertiesForClasses()
 			elseif Type == "Property" then
 				if not next(Table.tags) then
 					local Class = Classes[Table.Class]
-					local property = Table.Name
-					local Inserted
+					local Property = Table.Name
+					local Inserted = false
 
 					for j = 1, #Class do
-						if property < Class[j] then
+						if Property < Class[j] then
 							Inserted = true
-							table.insert(Class, j, property)
+							table.insert(Class, j, Property)
 							break
 						end
 					end
 
 					if not Inserted then
-						table.insert(Class, property)
+						table.insert(Class, Property)
 					end
 				end
 			end
 		end
-		script:SetAttribute("hasLoaded", true)
+
+		IsAPILoaded = true
+		APILoaded:Fire()
+
+		APILoaded:Destroy()
+		APILoaded = nil
 	end
 end
 
-task.spawn(createPropertiesForClasses)
-
-local function WaitForApiData()
-	if not script:GetAttribute("hasLoaded") then
-		script:GetAttributeChangedSignal("hasLoaded"):Wait()
-	end
-end
+task.spawn(CreatePropertiesForClasses)
 
 local Properties = {}
 Properties.__index = {}
 
 function Properties.new()
-	local new = {}
-	return setmetatable(new, Properties)
+	return setmetatable({}, Properties)
 end
 
 function Properties.GetProperties(instance: string | any)
-	WaitForApiData()
+	if not IsAPILoaded then
+		APILoaded.Event:Wait()
+	end
+
 	return Classes[tostring(instance)]
 end
 
