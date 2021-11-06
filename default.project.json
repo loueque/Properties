@@ -1,0 +1,25 @@
+{
+	"name": "Properties+",
+
+	"tree": {
+		"$className": "DataModel",
+
+		"ReplicatedStorage": {
+			"$className": "ReplicatedStorage",
+			"$ignoreUnknownInstances": true,
+
+			"Properties": {
+				"$path": "src"
+			}
+		},
+
+		"ServerScriptService": {
+			"$className": "ServerScriptService",
+			"$ignoreUnknownInstances": true,
+
+			"Demos": {
+				"$path": "Demos"
+			}
+		}
+	}
+}
