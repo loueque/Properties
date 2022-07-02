@@ -44,11 +44,11 @@ local function CreatePropertiesForClasses()
 					end
 				end
 
-				Classes[Table.ClassName] = ClassData
+				Classes[Table.Name] = ClassData
 			elseif Type == "Property" then
 				if not next(Table.tags) then
 					local Class = Classes[Table.Class]
-					local Property = Table.ClassName
+					local Property = Table.Name
 					local Inserted = false
 
 					for j = 1, #Class do
